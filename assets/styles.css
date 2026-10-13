@@ -1865,3 +1865,23 @@ h2 {
   background: #e2ff9b;
   color: var(--ink);
 }
+
+/* Only the completed clinic card exposes project actions. */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 14px;
+}
+.project-links a {
+  font-size: 12px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-links a:hover {
+  text-decoration-thickness: 2px;
+}

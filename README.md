@@ -1,6 +1,6 @@
 # Ege Sarp Yazıcı — Portfolio foundation
 
-A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services, approach, and five **Coming Soon — Demo / Concept** previews. The concept cards are noninteractive visual studies; no full demos or client case studies are claimed.
+A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo, alongside four **Coming Soon — Demo / Concept** previews. All projects are original concepts, not commissioned client case studies.
 
 ## Run locally
 
@@ -47,7 +47,7 @@ assets/styles.css           Responsive design, interaction and motion preference
 assets/main.js              Menu, focus management, year and contact enhancement
 assets/config.js            Public contact configuration
 assets/favicon.svg          Original brand mark
-projects/clinic/             Reserved clinic demo
+projects/clinic/             Avela multilingual clinic demo (Phase 1)
 projects/tour-rental/        Reserved tour and rental demo
 projects/missed-inquiries/   Reserved inquiries calculator
 projects/business-dashboard/ Reserved business dashboard
@@ -60,7 +60,7 @@ AGENTS.md                   Permanent standards for future Codex tasks
 
 Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, travel, business-tool, dashboard, and game directions without stock imagery or external requests.
 
-The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. Cards are deliberately not links until their demos exist.
+The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. The clinic card links to its standalone demo and source code. The other four cards remain noninteractive until their demos exist.
 
 ## Quality assurance
 
@@ -73,15 +73,23 @@ Phase 0 was tested using headless Chromium and Playwright against `/web-demos/` 
 - Browser exceptions and HTTP failures; real requests for all local assets.
 - Desktop/mobile screenshot review and automated accessibility checks.
 
-Automated checks do not replace a screen-reader review or testing Safari/Firefox and real touch devices. No full demo behavior, actual email delivery, or live GitHub Pages deployment is claimed.
+Automated checks do not replace a screen-reader review or testing Safari/Firefox and real touch devices. Phase 0 checks do not establish clinic behavior, email delivery, or live deployment. The clinic has its own browser regression suite described below.
 
 ## Roadmap
 
 - **Phase 0:** Portfolio foundation, honest previews, contact configuration, accessibility, and documentation.
-- **Future:** Clinic website — approachable service discovery and care information.
+- **Phase 1:** Avela clinic website — complete EN/DE/RU demo, service discovery, accessible FAQ, and a client-side appointment inquiry builder.
 - **Future:** Tour & rental website — distinct travel discovery and rental interactions.
 - **Future:** Missed inquiries calculator — accessible inputs, transparent assumptions, useful estimates.
 - **Future:** Business dashboard — representative labeled sample data and meaningful controls.
 - **Future:** Branded marketing mini-game — original interaction, keyboard support, accessible alternative.
 
-Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. No phase beyond the foundation is implemented here.
+Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. Only the foundation and Phase 1 clinic are implemented. Phase 2 has not begun.
+
+## Phase 1: Avela clinic demo
+
+Open `projects/clinic/` through the static server. Avela uses an original warm healthcare identity, local SVG/CSS illustrations, and fully translated English, German, and Russian content. It demonstrates how a healthcare business could communicate services and guide international visitors toward a structured inquiry.
+
+The inquiry builder validates sample details, formats dates locally, generates a reviewable summary, and supports copying. Nothing is booked, submitted, or received. WhatsApp is intentionally unconfigured; add a real authorized number only in `projects/clinic/assets/config.js`. No form data is persisted. Only the language preference is saved locally when storage is available.
+
+See [the clinic documentation](projects/clinic/README.md) for configuration, business value, field rules, privacy behavior, browser testing instructions, and limitations. The committed `projects/clinic/tests/browser.cjs` suite checks languages, responsive layouts, navigation, form behavior, clipboard, WhatsApp configuration, and accessibility. Test dependencies are installed outside the repository and are not runtime dependencies.
