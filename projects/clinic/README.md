@@ -2,7 +2,7 @@
 
 **Phase 1 · Live Demo — Concept**
 
-Avela is a fictional private clinic identity and an original static website. Its warm plum, terracotta, sage, and architectural illustrations create a deliberately different experience from the main portfolio. There are no fabricated clinicians, qualifications, testimonials, medical outcomes, or real facilities.
+Avela is a fictional private clinic identity and an original static website. Its refined visual system uses mineral whites, graphite, restrained mint, modern sans-serif typography, and original dimensional healthcare illustrations. The design is deliberately distinct from the main portfolio. There are no fabricated clinicians, qualifications, testimonials, medical outcomes, or real facilities.
 
 ## Business value
 
@@ -22,7 +22,7 @@ Request `/web-demos/projects/clinic/` on port 8000. The same relative paths supp
 
 - English, German, and Russian interface translations, including navigation, SEO description/title, accessibility labels, field errors, summaries, and status messages. Language selection updates the page without reload and preserves form values.
 - A language preference stored under `avela-language` when localStorage is available; English is the default. Blocked storage is handled without breaking the page.
-- Original SVG lounge illustration, CSS architectural study, service cards, service-selection shortcuts, principles, patient journey, and native keyboard-accessible FAQ disclosures.
+- Original sculpted-tooth SVG illustration, dimensional CSS medical-symbol study, CSS architectural reception study, service cards, service-selection shortcuts, principles, patient journey, and native keyboard-accessible FAQ disclosures.
 - Mobile navigation with Escape handling, focus transfer and resize reset; skip link, visible focus, semantic structure, reduced motion, and responsive layouts from 320px upward.
 - A client-side inquiry builder with name, email, phone, service, preferred date/time, and optional message. Validation displays localized inline errors associated with fields and focuses the first invalid field.
 - A reviewable, localized summary, actual Clipboard API copying when allowed, and a selectable-text fallback when copying is denied or unsupported.
@@ -59,7 +59,7 @@ The contact action prefills a localized general question; the summary action pre
 - `assets/clinic.js` — translations, navigation, validation, summaries, clipboard, WhatsApp.
 - `assets/translations.js` — complete matching EN/DE/RU dictionaries.
 - `assets/config.js` — public WhatsApp destination only.
-- `assets/lounge.svg`, `assets/favicon.svg` — original local graphics.
+- `assets/precision.svg`, `assets/favicon.svg` — original local graphics.
 - `tests/browser.cjs` — development-only Chromium/Playwright and axe regression suite.
 
 ## Browser QA
@@ -86,3 +86,11 @@ Manual review should additionally cover real touch devices, screen readers, cros
 ## Limitations
 
 No medical advice, real staff, real address, live availability, appointment booking, message submission, delivery verification, or backend storage. No WhatsApp destination is configured by default. Safari/Firefox, assistive technology, real-device behavior, and live GitHub Pages deployment require separate verification. All other portfolio demos remain future work; Phase 2 has not begun.
+
+## Phase 1 visual refinement
+
+The redesigned hero centers on an original ceramic-tooth sculpture, precision ring, reflective platform, and restrained detail panels. All artwork is CSS/SVG; it is not a real product, device, or facility. The old lounge illustration has been replaced.
+
+A graphite/mint brand mark, translucent sticky navigation, bordered language control, stronger CTAs, unified white service/process cards, a dark principles section, and a refined inquiry panel form one visual system. No external font or runtime dependency was introduced. Sticky-header offsets accommodate anchor navigation, and motion remains optional through reduced-motion support.
+
+All updated headings and visual descriptions have English, German, and Russian versions, including the no-JavaScript English fallback. The validation, language persistence, FAQ, inquiry generation, clipboard, and WhatsApp implementation in `assets/clinic.js` is unchanged. The existing browser regression suite was rerun against the redesign; it passed, including zero axe WCAG A/AA violations in all three languages at 320px and 1440px. Desktop/mobile screenshots were reviewed. This remains Phase 1; no later demo is implemented.
