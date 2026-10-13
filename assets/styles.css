@@ -1889,8 +1889,8 @@ h2 {
 /* The clinic preview shares the refined demo's local illustration and palette. */
 .clinic-art.clinic-refined {
   padding: 0;
-  background: #eaf0f1;
-  color: #152b31;
+  background: #eaf3ff;
+  color: #142842;
 }
 .clinic-refined > img {
   position: absolute;

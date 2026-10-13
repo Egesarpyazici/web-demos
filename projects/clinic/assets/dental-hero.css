@@ -1,0 +1,780 @@
+/* The dental showcase is isolated from the preserved form and navigation logic. */
+.hero.dental-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.45fr) minmax(0, 0.65fr);
+  gap: 0 16px;
+  padding: 55px 0 24px;
+  align-items: center;
+  max-width: 1440px;
+}
+.dental-hero:before {
+  content: "";
+  position: absolute;
+  inset: 0 -20px 70px;
+  background: radial-gradient(ellipse at 57% 38%, #d9ecff80, transparent 65%);
+  z-index: -2;
+  pointer-events: none;
+}
+.hero-watermark {
+  position: absolute;
+  left: 24%;
+  top: 30px;
+  color: #dceafa66;
+  font-size: clamp(150px, 23vw, 360px);
+  line-height: 1;
+  letter-spacing: -25px;
+  font-weight: 600;
+  z-index: -1;
+  max-width: 76%;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+.dental-hero .hero-copy {
+  padding: 25px 0 40px;
+  z-index: 3;
+  align-self: center;
+  min-width: 0;
+}
+.dental-hero .hero-copy h1 {
+  font-size: clamp(44px, 4.8vw, 73px);
+  line-height: 1.02;
+  font-weight: 600;
+  letter-spacing: -3.9px;
+  text-wrap: initial;
+  margin-bottom: 27px;
+}
+.dental-hero .hero-copy h1 em {
+  color: #2860a2;
+  font-weight: 400;
+  letter-spacing: -3.5px;
+}
+.dental-hero .hero-copy > .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  max-width: 300px;
+  margin-bottom: 22px;
+}
+.dental-hero .hero-text {
+  font-size: 13px;
+  line-height: 1.85;
+  max-width: 320px;
+  margin-bottom: 29px;
+}
+.dental-hero .hero-actions {
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dental-hero .hero-actions > .button {
+  background: #1c57a5;
+  border-color: #1c57a5;
+  padding: 14px 16px 14px 22px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px #245aab26;
+  gap: 20px;
+}
+.dental-hero .hero-actions > .button:hover {
+  background: #123f7b;
+}
+.dental-hero .hero-actions > .button .icon {
+  border-radius: 50%;
+  background: white;
+  color: #1b4e91;
+  width: 18px;
+  height: 18px;
+  padding: 9px;
+}
+.dental-hero .hero-actions > .text-link {
+  font-size: 11px;
+  padding-left: 5px;
+  min-height: 32px;
+}
+.dental-hero .hero-foot {
+  font-size: 9px;
+  line-height: 1.7;
+  max-width: 260px;
+  margin-top: 25px;
+}
+.dental-hero .hero-foot .icon {
+  width: 16px;
+  height: 16px;
+}
+.dental-hero .hero-visual {
+  padding: 0 0 28px;
+  position: relative;
+  align-self: center;
+  max-width: none;
+  width: 100%;
+  justify-self: stretch;
+  min-width: 0;
+  z-index: 2;
+}
+.dental-hero .hero-scene {
+  border: 0;
+  overflow: visible;
+  background: none;
+  border-radius: 0;
+  line-height: 0;
+}
+.dental-hero .hero-scene img {
+  display: block;
+  width: 115%;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+  margin-left: -7.5%;
+  filter: drop-shadow(0 15px 15px #3463a009);
+}
+.dental-hero .art-caption {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  left: -8%;
+  top: 26%;
+  bottom: auto;
+  padding: 12px 14px;
+  background: #ffffffed;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 9px 35px #25579413;
+  max-width: 70%;
+}
+.art-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e72ba;
+  box-shadow: 0 0 0 5px #e3effb;
+  flex-shrink: 0;
+}
+.dental-hero .art-caption .eyebrow {
+  font-size: 6px;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.dental-hero .art-caption p {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.dental-hero .visual-detail {
+  left: auto;
+  right: -8%;
+  top: auto;
+  bottom: 24%;
+  gap: 9px;
+  background: #ffffffed;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 9px 30px #25579412;
+  max-width: 72%;
+}
+.dental-hero .detail-symbol {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #e5effc;
+  color: #245a97;
+  font-size: 22px;
+}
+.dental-hero .visual-detail strong {
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #285585;
+  line-height: 1.8;
+}
+.dental-hero .visual-detail div > span {
+  font-size: 9px;
+  max-width: 165px;
+  line-height: 1.5;
+}
+.dental-hero .art-note {
+  bottom: 5px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 8px;
+  color: #526c88;
+}
+.hero-aside {
+  position: relative;
+  z-index: 3;
+  align-self: center;
+  padding-left: 20px;
+  margin-top: 40px;
+  min-width: 0;
+}
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  color: #285581;
+  line-height: 1.5;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #c8d7e9;
+}
+.hero-badge > span:first-child {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #9abce0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 11px;
+}
+.aside-diagram {
+  position: relative;
+  width: 95px;
+  height: 80px;
+  margin: 25px 0;
+}
+.aside-diagram i {
+  position: absolute;
+  inset: 15px 0;
+  border: 1px solid #90b3dc;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+.aside-diagram i:nth-child(2) {
+  transform: rotate(30deg);
+}
+.aside-diagram i:nth-child(3) {
+  transform: rotate(90deg);
+}
+.aside-diagram > span {
+  position: absolute;
+  inset: 21px 28px;
+  background: #daeafb;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #245b98;
+  font-size: 23px;
+}
+.hero-aside h2 {
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  text-wrap: initial;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hero-aside > p {
+  font-size: 11px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.hero-aside > .text-link {
+  font-size: 10px;
+  gap: 8px;
+  line-height: 1.6;
+}
+.hero-facts {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  border: 1px solid #d5e2f0;
+  border-radius: 14px;
+  background: #ffffffbd;
+  box-shadow: 0 10px 30px #324e8305;
+  margin-top: 14px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.hero-facts > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23px 28px;
+  border-right: 1px solid #d5e2f0;
+  min-width: 0;
+}
+.hero-facts strong {
+  font-size: 36px;
+  letter-spacing: -2px;
+  line-height: 1;
+  font-weight: 400;
+  color: #184571;
+}
+.hero-facts div > span:not(.fact-chip):not(.fact-icon) {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #435d75;
+}
+.fact-chip {
+  font-size: 8px;
+  border: 1px solid #cbdbed;
+  padding: 6px 9px;
+  border-radius: 20px;
+  color: #3d5c7d;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.fact-icon {
+  margin-left: auto;
+  color: #3673b0;
+  font-size: 25px;
+  font-weight: 300;
+}
+.hero-facts > p {
+  font-size: 9px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 20px 25px;
+  color: #536c86;
+}
+.dental-hero + .ribbon {
+  border-top: 0;
+  font-size: 10px;
+  padding-block: 18px 25px;
+}
+.header {
+  background: #f5f9fef5;
+}
+.header-book.button {
+  background: #1d55a0;
+  border-color: #1d55a0;
+  border-radius: 25px;
+}
+.language-control {
+  border-radius: 24px;
+}
+.brand-dot {
+  color: #2767b4;
+}
+.service-card {
+  border-radius: 20px;
+  padding: 30px 25px 23px;
+}
+.service-card:nth-child(2) {
+  background: #e4efff;
+  border-color: #bbd4f2;
+}
+.service-card:nth-child(2) > .icon {
+  background: #fff;
+}
+.service-card:hover {
+  box-shadow: 0 25px 45px #2e609b17;
+}
+.service-card > .icon {
+  border-radius: 50%;
+  border: 1px solid #c4d8ef;
+  background: #edf5ff;
+}
+.principles-panel {
+  border-radius: 26px;
+  background-image: radial-gradient(
+    ellipse at 50% 30%,
+    #3a5f8c,
+    transparent 68%
+  );
+}
+.precision-art i {
+  border-color: #5377aa;
+}
+.precision-art i:nth-child(2) {
+  border-color: #7194c6;
+}
+.precision-art i:nth-child(3) {
+  border-color: #89a9d5;
+}
+.precision-art i:nth-child(4) {
+  border-color: #bbd4f1;
+}
+.journey-steps li {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px #30558806;
+}
+.step-number {
+  color: #2b64a8;
+  border-bottom: 1px solid #dbe5ef;
+  padding-bottom: 22px;
+  font-size: 44px;
+}
+.faq-list details[open] {
+  background: #edf4fc;
+  border-radius: 12px;
+  padding-inline: 17px;
+}
+.form-panel {
+  border-radius: 24px;
+  box-shadow: 0 24px 80px #365d8f12;
+}
+.demo-notice {
+  border-left: 3px solid #668fbf;
+}
+.contact-section {
+  background: #10253f;
+}
+.contact-section h2 em {
+  color: #afd1f6;
+}
+.button-light {
+  border-radius: 25px;
+}
+.footer-brand {
+  color: #183c68;
+}
+@media (min-width: 1600px) {
+  .hero.dental-hero {
+    grid-template-columns: 1fr 1.55fr 0.65fr;
+    padding-top: 70px;
+  }
+  .dental-hero .hero-copy h1 {
+    font-size: 81px;
+  }
+  .dental-hero .hero-scene img {
+    max-height: 760px;
+  }
+}
+@media (max-width: 1150px) {
+  .hero.dental-hero {
+    grid-template-columns: 1fr 1.25fr 0.62fr;
+    gap: 0 8px;
+    padding-top: 45px;
+  }
+  .dental-hero .hero-copy h1 {
+    font-size: 52px;
+    letter-spacing: -2.9px;
+  }
+  .dental-hero .hero-copy h1 em {
+    letter-spacing: -2.7px;
+  }
+  .dental-hero .hero-copy > .eyebrow {
+    font-size: 7px;
+  }
+  .dental-hero .hero-text {
+    font-size: 12px;
+  }
+  .hero-aside {
+    padding-left: 10px;
+  }
+  .hero-aside h2 {
+    font-size: 19px;
+  }
+  .hero-aside > p {
+    font-size: 10px;
+  }
+  .hero-badge {
+    font-size: 8px;
+  }
+  .hero-facts > div {
+    padding: 21px 20px;
+    gap: 12px;
+  }
+  .fact-chip {
+    display: none;
+  }
+  .hero-facts div > span:not(.fact-chip):not(.fact-icon) {
+    font-size: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .dental-hero:before {
+    left: -32px;
+    right: -32px;
+  }
+  .hero.dental-hero {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0 20px;
+    padding-top: 45px;
+  }
+  .dental-hero .hero-copy h1 {
+    font-size: clamp(38px, 6.8vw, 59px);
+    letter-spacing: -3px;
+  }
+  .dental-hero .hero-copy h1 em {
+    letter-spacing: -2.8px;
+  }
+  .dental-hero .hero-text {
+    font-size: 13px;
+  }
+  .dental-hero .hero-visual {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .dental-hero .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero-aside {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1.2fr;
+    gap: 15px 25px;
+    align-items: center;
+    border-top: 1px solid #cbddef;
+    padding: 24px 0 0;
+    margin: 20px 0;
+  }
+  .hero-badge {
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+  }
+  .aside-diagram {
+    display: none;
+  }
+  .hero-aside h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .hero-aside > p {
+    font-size: 11px;
+    margin: 0;
+  }
+  .hero-aside > .text-link {
+    grid-column: 3;
+    min-height: 25px;
+    margin-top: -5px;
+  }
+  .hero-facts {
+    margin-top: 7px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-facts > p {
+    grid-column: 1/-1;
+    padding: 10px 20px;
+    border-top: 1px solid #d5e2f0;
+    text-align: center;
+  }
+  .hero-facts > div:nth-child(2) {
+    border-right: 0;
+  }
+  .dental-hero .art-caption {
+    left: -9%;
+    max-width: 75%;
+    top: 20%;
+  }
+  .dental-hero .visual-detail {
+    right: -4%;
+    bottom: 22%;
+    max-width: 85%;
+  }
+  .hero-watermark {
+    font-size: 220px;
+    letter-spacing: -20px;
+    top: 90px;
+    left: 15%;
+  }
+  .dental-hero .art-note {
+    font-size: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .hero.dental-hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 32px 0 10px;
+  }
+  .dental-hero:before {
+    inset: 200px -20px 300px;
+  }
+  .hero-watermark {
+    font-size: 160px;
+    letter-spacing: -12px;
+    top: 355px;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .dental-hero .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+    max-width: 100%;
+  }
+  .dental-hero .hero-copy h1 {
+    font-size: clamp(46px, 12vw, 65px);
+    letter-spacing: -2.9px;
+    line-height: 1.01;
+    margin-bottom: 24px;
+  }
+  .dental-hero .hero-copy h1 em {
+    letter-spacing: -2.9px;
+  }
+  .dental-hero .hero-copy > .eyebrow {
+    font-size: 7px;
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+  .dental-hero .hero-text {
+    font-size: 13px;
+    max-width: 100%;
+    line-height: 1.8;
+    margin-bottom: 21px;
+  }
+  .dental-hero .hero-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+  }
+  .dental-hero .hero-actions > .button {
+    font-size: 11px;
+    gap: 12px;
+    padding: 10px 11px 10px 18px;
+  }
+  .dental-hero .hero-actions > .button .icon {
+    padding: 7px;
+    width: 16px;
+    height: 16px;
+  }
+  .dental-hero .hero-actions > .text-link {
+    font-size: 10px;
+    padding-left: 0;
+    min-height: 44px;
+  }
+  .dental-hero .hero-foot {
+    font-size: 8px;
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  .dental-hero .hero-visual {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 15px;
+    padding-bottom: 22px;
+    max-width: 440px;
+    justify-self: center;
+  }
+  .dental-hero .hero-scene img {
+    width: 100%;
+    margin: 0;
+    min-height: 0;
+    max-height: none;
+  }
+  .dental-hero .art-caption {
+    left: 0;
+    top: 25%;
+    padding: 10px 12px;
+    max-width: 71%;
+    gap: 9px;
+  }
+  .dental-hero .art-caption p {
+    font-size: 9px;
+  }
+  .dental-hero .art-caption .eyebrow {
+    font-size: 5px;
+  }
+  .art-dot {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 0 4px #e3effb;
+  }
+  .dental-hero .visual-detail {
+    right: 0;
+    bottom: 23%;
+    padding: 9px;
+    max-width: 77%;
+    gap: 7px;
+  }
+  .dental-hero .visual-detail strong {
+    font-size: 5px;
+  }
+  .dental-hero .visual-detail div > span {
+    font-size: 8px;
+    max-width: 145px;
+  }
+  .dental-hero .detail-symbol {
+    width: 24px;
+    height: 24px;
+    font-size: 19px;
+  }
+  .dental-hero .art-note {
+    font-size: 7px;
+    bottom: 0;
+    line-height: 1.6;
+  }
+  .hero-aside {
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 20px;
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+  .hero-badge {
+    grid-column: 1/-1;
+    font-size: 9px;
+  }
+  .hero-aside h2 {
+    font-size: 23px;
+    align-self: start;
+  }
+  .hero-aside > p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .hero-aside > .text-link {
+    grid-column: 1/-1;
+    font-size: 11px;
+    margin: 0;
+    min-height: 38px;
+  }
+  .hero-facts {
+    grid-column: 1;
+    grid-row: 4;
+    border-radius: 12px;
+    margin-top: 0;
+  }
+  .hero-facts > div {
+    padding: 20px 16px;
+    gap: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero-facts strong {
+    font-size: 38px;
+  }
+  .hero-facts div > span:not(.fact-chip):not(.fact-icon) {
+    font-size: 10px;
+  }
+  .fact-icon {
+    display: none;
+  }
+  .hero-facts > p {
+    font-size: 8px;
+    padding: 10px 15px;
+  }
+  .dental-hero + .ribbon {
+    font-size: 9px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+  .service-card {
+    padding: 26px 24px;
+  }
+  .step-number {
+    font-size: 31px;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .faq-list details[open] {
+    padding-inline: 12px;
+  }
+  .form-panel {
+    border-radius: 17px;
+  }
+  .header-book.button {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dental-hero * {
+    transition: none !important;
+  }
+}

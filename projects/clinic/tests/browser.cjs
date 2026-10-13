@@ -86,7 +86,25 @@ if (process.env.CHROMIUM_PATH)
           ),
           `${language}: overflow at ${width}`,
         );
+        const clippedHeadings = await page
+          .locator("h1, h2, h3, .hero-actions, .language-control")
+          .evaluateAll((nodes) =>
+            nodes
+              .filter((node) => node.scrollWidth > node.clientWidth + 1)
+              .map((node) => node.textContent.trim()),
+          );
+        assert.deepEqual(
+          clippedHeadings,
+          [],
+          `${language}: heading/control clipping at ${width}`,
+        );
       }
+      assert(
+        await page
+          .locator(".hero-scene img")
+          .evaluate((image) => image.complete && image.naturalWidth > 0),
+        "Original implant illustration rendered",
+      );
       await page.setViewportSize({ width: 390, height: 844 });
       await page.screenshot({
         path: path.join(screenshots, `${language}-mobile.png`),
