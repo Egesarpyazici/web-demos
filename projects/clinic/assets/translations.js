@@ -1,7 +1,7 @@
-// Complete interface copy. All visual-study labels are localized.
+// Complete EN/DE/RU interface copy; numeric hero details describe demo features only.
 window.CLINIC_TRANSLATIONS = {
   en: {
-    pageTitle: "Avela — Care, considered. In every detail. · Clinic concept",
+    pageTitle: "Avela — A new dimension of care · Dental clinic concept",
     description:
       "An original multilingual private clinic website concept. Explore a calmer care experience and prepare a demonstration appointment inquiry. No medical service or booking is provided.",
     skip: "Skip to content",
@@ -9,7 +9,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "A fictional clinic. A real attention to detail.",
     portfolio: "Back to portfolio",
     brandLabel: "Avela clinic concept, home",
-    brandSub: "HEALTHCARE, CONSIDERED",
+    brandSub: "DENTAL & PERSONAL CARE",
     navLabel: "Main navigation",
     menu: "Menu",
     services: "Care & services",
@@ -17,18 +17,18 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Questions",
     book: "Plan a visit",
     language: "Language",
-    heroEyebrow: "A NEW PERSPECTIVE ON PERSONAL CARE",
-    heroTitle: "Care, considered.<br><em>In every detail.</em>",
+    heroEyebrow: "A DIFFERENT DIMENSION OF CARE",
+    heroTitle: "Precision.<br>Presence.<br><em>Personal care.</em>",
     heroText:
-      "A clearer approach to your health. Explore a private clinic concept where thoughtful design, personal attention, and straightforward conversations come together.",
-    heroCta: "Plan your first step",
-    heroSecondary: "Explore the approach",
-    heroFoot: "Personal attention. Clear choices. A considered experience.",
+      "A forward-looking dental and clinic concept. Built around clear conversations, thoughtful choices, and the details that make an experience feel exceptional.",
+    heroCta: "Explore your visit",
+    heroSecondary: "Discover Avela",
+    heroFoot: "Original design. Thoughtful experience. Demo / Concept.",
     artLabel:
-      "Original three-dimensional-style illustration of a polished ceramic tooth suspended inside a precision ring above a metallic platform. A design study, not a medical device.",
-    artTag: "PRECISION IN THE DETAILS",
-    artCaption: "Designed around you.",
-    artNote: "Original visual study · Not a medical device",
+      "Original exploded dental-implant-inspired sculpture: a luminous ceramic crown, polished connector, and threaded metallic base surrounded by blue orbital lines. Illustrative artwork, not a medical device.",
+    artTag: "01 / SURFACE STUDY",
+    artCaption: "Precision in every contour.",
+    artNote: "Original design study · Not a real device or treatment",
     ribbon1: "Space to ask questions",
     ribbon2: "Clarity at every step",
     ribbon3: "Care that considers you",
@@ -78,7 +78,8 @@ window.CLINIC_TRANSLATIONS = {
     step3Text:
       "Copy your summary. WhatsApp opens only if a real destination has been configured, and you decide whether to send.",
     spaceEyebrow: "04 / THE SPACE BETWEEN",
-    spaceTitle: "Intentional spaces.<br><em>Exceptional attention.</em>",
+    spaceTitle:
+      "A space with purpose.<br><em>Designed to inspire confidence.</em>",
     spaceText:
       "Clean lines, considered lighting, and thoughtful proportions. An original architectural concept for a clinic that brings clarity to every part of the visit.",
     spaceLabel:
@@ -184,11 +185,19 @@ window.CLINIC_TRANSLATIONS = {
     top: "Back to top",
     noscript:
       "This concept needs JavaScript for language switching and the inquiry builder. English content, navigation, and FAQs remain available. Nothing can be submitted.",
-    visualDetailTitle: "A considered perspective",
-    visualDetailText: "Every detail has a purpose.",
+    visualDetailTitle: "02 / STRUCTURE STUDY",
+    visualDetailText: "A different perspective on detail.",
+    heroAsideTitle: "The details. The difference.",
+    heroAsideText:
+      "From your first question to your next step, clarity is part of the design.",
+    heroBadge: "Designed around people",
+    statLanguages: "Interface languages",
+    statServices: "Care concepts to explore",
+    statNote: "Demo features, not clinical statistics.",
+    heroExplore: "Explore the experience",
   },
   de: {
-    pageTitle: "Avela — Zuwendung. In jedem Detail. · Praxiskonzept",
+    pageTitle: "Avela — Eine neue Dimension der Zuwendung · Praxiskonzept",
     description:
       "Ein mehrsprachiges Website-Konzept für eine fiktive Privatpraxis. Entdecken Sie einen ruhigeren Ansatz und erstellen Sie eine Beispielanfrage. Keine medizinische Leistung oder Buchung.",
     skip: "Zum Inhalt springen",
@@ -196,7 +205,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "Eine fiktive Praxis. Mit Liebe zum Detail.",
     portfolio: "Zurück zum Portfolio",
     brandLabel: "Avela-Praxiskonzept, Startseite",
-    brandSub: "ZUWENDUNG, DURCHDACHT",
+    brandSub: "ZAHNGESUNDHEIT & BETREUUNG",
     navLabel: "Hauptnavigation",
     menu: "Menü",
     services: "Angebot",
@@ -204,19 +213,18 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Fragen",
     book: "Besuch planen",
     language: "Sprache",
-    heroEyebrow: "EINE NEUE PERSPEKTIVE AUF PERSÖNLICHE BETREUUNG",
-    heroTitle: "Zuwendung.<br><em>In jedem Detail.</em>",
+    heroEyebrow: "EINE ANDERE DIMENSION DER ZUWENDUNG",
+    heroTitle: "Präzision.<br>Präsenz.<br><em>Persönliche Betreuung.</em>",
     heroText:
-      "Ein klarer Ansatz für Ihre Gesundheit. Entdecken Sie ein Privatpraxiskonzept, das durchdachte Gestaltung, persönliche Aufmerksamkeit und verständliche Gespräche verbindet.",
-    heroCta: "Den ersten Schritt planen",
-    heroSecondary: "Den Ansatz entdecken",
-    heroFoot:
-      "Persönliche Aufmerksamkeit. Klare Entscheidungen. Durchdachte Abläufe.",
+      "Ein zukunftsorientiertes Zahn- und Praxiskonzept. Mit klaren Gesprächen, durchdachten Entscheidungen und Details, die das Erlebnis besonders machen.",
+    heroCta: "Den Besuch entdecken",
+    heroSecondary: "Avela entdecken",
+    heroFoot: "Originales Design. Durchdachtes Erlebnis. Demo / Konzept.",
     artLabel:
-      "Originale dreidimensionale Illustration eines polierten Keramikzahns, der in einem Präzisionsring über einer metallischen Plattform schwebt. Eine Designstudie, kein medizinisches Gerät.",
-    artTag: "PRÄZISION IM DETAIL",
-    artCaption: "Für Sie gestaltet.",
-    artNote: "Originale Designstudie · Kein medizinisches Gerät",
+      "Originale zerlegte Skulptur, inspiriert von einem Zahnimplantat: eine leuchtende Keramikkrone, ein poliertes Verbindungselement und eine metallische Gewindebasis mit blauen Orbitallinien. Illustration, kein medizinisches Gerät.",
+    artTag: "01 / OBERFLÄCHENSTUDIE",
+    artCaption: "Präzision in jeder Kontur.",
+    artNote: "Originale Designstudie · Kein reales Gerät oder Verfahren",
     ribbon1: "Raum für Fragen",
     ribbon2: "Klarheit bei jedem Schritt",
     ribbon3: "Der Mensch im Mittelpunkt",
@@ -266,7 +274,7 @@ window.CLINIC_TRANSLATIONS = {
     step3Text:
       "Kopieren Sie Ihre Zusammenfassung. WhatsApp öffnet sich nur mit einer konfigurierten Zielnummer. Sie entscheiden, ob Sie die Nachricht senden.",
     spaceEyebrow: "04 / RAUM ZUM ANKOMMEN",
-    spaceTitle: "Bewusste Gestaltung.<br><em>Besondere Aufmerksamkeit.</em>",
+    spaceTitle: "Räume mit Sinn.<br><em>Für ein gutes Gefühl gestaltet.</em>",
     spaceText:
       "Klare Linien, gezieltes Licht und durchdachte Proportionen. Ein originales Architekturkonzept für eine Praxis, die jeden Teil des Besuchs verständlicher macht.",
     spaceLabel:
@@ -373,12 +381,19 @@ window.CLINIC_TRANSLATIONS = {
     top: "Nach oben",
     noscript:
       "Dieses Konzept benötigt JavaScript für den Sprachwechsel und das Anfrageformular. Englische Inhalte, Navigation und häufige Fragen bleiben verfügbar. Es kann nichts übermittelt werden.",
-    visualDetailTitle: "Ein durchdachter Blickwinkel",
-    visualDetailText: "Jedes Detail hat einen Zweck.",
+    visualDetailTitle: "02 / STRUKTURSTUDIE",
+    visualDetailText: "Ein anderer Blick auf Details.",
+    heroAsideTitle: "Die Details. Der Unterschied.",
+    heroAsideText:
+      "Von der ersten Frage bis zum nächsten Schritt: Klarheit gehört zum Design.",
+    heroBadge: "Für Menschen gestaltet",
+    statLanguages: "Sprachen der Oberfläche",
+    statServices: "Angebotskonzepte entdecken",
+    statNote: "Demofunktionen, keine medizinischen Statistiken.",
+    heroExplore: "Das Erlebnis entdecken",
   },
   ru: {
-    pageTitle:
-      "Avela — Продуманная забота. В каждой детали. · Концепция клиники",
+    pageTitle: "Avela — Новое измерение заботы · Концепция клиники",
     description:
       "Авторская многоязычная концепция сайта частной клиники. Познакомьтесь с продуманным подходом и подготовьте пример обращения. Медицинские услуги и запись не предоставляются.",
     skip: "Перейти к содержимому",
@@ -386,7 +401,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "Вымышленная клиника. Настоящее внимание к деталям.",
     portfolio: "Вернуться в портфолио",
     brandLabel: "Концепция клиники Avela, главная",
-    brandSub: "ПРОДУМАННАЯ ЗАБОТА",
+    brandSub: "СТОМАТОЛОГИЯ И ЗАБОТА",
     navLabel: "Основная навигация",
     menu: "Меню",
     services: "Направления",
@@ -394,18 +409,18 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Вопросы",
     book: "План визита",
     language: "Язык",
-    heroEyebrow: "НОВЫЙ ВЗГЛЯД НА ПЕРСОНАЛЬНУЮ ЗАБОТУ",
-    heroTitle: "Продуманная забота.<br><em>В каждой детали.</em>",
+    heroEyebrow: "НОВОЕ ИЗМЕРЕНИЕ ЗАБОТЫ",
+    heroTitle: "Точность.<br>Внимание.<br><em>Личная забота.</em>",
     heroText:
-      "Понятный подход к вашему здоровью. Откройте для себя концепцию частной клиники, где продуманный дизайн сочетается с личным вниманием и ясным общением.",
-    heroCta: "Наметить первый шаг",
-    heroSecondary: "Познакомиться с подходом",
-    heroFoot: "Личное внимание. Понятный выбор. Продуманный опыт.",
+      "Концепция современной стоматологии и клиники. Понятное общение, продуманный выбор и детали, которые делают каждый шаг особенным.",
+    heroCta: "Продумать визит",
+    heroSecondary: "Открыть Avela",
+    heroFoot: "Авторский дизайн. Продуманный опыт. Демо / Концепция.",
     artLabel:
-      "Авторская объёмная иллюстрация полированного керамического зуба внутри точного кольца над металлической платформой. Дизайн-концепция, не медицинское устройство.",
-    artTag: "ТОЧНОСТЬ В ДЕТАЛЯХ",
-    artCaption: "Создано вокруг вас.",
-    artNote: "Авторская визуальная концепция · Не медицинское устройство",
+      "Авторская разборная скульптура по мотивам зубного имплантата: сияющая керамическая коронка, полированный соединитель и металлическая резьбовая основа с голубыми орбитальными линиями. Иллюстрация, не медицинское устройство.",
+    artTag: "01 / ФОРМА ПОВЕРХНОСТИ",
+    artCaption: "Точность каждого контура.",
+    artNote: "Авторская концепция · Не реальное устройство или процедура",
     ribbon1: "Время для вопросов",
     ribbon2: "Ясность на каждом этапе",
     ribbon3: "Внимание к человеку",
@@ -456,7 +471,7 @@ window.CLINIC_TRANSLATIONS = {
       "Скопируйте обращение. WhatsApp откроется только при наличии настроенного номера. Решение об отправке остаётся за вами.",
     spaceEyebrow: "04 / ПРОСТРАНСТВО ДЛЯ ПАУЗЫ",
     spaceTitle:
-      "Продуманное пространство.<br><em>Исключительное внимание.</em>",
+      "Пространство со смыслом.<br><em>Дизайн, который располагает.</em>",
     spaceText:
       "Чёткие линии, выверенный свет и продуманные пропорции. Авторская архитектурная концепция клиники, в которой каждый этап визита становится понятнее.",
     spaceLabel:
@@ -563,7 +578,15 @@ window.CLINIC_TRANSLATIONS = {
     top: "Наверх",
     noscript:
       "Для переключения языка и подготовки обращения нужен JavaScript. Английские тексты, навигация и ответы на вопросы остаются доступны. Отправка данных невозможна.",
-    visualDetailTitle: "Продуманный взгляд",
-    visualDetailText: "У каждой детали есть цель.",
+    visualDetailTitle: "02 / СТРУКТУРА",
+    visualDetailText: "Новый взгляд на детали.",
+    heroAsideTitle: "Детали. Которые меняют всё.",
+    heroAsideText:
+      "От первого вопроса до следующего шага: ясность заложена в сам дизайн.",
+    heroBadge: "Создано для людей",
+    statLanguages: "Языка интерфейса",
+    statServices: "Концепции направлений",
+    statNote: "Возможности демоверсии, не медицинская статистика.",
+    heroExplore: "Познакомиться с концепцией",
   },
 };

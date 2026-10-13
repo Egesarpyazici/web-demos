@@ -2,7 +2,7 @@
 
 **Phase 1 · Live Demo — Concept**
 
-Avela is a fictional private clinic identity and an original static website. Its refined visual system uses mineral whites, graphite, restrained mint, modern sans-serif typography, and original dimensional healthcare illustrations. The design is deliberately distinct from the main portfolio. There are no fabricated clinicians, qualifications, testimonials, medical outcomes, or real facilities.
+Avela is a fictional private clinic identity and an original static website. Its dental-led visual system uses medical blue, cool white, navy, metallic accents, bold typography, and original dimensional healthcare illustrations. The design is deliberately distinct from the main portfolio. There are no fabricated clinicians, qualifications, testimonials, medical outcomes, or real facilities.
 
 ## Business value
 
@@ -55,7 +55,8 @@ The contact action prefills a localized general question; the summary action pre
 ## Files
 
 - `index.html` — semantic English fallback and complete page structure.
-- `assets/clinic.css` — isolated responsive visual identity and interaction states.
+- `assets/clinic.css` — shared responsive visual system and interaction states.
+- `assets/dental-hero.css` — dimensional dental showcase, supporting panels, truthful feature metrics, and coordinated section treatments.
 - `assets/clinic.js` — translations, navigation, validation, summaries, clipboard, WhatsApp.
 - `assets/translations.js` — complete matching EN/DE/RU dictionaries.
 - `assets/config.js` — public WhatsApp destination only.
@@ -87,10 +88,12 @@ Manual review should additionally cover real touch devices, screen readers, cros
 
 No medical advice, real staff, real address, live availability, appointment booking, message submission, delivery verification, or backend storage. No WhatsApp destination is configured by default. Safari/Firefox, assistive technology, real-device behavior, and live GitHub Pages deployment require separate verification. All other portfolio demos remain future work; Phase 2 has not begun.
 
-## Phase 1 visual refinement
+## Final Phase 1 dental refinement
 
-The redesigned hero centers on an original ceramic-tooth sculpture, precision ring, reflective platform, and restrained detail panels. All artwork is CSS/SVG; it is not a real product, device, or facility. The old lounge illustration has been replaced.
+The hero uses a dramatic three-part desktop composition: large stacked typography, a central exploded implant-inspired sculpture, and a supporting information panel. The original SVG shows a ceramic-inspired crown, polished connector, threaded metallic base, orbital lines, and soft material lighting. It is an illustrative design study, not a real device, treatment, or anatomical specification.
 
-A graphite/mint brand mark, translucent sticky navigation, bordered language control, stronger CTAs, unified white service/process cards, a dark principles section, and a refined inquiry panel form one visual system. No external font or runtime dependency was introduced. Sticky-header offsets accommodate anchor navigation, and motion remains optional through reduced-motion support.
+Medical blue, cool whites, navy, and metallic accents unify the navigation, language selector, capsule CTA, floating detail panels, service cards, principles, journey, architectural concept, FAQ, inquiry builder, and footer. Tablet and mobile layouts reorganize the composition without dropping content. The portfolio’s clinic preview shares the same local artwork. No other demo is changed.
 
-All updated headings and visual descriptions have English, German, and Russian versions, including the no-JavaScript English fallback. The validation, language persistence, FAQ, inquiry generation, clipboard, and WhatsApp implementation in `assets/clinic.js` is unchanged. The existing browser regression suite was rerun against the redesign; it passed, including zero axe WCAG A/AA violations in all three languages at 320px and 1440px. Desktop/mobile screenshots were reviewed. This remains Phase 1; no later demo is implemented.
+The hero’s **03 languages** and **04 care concepts** are actual interface features, explicitly labeled as demo features rather than clinical statistics. The people-centered badge is a design principle, not an endorsement, accreditation, or fabricated review. No patient counts, success rates, medical credentials, or invented achievements are shown.
+
+All new copy and artwork descriptions are translated into English, German, and Russian, including the English no-JavaScript fallback. The validation, persistence, FAQ, inquiry generation, clipboard, and WhatsApp code in `assets/clinic.js` remains unchanged. Reduced-motion preferences and visible focus are preserved. No runtime dependency, external image, font service, or backend was added. This remains Phase 1 only.
