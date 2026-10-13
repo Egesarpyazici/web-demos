@@ -1948,3 +1948,74 @@ h2 {
     letter-spacing: -1px;
   }
 }
+
+/* Orivela: scoped live travel preview, sharing the demo's original artwork. */
+.orivela-art {
+  background: #092b39;
+  color: #fcf9ef;
+  isolation: isolate;
+}
+.orivela-art > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% center;
+  z-index: -2;
+}
+.orivela-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #071f2be8, #071f2b22);
+  z-index: -1;
+}
+.orivela-brand {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+}
+.orivela-brand small {
+  display: block;
+  margin-top: 7px;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+}
+.orivela-art > strong {
+  position: absolute;
+  top: 105px;
+  left: 30px;
+  font-weight: 400;
+  font-size: clamp(30px, 3.8vw, 50px);
+  line-height: 1.07;
+  letter-spacing: -0.05em;
+}
+.orivela-art > strong em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #e8d6a6;
+}
+.orivela-detail {
+  position: absolute;
+  bottom: 53px;
+  left: 30px;
+  font-size: 7px;
+  letter-spacing: 0.13em;
+}
+.orivela-art .concept-label {
+  color: #f7f5ee;
+}
+@media (max-width: 520px) {
+  .orivela-brand,
+  .orivela-art > strong,
+  .orivela-detail {
+    left: 20px;
+  }
+  .orivela-art > strong {
+    top: 107px;
+    font-size: 32px;
+  }
+}
