@@ -88,7 +88,7 @@ Each demo requires its own scoped implementation and testing. Add navigation to 
 
 ## Phase 1: Avela clinic demo
 
-Open `projects/clinic/` through the static server. Avela uses an original warm healthcare identity, local SVG/CSS illustrations, and fully translated English, German, and Russian content. It demonstrates how a healthcare business could communicate services and guide international visitors toward a structured inquiry.
+Open `projects/clinic/` through the static server. Avela uses a refined graphite, mineral-white, and mint healthcare identity, original dimensional SVG/CSS illustrations, and fully translated English, German, and Russian content. It demonstrates how a healthcare business could communicate services and guide international visitors toward a structured inquiry.
 
 The inquiry builder validates sample details, formats dates locally, generates a reviewable summary, and supports copying. Nothing is booked, submitted, or received. WhatsApp is intentionally unconfigured; add a real authorized number only in `projects/clinic/assets/config.js`. No form data is persisted. Only the language preference is saved locally when storage is available.
 

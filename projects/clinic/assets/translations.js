@@ -1,7 +1,7 @@
-// All interface copy. No user input is treated as markup.
+// Complete interface copy. All visual-study labels are localized.
 window.CLINIC_TRANSLATIONS = {
   en: {
-    pageTitle: "Avela — A little more space for care · Clinic concept",
+    pageTitle: "Avela — Care, considered. In every detail. · Clinic concept",
     description:
       "An original multilingual private clinic website concept. Explore a calmer care experience and prepare a demonstration appointment inquiry. No medical service or booking is provided.",
     skip: "Skip to content",
@@ -9,7 +9,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "A fictional clinic. A real attention to detail.",
     portfolio: "Back to portfolio",
     brandLabel: "Avela clinic concept, home",
-    brandSub: "A considered approach to care",
+    brandSub: "HEALTHCARE, CONSIDERED",
     navLabel: "Main navigation",
     menu: "Menu",
     services: "Care & services",
@@ -17,25 +17,25 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Questions",
     book: "Plan a visit",
     language: "Language",
-    heroEyebrow: "CARE, WITH ROOM TO BREATHE",
-    heroTitle: "A little more time.<br>A little more <em>human.</em>",
+    heroEyebrow: "A NEW PERSPECTIVE ON PERSONAL CARE",
+    heroTitle: "Care, considered.<br><em>In every detail.</em>",
     heroText:
-      "Imagine care that starts with listening. A welcoming space, thoughtful conversations, and a clearer path to your next step.",
-    heroCta: "Explore an appointment",
-    heroSecondary: "Discover our approach",
-    heroFoot: "Designed around people. Down to the smallest detail.",
+      "A clearer approach to your health. Explore a private clinic concept where thoughtful design, personal attention, and straightforward conversations come together.",
+    heroCta: "Plan your first step",
+    heroSecondary: "Explore the approach",
+    heroFoot: "Personal attention. Clear choices. A considered experience.",
     artLabel:
-      "Original illustration of a tranquil clinic lounge with an arched window, a curved sofa, a plant, and soft sunlight.",
-    artTag: "THE AVELA EXPERIENCE",
-    artCaption: "A calmer kind of care.",
-    artNote: "An original space concept — not a real facility",
+      "Original three-dimensional-style illustration of a polished ceramic tooth suspended inside a precision ring above a metallic platform. A design study, not a medical device.",
+    artTag: "PRECISION IN THE DETAILS",
+    artCaption: "Designed around you.",
+    artNote: "Original visual study · Not a medical device",
     ribbon1: "Space to ask questions",
     ribbon2: "Clarity at every step",
     ribbon3: "Care that considers you",
     servicesEyebrow: "01 / CARE, CONSIDERED",
-    servicesTitle: "Different needs.<br><em>The same thoughtful approach.</em>",
+    servicesTitle: "Expertly designed.<br><em>Personally considered.</em>",
     servicesIntro:
-      "A concept for connected, everyday care. Explore a service to shape your demonstration inquiry.",
+      "Four service concepts. One clear principle: make every interaction more useful, understandable, and personal.",
     serviceGeneral: "General consultations",
     serviceGeneralText:
       "A starting point for your questions, with space to discuss everyday health concerns and possible next steps.",
@@ -52,7 +52,7 @@ window.CLINIC_TRANSLATIONS = {
     serviceDisclaimer:
       "Illustrative service categories only. This demo does not provide medical advice, diagnosis, or treatment.",
     principlesEyebrow: "02 / A DIFFERENT STARTING POINT",
-    principlesTitle: "Care should feel<br><em>like a conversation.</em>",
+    principlesTitle: "A higher standard<br><em>of consideration.</em>",
     principlesIntro:
       "These are the principles behind the Avela concept. A design for a more considered experience, not a claim about an operating clinic.",
     principle1: "Listen before anything else.",
@@ -64,10 +64,10 @@ window.CLINIC_TRANSLATIONS = {
     principle3: "Let people set the pace.",
     principle3Text:
       "Design welcoming spaces and give people time to consider their choices.",
-    principlesQuote: "Less uncertainty.<br>More understanding.",
-    principlesCaption: "A simple idea at the heart of this concept.",
+    principlesQuote: "Human at heart.<br>Considered by design.",
+    principlesCaption: "The guiding principle of the Avela concept.",
     journeyEyebrow: "03 / FROM FIRST QUESTION TO NEXT STEP",
-    journeyTitle: "A gentler way <em>to begin.</em>",
+    journeyTitle: "Your next step.<br><em>Made clear.</em>",
     step1: "Explore your options",
     step1Text:
       "Get to know the service concepts and choose the one you would like to ask about.",
@@ -78,22 +78,22 @@ window.CLINIC_TRANSLATIONS = {
     step3Text:
       "Copy your summary. WhatsApp opens only if a real destination has been configured, and you decide whether to send.",
     spaceEyebrow: "04 / THE SPACE BETWEEN",
-    spaceTitle: "Thoughtful surroundings.<br><em>A softer landing.</em>",
+    spaceTitle: "Intentional spaces.<br><em>Exceptional attention.</em>",
     spaceText:
-      "Natural shapes, warm materials, and room to pause. A visual exploration of how a clinic could feel less clinical and more welcoming.",
+      "Clean lines, considered lighting, and thoughtful proportions. An original architectural concept for a clinic that brings clarity to every part of the visit.",
     spaceLabel:
-      "An original architectural illustration of an arched doorway, a bench, and a sculptural plant.",
-    spaceTag: "DESIGNED TO PUT PEOPLE AT EASE",
-    space1: "Room to pause",
+      "Original architectural concept showing a luminous glass partition, a sculptural reception desk, and a minimal seating area. Not a real clinic.",
+    spaceTag: "AN ARCHITECTURAL STUDY IN CLARITY",
+    space1: "Purpose in every detail",
     space1Text:
-      "A quiet lounge concept with uncluttered spaces and soft, natural tones.",
-    space2: "Clarity by design",
+      "A reception concept defined by light, open space, and precise material choices.",
+    space2: "An intuitive arrival",
     space2Text:
-      "Simple wayfinding and a welcoming arrival sequence, considered from the first step.",
+      "A clear path from the entrance to the next step, with simplicity built into the experience.",
     spaceNote:
       "All spaces are original illustrations. No physical clinic or accessibility certification is represented.",
     faqEyebrow: "05 / A LITTLE CLARITY",
-    faqTitle: "Good questions.<br><em>Straightforward answers.</em>",
+    faqTitle: "Before your visit.<br><em>The details that matter.</em>",
     q1: "Is Avela a real clinic?",
     a1: "No. Avela is a fictional clinic identity created for a developer portfolio. The website demonstrates design, accessibility, and multilingual interactions. It does not offer medical services.",
     q2: "Can I book an appointment here?",
@@ -107,7 +107,7 @@ window.CLINIC_TRANSLATIONS = {
     q6: "What if I need urgent medical help?",
     a6: "This website is not a medical service and is not monitored. For urgent medical help, contact your local emergency services or an appropriate healthcare provider. Do not use this demo for medical requests.",
     formEyebrow: "06 / YOUR FIRST STEP",
-    formTitle: "Start with<br><em>a conversation.</em>",
+    formTitle: "Your preferences.<br><em>Your next step.</em>",
     formIntro:
       "Try the appointment inquiry experience. Choose a service, tell us your preferences, and prepare a summary to review.",
     formNoticeTitle: "An inquiry builder. Not a booking.",
@@ -172,7 +172,8 @@ window.CLINIC_TRANSLATIONS = {
     genericMessage:
       "Hello. I am exploring the Avela clinic website concept and would like to ask a question.",
     contactEyebrow: "A NOTE BEFORE YOU GO",
-    contactTitle: "Good care starts<br>with <em>clear communication.</em>",
+    contactTitle:
+      "Consider the possibilities.<br><em>Start a conversation.</em>",
     contactText:
       "This is a fictional clinic website, not a medical contact point. A real contact number can be added when adapting the design for a business.",
     contactAction: "Open WhatsApp",
@@ -183,9 +184,11 @@ window.CLINIC_TRANSLATIONS = {
     top: "Back to top",
     noscript:
       "This concept needs JavaScript for language switching and the inquiry builder. English content, navigation, and FAQs remain available. Nothing can be submitted.",
+    visualDetailTitle: "A considered perspective",
+    visualDetailText: "Every detail has a purpose.",
   },
   de: {
-    pageTitle: "Avela — Mehr Raum für Zuwendung · Praxiskonzept",
+    pageTitle: "Avela — Zuwendung. In jedem Detail. · Praxiskonzept",
     description:
       "Ein mehrsprachiges Website-Konzept für eine fiktive Privatpraxis. Entdecken Sie einen ruhigeren Ansatz und erstellen Sie eine Beispielanfrage. Keine medizinische Leistung oder Buchung.",
     skip: "Zum Inhalt springen",
@@ -193,7 +196,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "Eine fiktive Praxis. Mit Liebe zum Detail.",
     portfolio: "Zurück zum Portfolio",
     brandLabel: "Avela-Praxiskonzept, Startseite",
-    brandSub: "Zuwendung mit Bedacht",
+    brandSub: "ZUWENDUNG, DURCHDACHT",
     navLabel: "Hauptnavigation",
     menu: "Menü",
     services: "Angebot",
@@ -201,27 +204,26 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Fragen",
     book: "Besuch planen",
     language: "Sprache",
-    heroEyebrow: "ZUWENDUNG. MIT RAUM ZUM DURCHATMEN.",
-    heroTitle:
-      "Ein wenig mehr Zeit.<br>Ein wenig mehr <em>Menschlichkeit.</em>",
+    heroEyebrow: "EINE NEUE PERSPEKTIVE AUF PERSÖNLICHE BETREUUNG",
+    heroTitle: "Zuwendung.<br><em>In jedem Detail.</em>",
     heroText:
-      "Stellen Sie sich eine Betreuung vor, die mit Zuhören beginnt. Ein einladender Ort, aufmerksame Gespräche und ein klarer Weg zum nächsten Schritt.",
-    heroCta: "Eine Anfrage vorbereiten",
-    heroSecondary: "Unseren Ansatz entdecken",
-    heroFoot: "Für Menschen gestaltet. Bis ins kleinste Detail.",
+      "Ein klarer Ansatz für Ihre Gesundheit. Entdecken Sie ein Privatpraxiskonzept, das durchdachte Gestaltung, persönliche Aufmerksamkeit und verständliche Gespräche verbindet.",
+    heroCta: "Den ersten Schritt planen",
+    heroSecondary: "Den Ansatz entdecken",
+    heroFoot:
+      "Persönliche Aufmerksamkeit. Klare Entscheidungen. Durchdachte Abläufe.",
     artLabel:
-      "Originalillustration einer ruhigen Praxislounge mit Rundbogenfenster, geschwungenem Sofa, Pflanze und sanftem Sonnenlicht.",
-    artTag: "DAS AVELA-ERLEBNIS",
-    artCaption: "Zuwendung mit mehr Ruhe.",
-    artNote: "Ein originales Raumkonzept — keine reale Einrichtung",
+      "Originale dreidimensionale Illustration eines polierten Keramikzahns, der in einem Präzisionsring über einer metallischen Plattform schwebt. Eine Designstudie, kein medizinisches Gerät.",
+    artTag: "PRÄZISION IM DETAIL",
+    artCaption: "Für Sie gestaltet.",
+    artNote: "Originale Designstudie · Kein medizinisches Gerät",
     ribbon1: "Raum für Fragen",
     ribbon2: "Klarheit bei jedem Schritt",
     ribbon3: "Der Mensch im Mittelpunkt",
     servicesEyebrow: "01 / MIT BEDACHT GESTALTET",
-    servicesTitle:
-      "Unterschiedliche Anliegen.<br><em>Die gleiche Aufmerksamkeit.</em>",
+    servicesTitle: "Durchdacht gestaltet.<br><em>Persönlich ausgerichtet.</em>",
     servicesIntro:
-      "Ein Konzept für eine vernetzte Betreuung im Alltag. Wählen Sie ein Angebot für Ihre Beispielanfrage.",
+      "Vier Angebotskonzepte. Ein klarer Grundsatz: jede Interaktion nützlicher, verständlicher und persönlicher gestalten.",
     serviceGeneral: "Allgemeine Beratung",
     serviceGeneralText:
       "Ein Ausgangspunkt für Ihre Fragen, mit Raum für alltägliche Gesundheitsthemen und mögliche nächste Schritte.",
@@ -238,7 +240,7 @@ window.CLINIC_TRANSLATIONS = {
     serviceDisclaimer:
       "Die Angebote dienen nur der Veranschaulichung. Diese Demo bietet keine medizinische Beratung, Diagnose oder Behandlung.",
     principlesEyebrow: "02 / EIN ANDERER AUSGANGSPUNKT",
-    principlesTitle: "Gute Betreuung beginnt<br><em>mit einem Gespräch.</em>",
+    principlesTitle: "Aufmerksamkeit<br><em>mit Anspruch.</em>",
     principlesIntro:
       "Diese Grundsätze prägen das Avela-Konzept. Sie beschreiben einen Gestaltungsansatz, keine Leistungen einer realen Praxis.",
     principle1: "Zuerst einmal zuhören.",
@@ -250,10 +252,10 @@ window.CLINIC_TRANSLATIONS = {
     principle3: "Das eigene Tempo respektieren.",
     principle3Text:
       "Einladende Räume gestalten und Zeit lassen, um Entscheidungen zu überdenken.",
-    principlesQuote: "Weniger Ungewissheit.<br>Mehr Verständnis.",
-    principlesCaption: "Eine einfache Idee im Mittelpunkt dieses Konzepts.",
+    principlesQuote: "Menschlich im Kern.<br>Durchdacht im Detail.",
+    principlesCaption: "Der Leitgedanke des Avela-Konzepts.",
     journeyEyebrow: "03 / VON DER ERSTEN FRAGE ZUM NÄCHSTEN SCHRITT",
-    journeyTitle: "Ein entspannter <em>Anfang.</em>",
+    journeyTitle: "Ihr nächster Schritt.<br><em>Klar erklärt.</em>",
     step1: "Möglichkeiten entdecken",
     step1Text:
       "Lernen Sie die Angebotskonzepte kennen und wählen Sie das Thema für Ihre Anfrage.",
@@ -264,22 +266,22 @@ window.CLINIC_TRANSLATIONS = {
     step3Text:
       "Kopieren Sie Ihre Zusammenfassung. WhatsApp öffnet sich nur mit einer konfigurierten Zielnummer. Sie entscheiden, ob Sie die Nachricht senden.",
     spaceEyebrow: "04 / RAUM ZUM ANKOMMEN",
-    spaceTitle: "Durchdachte Räume.<br><em>Entspanntes Ankommen.</em>",
+    spaceTitle: "Bewusste Gestaltung.<br><em>Besondere Aufmerksamkeit.</em>",
     spaceText:
-      "Natürliche Formen, warme Materialien und Raum für eine Pause. Eine visuelle Idee dafür, wie eine Praxis weniger klinisch und einladender wirken könnte.",
+      "Klare Linien, gezieltes Licht und durchdachte Proportionen. Ein originales Architekturkonzept für eine Praxis, die jeden Teil des Besuchs verständlicher macht.",
     spaceLabel:
-      "Originale Architekturillustration mit einem Rundbogendurchgang, einer Bank und einer skulpturalen Pflanze.",
-    spaceTag: "GESTALTET FÜR EIN GUTES GEFÜHL",
-    space1: "Raum für eine Pause",
+      "Originales Architekturkonzept mit einer lichtdurchfluteten Glaswand, einem skulpturalen Empfangstresen und einem minimalistischen Sitzbereich. Keine reale Praxis.",
+    spaceTag: "EINE ARCHITEKTURSTUDIE IN KLARHEIT",
+    space1: "Jedes Detail hat einen Zweck",
     space1Text:
-      "Ein ruhiges Loungekonzept mit aufgeräumten Flächen und sanften Naturtönen.",
-    space2: "Orientierung durch Gestaltung",
+      "Ein Empfangskonzept, geprägt von Licht, offenem Raum und gezielter Materialwahl.",
+    space2: "Intuitiv ankommen",
     space2Text:
-      "Einfache Wegeführung und ein einladender Empfang, vom ersten Schritt an durchdacht.",
+      "Ein klarer Weg vom Eingang zum nächsten Schritt, mit Einfachheit als Gestaltungsprinzip.",
     spaceNote:
       "Alle Räume sind Originalillustrationen. Sie zeigen keine reale Praxis und belegen keine zertifizierte Barrierefreiheit.",
     faqEyebrow: "05 / EIN WENIG KLARHEIT",
-    faqTitle: "Gute Fragen.<br><em>Klare Antworten.</em>",
+    faqTitle: "Vor Ihrem Besuch.<br><em>Die wichtigen Details.</em>",
     q1: "Ist Avela eine echte Praxis?",
     a1: "Nein. Avela ist eine fiktive Praxisidentität für ein Entwicklerportfolio. Die Website demonstriert Design, Barrierefreiheit und mehrsprachige Interaktionen. Sie bietet keine medizinischen Leistungen.",
     q2: "Kann ich hier einen Termin buchen?",
@@ -293,7 +295,7 @@ window.CLINIC_TRANSLATIONS = {
     q6: "Was ist bei einem medizinischen Notfall zu tun?",
     a6: "Diese Website ist kein medizinischer Dienst und wird nicht überwacht. Wenden Sie sich in dringenden Fällen an den örtlichen Rettungsdienst oder eine geeignete medizinische Einrichtung. Verwenden Sie diese Demo nicht für medizinische Anfragen.",
     formEyebrow: "06 / IHR ERSTER SCHRITT",
-    formTitle: "Beginnen wir<br><em>mit einem Gespräch.</em>",
+    formTitle: "Ihre Wünsche.<br><em>Ihr nächster Schritt.</em>",
     formIntro:
       "Probieren Sie die Terminanfrage aus. Wählen Sie ein Angebot und Ihre Präferenzen, und erstellen Sie eine Zusammenfassung zur Prüfung.",
     formNoticeTitle: "Eine vorbereitete Anfrage. Keine Buchung.",
@@ -360,8 +362,7 @@ window.CLINIC_TRANSLATIONS = {
     genericMessage:
       "Hallo. Ich sehe mir das Avela-Praxiswebsite-Konzept an und habe eine Frage.",
     contactEyebrow: "NOCH EIN HINWEIS",
-    contactTitle:
-      "Gute Betreuung beginnt<br>mit <em>klarer Kommunikation.</em>",
+    contactTitle: "Möglichkeiten entdecken.<br><em>Ein Gespräch beginnen.</em>",
     contactText:
       "Dies ist eine fiktive Praxiswebsite, keine medizinische Kontaktstelle. Bei der Anpassung für ein Unternehmen kann eine echte Telefonnummer ergänzt werden.",
     contactAction: "WhatsApp öffnen",
@@ -372,9 +373,12 @@ window.CLINIC_TRANSLATIONS = {
     top: "Nach oben",
     noscript:
       "Dieses Konzept benötigt JavaScript für den Sprachwechsel und das Anfrageformular. Englische Inhalte, Navigation und häufige Fragen bleiben verfügbar. Es kann nichts übermittelt werden.",
+    visualDetailTitle: "Ein durchdachter Blickwinkel",
+    visualDetailText: "Jedes Detail hat einen Zweck.",
   },
   ru: {
-    pageTitle: "Avela — Больше пространства для заботы · Концепция клиники",
+    pageTitle:
+      "Avela — Продуманная забота. В каждой детали. · Концепция клиники",
     description:
       "Авторская многоязычная концепция сайта частной клиники. Познакомьтесь с продуманным подходом и подготовьте пример обращения. Медицинские услуги и запись не предоставляются.",
     skip: "Перейти к содержимому",
@@ -382,7 +386,7 @@ window.CLINIC_TRANSLATIONS = {
     demoNote: "Вымышленная клиника. Настоящее внимание к деталям.",
     portfolio: "Вернуться в портфолио",
     brandLabel: "Концепция клиники Avela, главная",
-    brandSub: "Продуманный подход к заботе",
+    brandSub: "ПРОДУМАННАЯ ЗАБОТА",
     navLabel: "Основная навигация",
     menu: "Меню",
     services: "Направления",
@@ -390,25 +394,25 @@ window.CLINIC_TRANSLATIONS = {
     faq: "Вопросы",
     book: "План визита",
     language: "Язык",
-    heroEyebrow: "ЗАБОТА, В КОТОРОЙ ЕСТЬ МЕСТО СПОКОЙСТВИЮ",
-    heroTitle: "Чуть больше времени.<br>Чуть больше <em>внимания.</em>",
+    heroEyebrow: "НОВЫЙ ВЗГЛЯД НА ПЕРСОНАЛЬНУЮ ЗАБОТУ",
+    heroTitle: "Продуманная забота.<br><em>В каждой детали.</em>",
     heroText:
-      "Представьте заботу, которая начинается с умения слушать. Уютное пространство, вдумчивый разговор и понятный следующий шаг.",
-    heroCta: "Подготовить обращение",
-    heroSecondary: "Узнать о подходе",
-    heroFoot: "Создано для людей. Продумано до мелочей.",
+      "Понятный подход к вашему здоровью. Откройте для себя концепцию частной клиники, где продуманный дизайн сочетается с личным вниманием и ясным общением.",
+    heroCta: "Наметить первый шаг",
+    heroSecondary: "Познакомиться с подходом",
+    heroFoot: "Личное внимание. Понятный выбор. Продуманный опыт.",
     artLabel:
-      "Авторская иллюстрация спокойной зоны ожидания с арочным окном, изогнутым диваном, растением и мягким солнечным светом.",
-    artTag: "ПРОСТРАНСТВО AVELA",
-    artCaption: "Больше спокойствия и заботы.",
-    artNote: "Авторская концепция пространства, не реальная клиника",
+      "Авторская объёмная иллюстрация полированного керамического зуба внутри точного кольца над металлической платформой. Дизайн-концепция, не медицинское устройство.",
+    artTag: "ТОЧНОСТЬ В ДЕТАЛЯХ",
+    artCaption: "Создано вокруг вас.",
+    artNote: "Авторская визуальная концепция · Не медицинское устройство",
     ribbon1: "Время для вопросов",
     ribbon2: "Ясность на каждом этапе",
     ribbon3: "Внимание к человеку",
     servicesEyebrow: "01 / ПРОДУМАННАЯ ЗАБОТА",
-    servicesTitle: "Разные потребности.<br><em>Одинаковое внимание.</em>",
+    servicesTitle: "Продуманный дизайн.<br><em>Личное внимание.</em>",
     servicesIntro:
-      "Концепция комплексной повседневной заботы. Выберите направление для демонстрационного обращения.",
+      "Четыре концепции направлений. Один принцип: сделать каждое взаимодействие полезнее, понятнее и ближе к человеку.",
     serviceGeneral: "Общие консультации",
     serviceGeneralText:
       "Отправная точка для ваших вопросов: возможность обсудить повседневные темы здоровья и возможные следующие шаги.",
@@ -425,7 +429,7 @@ window.CLINIC_TRANSLATIONS = {
     serviceDisclaimer:
       "Направления приведены только для иллюстрации. Эта демоверсия не предоставляет медицинских рекомендаций, диагностики или лечения.",
     principlesEyebrow: "02 / ДРУГОЙ ПОДХОД",
-    principlesTitle: "Забота начинается<br><em>с разговора.</em>",
+    principlesTitle: "Особое внимание<br><em>к каждому шагу.</em>",
     principlesIntro:
       "На этих принципах основана концепция Avela. Это идея продуманного взаимодействия, а не заявление о действующей клинике.",
     principle1: "Прежде всего — услышать.",
@@ -437,10 +441,10 @@ window.CLINIC_TRANSLATIONS = {
     principle3: "Уважать личный темп.",
     principle3Text:
       "Создавать уютные пространства и давать время спокойно обдумать свой выбор.",
-    principlesQuote: "Меньше неопределённости.<br>Больше понимания.",
-    principlesCaption: "Простая идея в основе этой концепции.",
+    principlesQuote: "Человечность в основе.<br>Точность в деталях.",
+    principlesCaption: "Главный принцип концепции Avela.",
     journeyEyebrow: "03 / ОТ ПЕРВОГО ВОПРОСА К СЛЕДУЮЩЕМУ ШАГУ",
-    journeyTitle: "Спокойное <em>начало.</em>",
+    journeyTitle: "Ваш следующий шаг.<br><em>Понятно и просто.</em>",
     step1: "Познакомьтесь с вариантами",
     step1Text:
       "Изучите концепции направлений и выберите то, о котором хотите спросить.",
@@ -451,22 +455,23 @@ window.CLINIC_TRANSLATIONS = {
     step3Text:
       "Скопируйте обращение. WhatsApp откроется только при наличии настроенного номера. Решение об отправке остаётся за вами.",
     spaceEyebrow: "04 / ПРОСТРАНСТВО ДЛЯ ПАУЗЫ",
-    spaceTitle: "Продуманная обстановка.<br><em>Мягкое начало.</em>",
+    spaceTitle:
+      "Продуманное пространство.<br><em>Исключительное внимание.</em>",
     spaceText:
-      "Естественные формы, тёплые материалы и место для паузы. Визуальная идея того, как сделать клинику менее строгой и более уютной.",
+      "Чёткие линии, выверенный свет и продуманные пропорции. Авторская архитектурная концепция клиники, в которой каждый этап визита становится понятнее.",
     spaceLabel:
-      "Авторская архитектурная иллюстрация с арочным проёмом, скамьёй и скульптурным растением.",
-    spaceTag: "СОЗДАНО ДЛЯ ЧУВСТВА СПОКОЙСТВИЯ",
-    space1: "Место для паузы",
+      "Авторская архитектурная концепция со светящейся стеклянной перегородкой, скульптурной стойкой регистрации и минималистичной зоной ожидания. Не реальная клиника.",
+    spaceTag: "АРХИТЕКТУРНАЯ КОНЦЕПЦИЯ ЯСНОСТИ",
+    space1: "Смысл в каждой детали",
     space1Text:
-      "Концепция тихой зоны ожидания со свободным пространством и мягкими природными оттенками.",
-    space2: "Понятная среда",
+      "Концепция приёмной, построенная на свете, открытом пространстве и точном выборе материалов.",
+    space2: "Интуитивное начало",
     space2Text:
-      "Простая навигация и приветливая входная зона, продуманные с первого шага.",
+      "Понятный путь от входа к следующему шагу, с простотой в основе каждого решения.",
     spaceNote:
       "Все пространства — авторские иллюстрации. Они не представляют реальную клинику или сертифицированную доступную среду.",
     faqEyebrow: "05 / НЕМНОГО ЯСНОСТИ",
-    faqTitle: "Важные вопросы.<br><em>Понятные ответы.</em>",
+    faqTitle: "Перед визитом.<br><em>Важные детали.</em>",
     q1: "Avela — настоящая клиника?",
     a1: "Нет. Avela — вымышленный образ клиники, созданный для портфолио разработчика. Сайт демонстрирует дизайн, доступность и многоязычные взаимодействия. Медицинские услуги не предоставляются.",
     q2: "Можно ли здесь записаться на приём?",
@@ -480,7 +485,7 @@ window.CLINIC_TRANSLATIONS = {
     q6: "Что делать, если нужна срочная медицинская помощь?",
     a6: "Этот сайт не является медицинским сервисом и не отслеживается. Для срочной помощи обратитесь в местную экстренную службу или подходящее медицинское учреждение. Не используйте демоверсию для медицинских обращений.",
     formEyebrow: "06 / ВАШ ПЕРВЫЙ ШАГ",
-    formTitle: "Начнём<br><em>с разговора.</em>",
+    formTitle: "Ваши пожелания.<br><em>Ваш следующий шаг.</em>",
     formIntro:
       "Попробуйте подготовить обращение. Выберите направление, укажите пожелания и создайте текст для проверки.",
     formNoticeTitle: "Подготовка обращения. Не запись на приём.",
@@ -547,7 +552,7 @@ window.CLINIC_TRANSLATIONS = {
     genericMessage:
       "Здравствуйте. Я изучаю концепцию сайта клиники Avela и хочу задать вопрос.",
     contactEyebrow: "ПРЕЖДЕ ЧЕМ ВЫ УЙДЁТЕ",
-    contactTitle: "Хорошая забота начинается<br>с <em>понятного общения.</em>",
+    contactTitle: "Рассмотрите возможности.<br><em>Начните разговор.</em>",
     contactText:
       "Это сайт вымышленной клиники, а не канал медицинской связи. При адаптации дизайна для бизнеса можно добавить реальный контактный номер.",
     contactAction: "Открыть WhatsApp",
@@ -558,5 +563,7 @@ window.CLINIC_TRANSLATIONS = {
     top: "Наверх",
     noscript:
       "Для переключения языка и подготовки обращения нужен JavaScript. Английские тексты, навигация и ответы на вопросы остаются доступны. Отправка данных невозможна.",
+    visualDetailTitle: "Продуманный взгляд",
+    visualDetailText: "У каждой детали есть цель.",
   },
 };
