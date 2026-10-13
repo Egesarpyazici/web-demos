@@ -2019,3 +2019,26 @@ h2 {
     font-size: 32px;
   }
 }
+
+/* Match the live ORIVELA campaign without affecting other project previews. */
+.orivela-art {
+  background: #050e19;
+}
+.orivela-art > img {
+  object-position: 65% 62%;
+}
+.orivela-art::before {
+  background: linear-gradient(90deg, #030b18d9, #030b1820);
+}
+.orivela-brand {
+  font-family: Georgia, serif;
+}
+.orivela-brand small {
+  font-family: Arial, sans-serif;
+}
+.orivela-art > strong {
+  font-family: Georgia, serif;
+}
+.orivela-art > strong em {
+  color: #edca85;
+}

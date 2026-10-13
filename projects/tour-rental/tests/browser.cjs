@@ -34,6 +34,34 @@ const url =
       `overflow ${width}`,
     );
     assert.equal(await page.locator("h1").count(), 1);
+    const hero = await page.evaluate(() => {
+      const image = document.querySelector(".hero-art");
+      const heading = document.querySelector("h1").getBoundingClientRect();
+      const action = document
+        .querySelector(".hero-actions .button")
+        .getBoundingClientRect();
+      const header = document.querySelector(".header").getBoundingClientRect();
+      return {
+        source: image.currentSrc,
+        headingVisible:
+          heading.top >= header.bottom && heading.right <= innerWidth,
+        actionVisible:
+          action.bottom < innerHeight &&
+          action.left >= 0 &&
+          action.right <= innerWidth,
+      };
+    });
+    assert(
+      hero.source.includes(
+        width <= 600 ? "yacht-night-mobile.webp" : "yacht-night",
+      ),
+      `art-directed hero source at ${width}`,
+    );
+    assert(
+      hero.headingVisible && hero.actionVisible,
+      `hero headline/CTA visible at ${width}`,
+    );
+
     assert.deepEqual(
       await page
         .locator('a[href^="#"]')

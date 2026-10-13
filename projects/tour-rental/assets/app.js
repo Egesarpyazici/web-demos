@@ -390,7 +390,11 @@
   });
   const slides = [...document.querySelectorAll(".slide")],
     dots = [...document.querySelectorAll("[data-slide]")];
-  const captions = ["The private coast", "The golden hour", "The open horizon"];
+  const captions = [
+    "The private coast",
+    "The golden hour",
+    "The yacht after dark",
+  ];
   let current = 0,
     pointer = null;
   function showSlide(index) {
@@ -402,7 +406,7 @@
       dot.setAttribute("aria-pressed", String(i === current)),
     );
     $("#gallery-status").textContent =
-      `Illustration ${current + 1} of ${slides.length} · ${captions[current]}`;
+      `Scene ${current + 1} of ${slides.length} · ${captions[current]}`;
   }
   $("#gallery-view").classList.add("enhanced");
   $("#gallery-controls").hidden = false;

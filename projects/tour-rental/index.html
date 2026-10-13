@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#092b39" />
+    <meta name="theme-color" content="#050e19" />
     <meta
       name="description"
-      content="Orivela is an original luxury coastal charter concept. Explore illustrated experiences, build an itemized EUR estimate, and prepare an inquiry. No real booking or submission."
+      content="Orivela is an original luxury coastal charter concept. Explore cinematic yacht concepts, build an itemized EUR estimate, and prepare an inquiry. No real booking or submission."
     />
     <title>Orivela — A horizon of your own · Demo / Concept</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/luxury.css" />
     <script src="assets/config.js" defer></script>
     <script src="assets/pricing.js" defer></script>
     <script src="assets/app.js" defer></script>
@@ -81,28 +82,56 @@
     </header>
     <main id="main" tabindex="-1">
       <section class="hero" id="top">
-        <img
-          class="hero-art"
-          src="assets/coast.svg"
-          width="1440"
-          height="900"
-          alt="Original illustration of a private yacht gliding beside a Mediterranean-inspired limestone coast."
-          fetchpriority="high"
-        />
+        <picture class="hero-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="assets/yacht-night-mobile.webp"
+            width="768"
+            height="1152"
+          />
+          <img
+            class="hero-art"
+            src="assets/yacht-night.webp"
+            srcset="
+              assets/yacht-night-960.webp  960w,
+              assets/yacht-night.webp     1536w
+            "
+            sizes="100vw"
+            width="1536"
+            height="1024"
+            alt="AI-generated concept: an illuminated superyacht on a midnight-blue sea, with warm light reflected across the water."
+            fetchpriority="high"
+          />
+        </picture>
+        <svg
+          class="hero-orbit"
+          viewBox="0 0 900 800"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M82 520C-35 185 346-98 634 89c215 138 216 392 107 553"
+            stroke="currentColor"
+            stroke-dasharray="2 7"
+          />
+          <path d="M187 77a377 377 0 0 1 391-18" stroke="currentColor" />
+          <circle cx="741" cy="642" r="6" fill="currentColor" />
+          <circle cx="82" cy="520" r="5" fill="currentColor" />
+        </svg>
         <div class="hero-shade"></div>
         <div class="wrap hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow light">THE LUXURY OF YOUR OWN HORIZON</p>
-            <h1>
-              Some days<br />deserve <em>their own<br />horizon.</em>
-            </h1>
+            <p class="eyebrow light">THE ART OF PRIVATE ESCAPE</p>
+            <h1>The sea.<br /><em>On your terms.</em></h1>
             <p>
-              Beyond the shoreline. Away from the expected.<br />A private
-              coastal experience, shaped around you.
+              Leave the everyday on shore. Discover a world of<br
+                class="desktop-break"
+              />
+              private horizons, quiet freedom, and extraordinary days.
             </p>
             <div class="hero-actions">
               <a class="button gold" href="#estimate"
-                >Design your day at sea
+                >Plan your escape
                 <span aria-hidden="true"
                   ><svg
                     class="direction-icon"
@@ -116,7 +145,7 @@
                       stroke-width="1.5"
                     /></svg></span></a
               ><a class="hero-link" href="#gallery"
-                >Explore the coast
+                >Discover the coast
                 <span aria-hidden="true"
                   ><svg
                     class="direction-icon"
@@ -132,42 +161,19 @@
               ></a>
             </div>
           </div>
-          <div class="hero-card">
-            <div class="route-heading">
-              <span>THE ORIVELA PERSPECTIVE</span
-              ><span aria-hidden="true"
-                ><svg
-                  class="direction-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 19 19 5M5 5h14v14"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  /></svg
-              ></span>
-            </div>
-            <svg viewBox="0 0 240 60" fill="none" aria-hidden="true">
-              <path
-                d="M8 44c34 0 25-34 65-28s43 42 73 18 55-3 86-21"
-                stroke="#81c9bf"
-                stroke-width="1.5"
-                stroke-dasharray="4 5"
-              />
-              <circle cx="8" cy="44" r="4" fill="#e8d6a6" />
-              <circle cx="232" cy="13" r="4" fill="#e8d6a6" /></svg
-            ><strong>Less itinerary.<br />More possibility.</strong>
-            <p>
-              An original coastal concept.<br />No real route or availability is
-              represented.
-            </p>
+          <div class="hero-callout callout-one">
+            <span class="callout-marker" aria-hidden="true"></span>
+            <p><small>THE PRIVATE PERSPECTIVE</small>One group. Your pace.</p>
+          </div>
+          <div class="hero-callout callout-two">
+            <span class="callout-marker" aria-hidden="true"></span>
+            <p><small>DESIGNED TO INSPIRE</small>An imagined escape.</p>
           </div>
           <div class="hero-bottom">
-            <span>PRIVATE CHARTERS / COASTAL EXCURSIONS</span
+            <span>ORIVELA / THE AFTER-DARK EDITION</span
             ><span
-              >Original vector artwork <i aria-hidden="true">—</i> 01 / 03</span
+              >AI-generated concept imagery <i aria-hidden="true">—</i> Not a
+              real vessel</span
             >
           </div>
         </div>
@@ -327,8 +333,7 @@
               <h2>Let the coast <em>set the scene.</em></h2>
             </div>
             <p>
-              Three original vector studies.<br />One invitation to imagine
-              something different.
+              Three imagined perspectives.<br />A different kind of departure.
             </p>
           </div>
           <div
@@ -336,15 +341,16 @@
             class="gallery-view"
             role="group"
             aria-roledescription="carousel"
-            aria-label="Illustrated coastal experiences"
+            aria-label="Imagined yacht experiences"
             tabindex="0"
           >
             <figure class="slide">
               <img
-                src="assets/coast.svg"
-                width="1440"
-                height="900"
-                alt="Ivory motor yacht, turquoise shallows, and a terraced limestone coastline."
+                src="assets/yacht-cove.webp"
+                width="1280"
+                height="853"
+                alt="AI-generated concept of a superyacht anchored beside rugged coastal cliffs."
+                loading="lazy"
               />
               <figcaption>
                 <span>01 / THE PRIVATE COAST</span>
@@ -356,10 +362,10 @@
             </figure>
             <figure class="slide">
               <img
-                src="assets/sunset.svg"
-                width="1440"
-                height="900"
-                alt="Private yacht below a golden sun, with amber cliffs and calm evening water."
+                src="assets/yacht-deck.webp"
+                width="1280"
+                height="853"
+                alt="AI-generated concept of a teak yacht deck and ivory lounge overlooking the sunset."
                 loading="lazy"
               />
               <figcaption>
@@ -370,23 +376,21 @@
             </figure>
             <figure class="slide">
               <img
-                src="assets/islands.svg"
-                width="1440"
-                height="900"
-                alt="Yacht sailing past a small green island and bright turquoise coastal shallows."
+                src="assets/yacht-night.webp"
+                width="1536"
+                height="1024"
+                alt="AI-generated superyacht concept with warm illuminated decks against a deep blue night sky."
                 loading="lazy"
               />
               <figcaption>
-                <span>03 / THE OPEN HORIZON</span>
-                <h3>Follow a different blue.</h3>
-                <p>
-                  An island-hopping concept, created entirely in vector artwork.
-                </p>
+                <span>03 / AFTER DARK</span>
+                <h3>When the coast turns to gold.</h3>
+                <p>A cinematic study in midnight blue and champagne light.</p>
               </figcaption>
             </figure>
           </div>
           <div id="gallery-controls" class="gallery-controls" hidden>
-            <div class="gallery-dots" aria-label="Choose an illustration">
+            <div class="gallery-dots" aria-label="Choose a scene">
               <button
                 type="button"
                 data-slide="0"
@@ -404,21 +408,17 @@
               ><button
                 type="button"
                 data-slide="2"
-                aria-label="03 — Show the open horizon"
+                aria-label="03 — Show the yacht after dark"
                 aria-pressed="false"
               >
                 03
               </button>
             </div>
             <p id="gallery-status" role="status" aria-live="polite">
-              Illustration 1 of 3 · The private coast
+              Scene 1 of 3 · The private coast
             </p>
             <div class="gallery-arrows">
-              <button
-                id="previous"
-                type="button"
-                aria-label="Previous illustration"
-              >
+              <button id="previous" type="button" aria-label="Previous scene">
                 <svg
                   class="direction-icon"
                   viewBox="0 0 24 24"
@@ -431,7 +431,7 @@
                     stroke-width="1.5"
                   />
                 </svg></button
-              ><button id="next" type="button" aria-label="Next illustration">
+              ><button id="next" type="button" aria-label="Next scene">
                 <svg
                   class="direction-icon"
                   viewBox="0 0 24 24"
@@ -448,8 +448,8 @@
             </div>
           </div>
           <p class="gallery-note">
-            Fictional settings, original artwork. No photographs, real vessels,
-            or guaranteed itineraries.
+            AI-generated concept imagery. No real vessel, destination, or
+            availability is represented.
           </p>
         </div>
       </section>
@@ -468,10 +468,10 @@
           <article class="package-card">
             <div class="package-image">
               <img
-                src="assets/coast.svg"
-                width="1440"
-                height="900"
-                alt="Illustrated private yacht near a limestone coast."
+                src="assets/yacht-cove.webp"
+                width="1280"
+                height="853"
+                alt="AI-generated concept of a private superyacht in a secluded limestone cove."
                 loading="lazy"
               /><span>COASTAL DISCOVERY</span>
             </div>
@@ -511,10 +511,10 @@
           <article class="package-card">
             <div class="package-image">
               <img
-                src="assets/sunset.svg"
-                width="1440"
-                height="900"
-                alt="Illustrated golden sunset over calm charter waters."
+                src="assets/yacht-deck.webp"
+                width="1280"
+                height="853"
+                alt="AI-generated concept of an elegant yacht lounge at sunset."
                 loading="lazy"
               /><span>THE EVENING COLLECTION</span>
             </div>
@@ -553,10 +553,10 @@
           <article class="package-card">
             <div class="package-image">
               <img
-                src="assets/islands.svg"
-                width="1440"
-                height="900"
-                alt="Illustrated yacht among island scenery and turquoise water."
+                src="assets/yacht-night.webp"
+                width="1536"
+                height="1024"
+                alt="AI-generated concept of an illuminated superyacht after dark."
                 loading="lazy"
               /><span>THE SIGNATURE COLLECTION</span>
             </div>
@@ -639,7 +639,7 @@
           </div>
         </div>
       </section>
-      <section class="section wrap" id="estimate">
+      <section class="section wrap estimate-section" id="estimate">
         <div class="section-head">
           <div>
             <p class="eyebrow">05 / DESIGN YOUR ESCAPE</p>
