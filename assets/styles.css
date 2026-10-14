@@ -2481,3 +2481,10 @@ h2 {
   max-width: 100%;
   justify-self: end;
 }
+.velune-preview-scene {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.velune-preview-copy,
+.velune-preview-board {
+  min-width: 0;
+}
