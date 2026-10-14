@@ -1,6 +1,6 @@
 # Ege Sarp Yazıcı — Portfolio foundation
 
-A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo. Phase 2 adds **ORIVELA**, a luxury coastal tour and rental demo. Phase 3 adds **ReplyGap**, a transparent response-delay revenue calculator. Phase 4 adds **Ordelle**, a complete fictional business operations dashboard. One **Coming Soon — Demo / Concept** preview remains. All projects are original concepts, not commissioned client case studies.
+A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo. Phase 2 adds **ORIVELA**, a luxury coastal tour and rental demo. Phase 3 adds **ReplyGap**, a transparent response-delay revenue calculator. Phase 4 adds **Ordelle**, a complete fictional business operations dashboard. Phase 5 adds **VELUNE**, a branded memory-matching campaign. All five standalone demos are implemented. All projects are original concepts, not commissioned client case studies.
 
 ## Run locally
 
@@ -51,7 +51,7 @@ projects/clinic/             Avela multilingual clinic demo (Phase 1)
 projects/tour-rental/        ORIVELA coastal tour and rental demo (Phase 2)
 projects/missed-inquiries/   ReplyGap hypothetical revenue calculator (Phase 3)
 projects/business-dashboard/ Ordelle operations workspace (Phase 4)
-projects/marketing-game/    Reserved branded mini-game
+projects/marketing-game/    VELUNE branded memory campaign (Phase 5)
 AGENTS.md                   Permanent standards for future Codex tasks
 .nojekyll                   Static GitHub Pages hosting
 ```
@@ -60,7 +60,7 @@ AGENTS.md                   Permanent standards for future Codex tasks
 
 Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, business-tool, dashboard, and game directions. The ORIVELA travel preview uses original generated yacht imagery. All assets are hosted locally, without stock imagery or external runtime requests.
 
-The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. The clinic, tour, calculator, and dashboard cards link to their standalone demos and source code. The marketing mini-game remains a noninteractive coming-soon preview.
+The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. All five project cards link to their standalone demos and source code. Each is clearly labeled as an original Demo / Concept.
 
 ## Quality assurance
 
@@ -82,9 +82,9 @@ Automated checks do not replace a screen-reader review or testing Safari/Firefox
 - **Phase 2:** ORIVELA tour & rental website — original coastal artwork, accessible gallery, itemized EUR estimator, and client-side inquiry builder.
 - **Phase 3:** ReplyGap missed inquiries calculator — adjustable hypothetical scenarios, synchronized inputs, live SVG charts, and private report actions.
 - **Phase 4:** Ordelle business dashboard — deterministic fictional orders/inquiries, connected analytics, filtering, editing, local persistence, and CSV export.
-- **Future:** Branded marketing mini-game — original interaction, keyboard support, accessible alternative.
+- **Phase 5:** VELUNE marketing mini-game — original SVG collection, reliable memory matching, configurable campaign identity, and a fictional reward reveal.
 
-Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation and Phases 1–4 are implemented. Phase 5 has not begun.
+Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation and Phases 1–5 are implemented. The final full-portfolio audit remains a separate task.
 
 ## Phase 1: Avela clinic demo
 
@@ -117,3 +117,11 @@ Open `projects/business-dashboard/` through the static server. Ordelle pairs a n
 The fixed sample window ends 31 March 2026. Revenue counts paid, non-cancelled orders; open inquiries are new or in progress. Validated overrides and the reporting-period preference persist in `ordelle.demo.v1`. Malformed or blocked storage recovers safely, and confirmed reset affects only this demo. No customer is contacted and nothing is saved to a server.
 
 See [Ordelle documentation](projects/business-dashboard/README.md) for architecture, calculation rules, privacy, test commands, and limitations. Its Node model tests and Chromium/axe browser suite verify data consistency, management interactions, export safety, local state, keyboard accessibility, responsive layouts, and GitHub Pages paths. Other demo implementations are unchanged.
+
+## Phase 5: VELUNE — Match / Reveal
+
+Open `projects/marketing-game/` through the static server. VELUNE is a fictional creative-commerce brand with a plum, lime, and lavender campaign. Sixteen dimensional cards contain eight original SVG pairs. Matching, attempts, progress, restart, and a fictional reward reveal work entirely in the browser, with keyboard controls and reduced-motion support.
+
+Rebrand the campaign through `GAME_CONFIG` at the top of `projects/marketing-game/assets/app.js`: identity, colors, card monogram, headline, symbols, pair count, mismatch delay, and reward copy/code. Pure game transitions, unbiased shuffle indexing, timer cleanup, and generation guards keep rapid inputs and restart reliable. Copying has a manual fallback. There are no real coupons, tracking, accounts, personal data, or persistent storage.
+
+See [VELUNE documentation](projects/marketing-game/README.md) for configuration, architecture, controls, tests, and limitations. The Node and Chromium/axe suites cover gameplay, configuration, restart races, copying, keyboard-only completion, responsive layouts, accessibility, and no-JavaScript behavior. The other four demo implementations are preserved. Completing this demo does not imply that the separate final portfolio audit or GitHub Pages deployment has occurred.
