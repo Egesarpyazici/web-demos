@@ -2188,3 +2188,121 @@ h2 {
     letter-spacing: 0.5px;
   }
 }
+
+/* Ordelle: a miniature of the actual default dashboard, decorative only. */
+.ordelle-art {
+  display: flex;
+  padding: 0;
+  background: #f3f6fb;
+  color: #24334d;
+}
+.ordelle-preview-rail {
+  flex: 0 0 44px;
+  padding: 22px 11px;
+  background: #19253b;
+}
+.ordelle-preview-rail img {
+  display: block;
+  margin-bottom: 25px;
+}
+.ordelle-preview-rail i {
+  display: block;
+  height: 7px;
+  width: 18px;
+  margin: 18px 0;
+  border-radius: 2px;
+  background: #6f7b91;
+}
+.ordelle-preview-rail i:first-of-type {
+  background: #7596ff;
+}
+.ordelle-preview-main {
+  padding: 14px 22px;
+  min-width: 0;
+  flex: 1;
+}
+.ordelle-preview-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ordelle-preview-top b {
+  font-size: 19px;
+  letter-spacing: -1px;
+}
+.ordelle-preview-top b span {
+  color: #4266e9;
+}
+.ordelle-preview-top small {
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #536680;
+}
+.ordelle-preview-main > p {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 7px 0;
+}
+.ordelle-preview-metrics {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 6px;
+}
+.ordelle-preview-metrics > div {
+  padding: 9px;
+  background: white;
+  border: 1px solid #e2e7f0;
+  border-radius: 5px;
+}
+.ordelle-preview-metrics span {
+  display: block;
+  font-size: 6px;
+  color: #536680;
+}
+.ordelle-preview-metrics strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 5px;
+  letter-spacing: -0.5px;
+}
+.ordelle-preview-metrics > div:first-child strong {
+  color: #355cdb;
+}
+.ordelle-preview-chart {
+  background: white;
+  border: 1px solid #e2e7f0;
+  border-radius: 5px;
+  margin-top: 8px;
+  padding: 10px;
+}
+.ordelle-preview-chart > span {
+  font-size: 6px;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 7px;
+}
+.ordelle-preview-chart svg {
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+.ordelle-preview-note {
+  display: block;
+  font-size: 6px;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  color: #536680;
+}
+@media (max-width: 380px) {
+  .ordelle-preview-main {
+    padding: 12px;
+  }
+  .ordelle-preview-metrics > div {
+    padding: 7px;
+  }
+  .ordelle-preview-metrics strong {
+    font-size: 15px;
+  }
+}
