@@ -169,3 +169,36 @@ test("brand, campaign, card theme and reward are copied independently from confi
   assert.equal(c.campaign.title, "Find / Keep");
   assert.equal(JSON.stringify(input), copy);
 });
+
+test("artwork mappings accept local WebP paths and reject unsafe sources", () => {
+  const c = L.normalizeConfig({
+    symbols: [
+      { id: "bloom", label: "Bloom", artwork: "assets/art/orbit.webp" },
+    ],
+    artwork: {
+      hero: "assets/art/loop-large.webp",
+      reward: "assets/art/bloom-large.webp",
+    },
+  });
+  assert.equal(c.symbols[0].artwork, "assets/art/orbit.webp");
+  assert.equal(c.artwork.hero, "assets/art/loop-large.webp");
+  assert.equal(c.artwork.reward, "assets/art/bloom-large.webp");
+  for (const unsafe of [
+    "https://example.com/a.webp",
+    "../a.webp",
+    "assets/art/../a.webp",
+    "data:image/png;base64,abc",
+    "assets/art/a.svg",
+    "assets/art/a.webp?q=x",
+    null,
+    42,
+  ]) {
+    const fallback = L.normalizeConfig({
+      symbols: [{ id: "bloom", artwork: unsafe }],
+      artwork: { hero: unsafe, reward: unsafe },
+    });
+    assert.equal(fallback.symbols[0].artwork, "assets/art/bloom.webp");
+    assert.equal(fallback.artwork.hero, "assets/art/bloom-large.webp");
+    assert.equal(fallback.artwork.reward, "assets/art/loop-large.webp");
+  }
+});

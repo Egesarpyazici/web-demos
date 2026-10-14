@@ -1,5 +1,5 @@
 /* Rebrand here. Use six-digit hex colors; supported pair counts: 4, 6, 8.
-   Symbol IDs reference the original SVG collection in index.html. No real reward. */
+   Artwork paths must be local assets/art/*.webp files. No real reward. */
 const GAME_CONFIG = {
   brand: {
     name: "Velune",
@@ -8,8 +8,8 @@ const GAME_CONFIG = {
     monogram: "V",
   },
   theme: {
-    background: "#211b29",
-    surface: "#302738",
+    background: "#17131d",
+    surface: "#282130",
     primary: "#dcf594",
     accent: "#cebaed",
     text: "#f5f1e9",
@@ -17,25 +17,29 @@ const GAME_CONFIG = {
   },
   campaign: {
     title: "Match / Reveal",
-    firstLine: "Good things",
-    secondLine: "come in",
-    finalLine: "pairs.",
+    firstLine: "A collection",
+    secondLine: "of",
+    finalLine: "small wonders.",
     description:
-      "For the curious. The collectors. The just-one-more-try kind. Discover a collection of small wonders, two at a time.",
+      "Eight sculptural objects. Sixteen hidden possibilities. Find the pairs and reveal your place in the collection.",
   },
   game: { pairs: 8, mismatchDelayMs: 950 },
   symbols: [
-    { id: "bloom", label: "Bloom" },
-    { id: "orbit", label: "Orbit" },
-    { id: "ripple", label: "Ripple" },
-    { id: "arc", label: "Arc" },
-    { id: "spark", label: "Spark" },
-    { id: "loop", label: "Loop" },
-    { id: "fold", label: "Fold" },
-    { id: "vessel", label: "Vessel" },
+    { id: "bloom", label: "Bloom", artwork: "assets/art/bloom.webp" },
+    { id: "orbit", label: "Orbit", artwork: "assets/art/orbit.webp" },
+    { id: "ripple", label: "Ripple", artwork: "assets/art/ripple.webp" },
+    { id: "arc", label: "Arc", artwork: "assets/art/arc.webp" },
+    { id: "spark", label: "Spark", artwork: "assets/art/spark.webp" },
+    { id: "loop", label: "Loop", artwork: "assets/art/loop.webp" },
+    { id: "fold", label: "Fold", artwork: "assets/art/fold.webp" },
+    { id: "vessel", label: "Vessel", artwork: "assets/art/vessel.webp" },
   ],
+  artwork: {
+    hero: "assets/art/bloom-large.webp",
+    reward: "assets/art/loop-large.webp",
+  },
   reward: {
-    headline: "A little wonder, revealed.",
+    headline: "A collection, completed. A moment, yours.",
     description:
       "Your collection is complete. Here is an imaginary invitation to the next chapter of Velune. A keepsake from this concept, with no real-world value.",
     code: "VELUNE-DEMO",
@@ -55,6 +59,42 @@ const GAME_CONFIG = {
     return e;
   };
   const labels = Object.fromEntries(config.symbols.map((s) => [s.id, s.label]));
+  $$("[data-artwork]").forEach((image) => {
+    image.src = config.artwork[image.dataset.artwork];
+    image.hidden = false;
+    image.addEventListener(
+      "error",
+      () => {
+        image.hidden = true;
+      },
+      { once: true },
+    );
+  });
+  const collection = $("#object-collection");
+  config.symbols.forEach((symbol, index) => {
+    const item = node("li", "collection-item");
+    const image = node("img");
+    image.src = symbol.artwork;
+    image.alt = "";
+    image.width = 384;
+    image.height = 384;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.addEventListener(
+      "error",
+      () => {
+        image.hidden = true;
+      },
+      { once: true },
+    );
+    item.append(
+      image,
+      node("span", "collection-index", String(index + 1).padStart(2, "0")),
+      node("h3", "", symbol.label),
+    );
+    collection.append(item);
+  });
+
   const root = document.documentElement;
   for (const [key, value] of Object.entries(config.theme))
     root.style.setProperty("--" + key, value);
@@ -96,21 +136,42 @@ const GAME_CONFIG = {
       String(index + 1).padStart(2, "0"),
     );
     const seal = node("span", "card-seal", config.brand.monogram);
+    back.append(node("span", "foil-emblem"));
     back.append(
       corner,
       seal,
       node("span", "card-edition", config.brand.logoText),
     );
     const face = node("span", "card-side card-face");
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("viewBox", "0 0 100 100");
-    const use = document.createElementNS(svg.namespaceURI, "use");
-    use.setAttribute("href", "#symbol-" + card.symbol);
-    svg.append(use);
+    const artwork = node("img", "collectible-image");
+    artwork.alt = "";
+    artwork.width = 384;
+    artwork.height = 384;
+    artwork.decoding = "async";
+    artwork.src = config.symbols.find(
+      (symbol) => symbol.id === card.symbol,
+    ).artwork;
+    artwork.addEventListener(
+      "error",
+      () => {
+        artwork.hidden = true;
+        face.classList.add("artwork-unavailable");
+      },
+      { once: true },
+    );
     face.append(
-      svg,
+      artwork,
+      node(
+        "span",
+        "object-index",
+        "OBJECT / " +
+          String(
+            config.symbols.findIndex((symbol) => symbol.id === card.symbol) + 1,
+          ).padStart(2, "0"),
+      ),
       node("span", "symbol-name", labels[card.symbol]),
       node("span", "match-mark", "✓"),
+      node("span", "collected-label", "Collected"),
     );
     turn.append(back, face);
     button.append(turn);

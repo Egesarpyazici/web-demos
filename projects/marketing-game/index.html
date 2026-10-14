@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#211b29" />
+    <meta name="theme-color" content="#17131d" />
     <meta
       name="description"
-      content="An original memory-matching campaign concept. A little play, a collection of original symbols, and a purely fictional reward."
+      content="VELUNE is a fictional collectible-art memory campaign. Discover eight original generated sculptures, match their pairs, and reveal a nonredeemable concept reward."
     />
-    <title>Match / Reveal — Interactive campaign · Demo / Concept</title>
+    <title>VELUNE — Objects of wonder · Demo / Concept</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/style.css" />
     <script src="assets/game-logic.js" defer></script>
@@ -21,104 +21,6 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <symbol id="symbol-bloom" viewBox="0 0 100 100">
-          <g fill="currentColor">
-            <ellipse cx="50" cy="29" rx="13" ry="23" />
-            <ellipse cx="50" cy="71" rx="13" ry="23" />
-            <ellipse cx="29" cy="50" rx="23" ry="13" />
-            <ellipse cx="71" cy="50" rx="23" ry="13" />
-          </g>
-          <circle cx="50" cy="50" r="8" fill="var(--card)" />
-        </symbol>
-        <symbol id="symbol-orbit" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="19" fill="currentColor" />
-          <ellipse
-            cx="50"
-            cy="50"
-            rx="44"
-            ry="18"
-            transform="rotate(-34 50 50)"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="5"
-          />
-          <circle cx="80" cy="25" r="7" fill="currentColor" />
-        </symbol>
-        <symbol id="symbol-ripple" viewBox="0 0 100 100">
-          <g fill="none" stroke="currentColor" stroke-width="6">
-            <ellipse cx="50" cy="50" rx="40" ry="29" />
-            <ellipse cx="50" cy="50" rx="27" ry="19" />
-            <ellipse cx="50" cy="50" rx="13" ry="9" />
-          </g>
-        </symbol>
-        <symbol id="symbol-arc" viewBox="0 0 100 100">
-          <path
-            d="M13 87V46a37 37 0 0 1 74 0v41H66V46a16 16 0 0 0-32 0v41Z"
-            fill="currentColor"
-          />
-          <path
-            d="M43 87V57a7 7 0 0 1 14 0v30"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="6"
-          />
-        </symbol>
-        <symbol id="symbol-spark" viewBox="0 0 100 100">
-          <path
-            d="m50 4 9 29 23-18-15 27 29 8-29 8 15 27-23-18-9 29-9-29-23 18 15-27-29-8 29-8-15-27 23 18Z"
-            fill="currentColor"
-          />
-        </symbol>
-        <symbol id="symbol-loop" viewBox="0 0 100 100">
-          <g fill="none" stroke="currentColor" stroke-width="12">
-            <ellipse
-              cx="36"
-              cy="50"
-              rx="20"
-              ry="32"
-              transform="rotate(25 36 50)"
-            />
-            <ellipse
-              cx="64"
-              cy="50"
-              rx="20"
-              ry="32"
-              transform="rotate(25 64 50)"
-            />
-          </g>
-        </symbol>
-        <symbol id="symbol-fold" viewBox="0 0 100 100">
-          <path
-            d="m13 22 37-12v66L13 89Zm44-12 30 13v65L57 76Z"
-            fill="currentColor"
-          />
-          <path
-            d="m18 29 25-8M18 39l25-8M64 24l16 7"
-            stroke="var(--card)"
-            stroke-width="2"
-          />
-        </symbol>
-        <symbol id="symbol-vessel" viewBox="0 0 100 100">
-          <path
-            d="M34 12h32v14c0 10 20 22 20 40a36 24 0 0 1-72 0c0-18 20-30 20-40Z"
-            fill="currentColor"
-          />
-          <path
-            d="M43 35c-3 12-17 21-17 32 0 7 8 12 18 14"
-            fill="none"
-            stroke="var(--card)"
-            stroke-width="3"
-          />
-          <ellipse
-            cx="50"
-            cy="13"
-            rx="16"
-            ry="5"
-            fill="var(--card)"
-            stroke="currentColor"
-            stroke-width="4"
-          />
-        </symbol>
         <symbol id="arrow" viewBox="0 0 24 24">
           <path
             d="M5 12h14m-6-6 6 6-6 6"
@@ -141,11 +43,10 @@
     <header class="site-header wrap">
       <a class="brand" href="#main" aria-label="Campaign introduction"
         ><span class="brand-mark" aria-hidden="true"></span
-        ><span data-brand="logoText">STUDIO</span></a
-      >
-      <span class="brand-tagline" data-brand="tagline">Objects of wonder</span>
+        ><span data-brand="logoText">VELUNE</span></a
+      ><span class="brand-tagline" data-brand="tagline">Objects of wonder</span>
       <nav aria-label="Campaign navigation">
-        <a href="#how">The experience</a
+        <a href="#collection">The collection</a><a href="#how">How to play</a
         ><a href="../../index.html"
           >Portfolio
           <svg class="inline-arrow" aria-hidden="true">
@@ -156,123 +57,149 @@
     </header>
     <main id="main" tabindex="-1">
       <section class="hero wrap" aria-labelledby="campaign-heading">
-        <div class="hero-copy">
-          <div class="campaign-label">
-            <svg class="tiny-star" aria-hidden="true" viewBox="0 0 100 100">
-              <use href="#symbol-spark" /></svg
-            ><span data-campaign="title">Match / Reveal</span
-            ><span class="edition">VOL. 01</span>
+        <div class="campaign-intro">
+          <div>
+            <p class="campaign-label">
+              <span class="live-dot" aria-hidden="true"></span>INTERACTIVE
+              EXHIBITION <span>/</span>
+              <span data-campaign="title">Match / Reveal</span>
+            </p>
+            <h1 id="campaign-heading">
+              <span data-campaign="firstLine">A collection</span>
+              <span data-campaign="secondLine">of</span
+              ><em data-campaign="finalLine">small wonders.</em>
+            </h1>
           </div>
-          <h1 id="campaign-heading">
-            <span data-campaign="firstLine">Good things</span
-            ><span data-campaign="secondLine">come in</span
-            ><em data-campaign="finalLine">pairs.</em>
-          </h1>
-          <p class="hero-description" data-campaign="description">
-            A small pause. A little discovery. Match the collection and reveal a
-            thoughtful finishing touch.
-          </p>
-          <a class="play-link" id="play-link" href="#play" hidden
-            ><span class="round-arrow"
-              ><svg aria-hidden="true"><use href="#arrow" /></svg></span
-            ><span
-              >Find your first pair<small
-                >A moment of play. No time limit.</small
-              ></span
-            ></a
-          >
-          <div class="hero-footnote">
-            <span class="mini-collection" aria-hidden="true"
-              ><svg viewBox="0 0 100 100"><use href="#symbol-bloom" /></svg
-              ><svg viewBox="0 0 100 100"><use href="#symbol-orbit" /></svg
-              ><svg viewBox="0 0 100 100">
-                <use href="#symbol-spark" /></svg></span
-            ><span
-              ><b><span data-pairs>8</span> objects. A little curiosity.</b
-              ><br />One collection, waiting to be found.</span
-            >
+          <div class="intro-description">
+            <p data-campaign="description">
+              Eight sculptural objects. Sixteen hidden possibilities. Find the
+              pairs and reveal your place in the collection.
+            </p>
+            <a id="play-link" class="play-link" href="#play" hidden
+              >Enter the collection
+              <svg aria-hidden="true"><use href="#arrow" /></svg
+            ></a>
+          </div>
+          <div class="edition-mark" aria-hidden="true">
+            <span>THE MATERIAL STUDIES</span><strong>01—08</strong
+            ><span>VOLUME 01 / ATELIER EDITION</span>
           </div>
         </div>
-        <div class="game-stage" id="play">
-          <div class="orbit-decoration" aria-hidden="true"></div>
-          <div id="static-art" class="static-art" aria-hidden="true">
-            <svg viewBox="0 0 100 100"><use href="#symbol-bloom" /></svg
-            ><span>A COLLECTION OF SMALL WONDERS</span>
-          </div>
-          <noscript
-            ><div class="nojs">
-              <h2>A little play needs JavaScript.</h2>
-              <p>
-                Enable JavaScript to play the memory game. The campaign and
-                reward are fictional; no purchase, account, or personal
-                information is involved.
-              </p>
-              <a href="../../index.html">Back to Portfolio →</a>
-            </div></noscript
-          >
-          <section
-            id="game-shell"
-            class="game-shell"
-            aria-labelledby="game-heading"
-            hidden
-          >
-            <div class="game-heading">
+        <div class="exhibition">
+          <figure class="featured-object">
+            <div class="feature-corner">
+              <span class="eyebrow">AN EXERCISE IN CURIOSITY</span
+              ><span class="feature-cross" aria-hidden="true">+</span>
+            </div>
+            <div id="static-art" class="static-art" aria-hidden="true">
+              <span>V</span>
+            </div>
+            <img
+              class="hero-art"
+              data-artwork="hero"
+              width="960"
+              height="960"
+              alt="Original AI-generated collectible sculpture with reflective materials and theatrical studio lighting"
+              fetchpriority="high"
+              hidden
+            /><span class="feature-coordinate" aria-hidden="true"
+              >V / 001 &nbsp; — &nbsp; THE ART OF LOOKING CLOSER</span
+            >
+            <figcaption>
               <div>
-                <span class="eyebrow">THE DISCOVERY COLLECTION</span>
-                <h2 id="game-heading">Turn. Discover. Repeat.</h2>
+                <span class="eyebrow">NOT JUST AN OBJECT.</span>
+                <p>A reason to <em>look twice.</em></p>
               </div>
-              <span
-                class="collection-number"
-                id="collection-count"
-                aria-hidden="true"
-                >08</span
+              <span class="feature-seal" aria-hidden="true"
+                ><span data-brand="monogram">V</span
+                ><small>ATELIER</small></span
               >
-            </div>
-            <div class="game-stats">
-              <div>
-                <strong id="matched">0</strong
-                ><span>/ <span data-pairs>8</span> pairs found</span>
+            </figcaption>
+          </figure>
+          <div class="game-stage" id="play">
+            <noscript
+              ><div class="nojs">
+                <h2>The collection is waiting.</h2>
+                <p>
+                  Enable JavaScript to explore this memory game. The campaign
+                  and its reward are fictional. No purchase, account, or
+                  personal information is involved.
+                </p>
+                <a href="../../index.html">Back to Portfolio</a>
+              </div></noscript
+            >
+            <section
+              id="game-shell"
+              class="game-shell"
+              aria-labelledby="game-heading"
+              hidden
+            >
+              <div class="game-heading">
+                <div>
+                  <span class="eyebrow">YOUR PRIVATE VIEWING</span>
+                  <h2 id="game-heading">Find the extraordinary.</h2>
+                </div>
+                <span
+                  class="collection-number"
+                  id="collection-count"
+                  aria-hidden="true"
+                  >08</span
+                >
               </div>
-              <div><strong id="moves">0</strong><span>attempts</span></div>
-              <button type="button" id="restart">
-                <svg aria-hidden="true"><use href="#reset-icon" /></svg>Restart
-              </button>
-            </div>
-            <label class="sr-only" for="progress">Collection progress</label
-            ><progress id="progress" value="0" max="8"></progress>
-            <p class="game-instructions" id="game-instructions">
-              Reveal two cards. Find their twin. Keep the collection.
-            </p>
-            <div
-              class="board"
-              id="board"
-              role="group"
-              aria-label="Memory cards"
-              aria-describedby="game-instructions keyboard-help"
-            ></div>
-            <div class="board-bottom">
-              <span><b id="remaining">8</b> pairs to discover</span
-              ><span class="collection-caption">CURATED TO CONNECT</span>
-            </div>
-            <p
-              class="game-status"
-              id="game-status"
-              role="status"
-              aria-live="polite"
-              aria-atomic="true"
-            ></p>
-            <details class="keyboard-help">
-              <summary>Playing with a keyboard?</summary>
-              <p id="keyboard-help">
-                Tab to any card, then press Enter or Space to reveal it. Arrow
-                keys move between cards; Home and End jump to the first and last
-                card. Matched cards remain available to review. Every reveal and
-                match is announced. There is no time limit.
+              <div class="game-toolbar">
+                <div class="game-stats">
+                  <div>
+                    <strong id="matched">0</strong
+                    ><span>/ <span data-pairs>8</span> pairs</span>
+                  </div>
+                  <span class="toolbar-divider" aria-hidden="true"></span>
+                  <div><strong id="moves">0</strong><span>attempts</span></div>
+                </div>
+                <button type="button" id="restart">
+                  <svg aria-hidden="true"><use href="#reset-icon" /></svg
+                  >Restart
+                </button>
+              </div>
+              <label class="sr-only" for="progress">Collection progress</label
+              ><progress id="progress" value="0" max="8"></progress>
+              <p id="game-instructions" class="game-instructions">
+                Turn two cards. Match the objects. Collect every pair.
               </p>
-            </details>
-          </section>
-          <span class="stage-caption" aria-hidden="true"
-            >NOT EVERYTHING WONDERFUL HAS TO BE SERIOUS.</span
+              <div
+                id="board"
+                class="board"
+                role="group"
+                aria-label="Memory cards"
+                aria-describedby="game-instructions keyboard-help"
+              ></div>
+              <div class="board-bottom">
+                <span><b id="remaining">8</b> discoveries to make</span
+                ><span>NO CLOCK. JUST CURIOSITY.</span>
+              </div>
+              <p
+                id="game-status"
+                class="game-status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+              <details class="keyboard-help">
+                <summary>Keyboard guide</summary>
+                <p id="keyboard-help">
+                  Tab to a card. Enter or Space reveals it. Arrow keys move
+                  between cards; Home and End jump to the first and last.
+                  Matched cards remain available to review. Each reveal and
+                  match is announced. There is no time limit.
+                </p>
+              </details>
+            </section>
+          </div>
+        </div>
+        <div class="exhibition-caption">
+          <span>ORIGINAL GENERATED ARTWORK / FICTIONAL DESIGN OBJECTS</span
+          ><span
+            >A MOMENT OF PLAY, CURATED BY
+            <b data-brand="logoText">VELUNE</b></span
           >
         </div>
       </section>
@@ -282,43 +209,55 @@
         aria-labelledby="reward-title"
         hidden
       >
-        <div class="reward-art" aria-hidden="true">
-          <span class="reward-orbit"></span
-          ><svg viewBox="0 0 100 100"><use href="#symbol-spark" /></svg
-          ><span data-brand="logoText">STUDIO</span>
+        <div class="reward-art">
+          <div class="reward-collectible">
+            <span class="reward-card-header"
+              ><span data-brand="logoText">VELUNE</span
+              ><span>COMPLETE / 01</span></span
+            ><img
+              data-artwork="reward"
+              width="960"
+              height="960"
+              alt="Original generated collectible sculpture presented on a commemorative concept card"
+              loading="lazy"
+              hidden
+            />
+            <div class="reward-card-bottom">
+              <span>THE COLLECTOR’S EDITION</span
+              ><strong
+                >Nothing ordinary.<br /><em>Everything discovered.</em></strong
+              ><small>ILLUSTRATIVE COLLECTIBLE / NO MONETARY VALUE</small>
+            </div>
+          </div>
+          <span class="reward-floor" aria-hidden="true"></span>
         </div>
         <div class="reward-content">
-          <span class="eyebrow"
-            >COLLECTION COMPLETE /
-            <span id="reward-attempts">0</span> ATTEMPTS</span
-          >
+          <span class="eyebrow">THE COLLECTION IS YOURS TO REMEMBER</span>
+          <p class="completion-detail">
+            All <span data-pairs>8</span> pairs discovered in
+            <span id="reward-attempts">0</span> attempts.
+          </p>
           <h2 id="reward-title" tabindex="-1" data-reward="headline">
-            A little wonder, revealed.
+            A collection, completed. A moment, yours.
           </h2>
           <p data-reward="description">
-            An illustrative invitation to discover the collection.
+            A fictional keepsake from this concept.
           </p>
           <div class="reward-ticket">
-            <div>
-              <span>YOUR FICTIONAL CAMPAIGN CODE</span
-              ><strong data-reward="code">STUDIO-DEMO</strong>
-            </div>
-            <span class="ticket-seal" aria-hidden="true">DEMO<br />ONLY</span>
+            <span>YOUR FICTIONAL CAMPAIGN CODE</span
+            ><strong data-reward="code">VELUNE-DEMO</strong
+            ><span class="ticket-stamp" aria-hidden="true">DEMO<br />ONLY</span>
           </div>
           <div class="reward-actions">
             <button type="button" class="button" id="copy-code">
               Copy demo code
-              <svg class="inline-arrow" aria-hidden="true">
-                <use href="#arrow" />
-              </svg></button
+              <svg aria-hidden="true"><use href="#arrow" /></svg></button
             ><button type="button" class="text-button" id="play-again">
               Play again
-              <svg class="inline-arrow" aria-hidden="true">
-                <use href="#reset-icon" />
-              </svg>
+              <svg aria-hidden="true"><use href="#reset-icon" /></svg>
             </button>
           </div>
-          <p class="copy-status" id="copy-status" role="status"></p>
+          <p id="copy-status" class="copy-status" role="status"></p>
           <div id="manual-copy" hidden>
             <label for="copy-field"
               >Select and copy this demonstration code</label
@@ -330,68 +269,87 @@
           </p>
         </div>
       </section>
+      <section
+        id="collection"
+        class="collection-section wrap"
+        aria-labelledby="collection-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">EIGHT STUDIES IN THE UNEXPECTED</span>
+            <h2 id="collection-heading">An uncommon <em>collection.</em></h2>
+          </div>
+          <p>
+            Chrome, glass, porcelain, and impossible forms. Original
+            AI-generated artworks, imagined for this fictional exhibition.
+          </p>
+        </div>
+        <ol id="object-collection" class="object-collection"></ol>
+        <noscript
+          ><p class="collection-fallback">
+            The collection includes Bloom, Orbit, Ripple, Arc, Spark, Loop,
+            Fold, and Vessel. Enable JavaScript to view the collectible artwork
+            and play.
+          </p></noscript
+        >
+      </section>
       <section id="how" class="how wrap" aria-labelledby="how-heading">
         <div class="section-heading">
-          <span class="eyebrow">A SMALL RITUAL OF DISCOVERY</span>
-          <h2 id="how-heading">Less scrolling.<br /><em>More delight.</em></h2>
+          <div>
+            <span class="eyebrow">THE PLEASURE IS IN THE DISCOVERY</span>
+            <h2 id="how-heading">
+              A little intuition.<br /><em>A second look.</em>
+            </h2>
+          </div>
           <p>
-            No countdown. No leaderboard. Just you, a collection of original
-            objects, and the pleasure of finding a connection.
+            No countdown. No leaderboard. No rush. Just a small ritual of
+            looking, remembering, and finding a connection.
           </p>
         </div>
         <ol class="steps">
           <li>
-            <span class="step-index">01 / TURN</span
-            ><svg aria-hidden="true" viewBox="0 0 100 100">
-              <use href="#symbol-fold" />
-            </svg>
-            <h3>Follow your curiosity.</h3>
+            <span>01 / REVEAL</span>
+            <h3>Let curiosity lead.</h3>
             <p>
-              Turn over any two cards. Each attempt is a chance to discover
-              something you have seen before.
+              Turn two cards to discover the objects beneath. Each pair of
+              selections counts as one attempt.
             </p>
           </li>
           <li>
-            <span class="step-index">02 / CONNECT</span
-            ><svg aria-hidden="true" viewBox="0 0 100 100">
-              <use href="#symbol-loop" />
-            </svg>
-            <h3>Find a familiar feeling.</h3>
+            <span>02 / RECOGNIZE</span>
+            <h3>Make a connection.</h3>
             <p>
-              Match the symbols to keep them revealed. Different objects turn
-              back, ready for another look.
+              Matching objects remain on display. Different objects turn back,
+              inviting you to look again.
             </p>
           </li>
           <li>
-            <span class="step-index">03 / REVEAL</span
-            ><svg aria-hidden="true" viewBox="0 0 100 100">
-              <use href="#symbol-spark" />
-            </svg>
-            <h3>Complete your collection.</h3>
+            <span>03 / COLLECT</span>
+            <h3>Enjoy the finishing touch.</h3>
             <p>
-              Find every pair to reveal a fictional campaign code. A finishing
-              touch, purely for this concept.
+              Find every pair to reveal your fictional collector’s card and
+              demonstration code. Nothing to purchase or redeem.
             </p>
           </li>
         </ol>
       </section>
       <aside class="brand-story wrap" aria-labelledby="story-heading">
         <div>
-          <span class="eyebrow">BEHIND THE CAMPAIGN</span>
+          <span class="eyebrow">A CAMPAIGN CONCEPT FOR BRANDS</span>
           <h2 id="story-heading">
-            A brand worth<br /><em>spending time with.</em>
+            Beyond a catalogue.<br /><em>Into an experience.</em>
           </h2>
         </div>
         <div>
           <p>
-            A product collection can be more than a catalogue. This fictional
-            experience explores how original artwork, thoughtful interaction,
-            and a playful reveal could introduce a brand.
+            A product story can become something people explore. This concept
+            combines a curated visual world with purposeful interaction and a
+            considered reveal.
           </p>
           <p class="story-note">
-            One configurable identity. No sign-up, tracking, or personal data.
-            Designed as a portfolio demonstration, with no claims about campaign
-            results.
+            One configurable identity. Original generated artwork. No tracking
+            or personal data. A portfolio demonstration, with no claims about
+            campaign results.
           </p>
           <a href="../../index.html"
             >Explore the developer’s portfolio
@@ -404,16 +362,17 @@
     <footer class="site-footer wrap">
       <div class="footer-top">
         <span data-brand="tagline">Objects of wonder</span
-        ><a href="#main">Back to the beginning</a>
+        ><a href="#main">Back to the exhibition</a>
       </div>
       <p class="footer-wordmark" data-brand="logoText" aria-hidden="true">
-        STUDIO
+        VELUNE
       </p>
       <div class="footer-bottom">
         <span
-          ><span data-brand="name">Studio</span> is a fictional brand. Demo /
+          ><span data-brand="name">Velune</span> is a fictional brand. Demo /
           Concept.</span
-        ><span>Original artwork. A little play. Nothing collected.</span
+        ><span
+          >Imagined objects. Original generated art. Nothing collected.</span
         ><a href="../../index.html">Back to Portfolio</a>
       </div>
     </footer>

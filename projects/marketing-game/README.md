@@ -1,6 +1,6 @@
 # VELUNE — Match / Reveal
 
-Phase 5 is an original, fictional creative-commerce campaign: **Demo / Concept**. VELUNE's “Objects of wonder” collection becomes a memory-matching experience with eight original SVG motifs and a purely illustrative reward reveal. It demonstrates how a brand could introduce a collection through interaction, without claiming engagement results or collecting visitor information.
+Phase 5 is an original, fictional creative-commerce campaign: **Demo / Concept**. VELUNE's “Objects of wonder” collection becomes a memory-matching experience with eight original generated studio collectible images and a purely illustrative reward reveal. It demonstrates how a brand could introduce a collection through interaction, without claiming engagement results or collecting visitor information.
 
 ## Run locally
 
@@ -18,8 +18,8 @@ Request `/web-demos/projects/marketing-game/`. All assets are local and paths ar
 - A default 4 × 4 deck containing eight unique pairs: Bloom, Orbit, Ripple, Arc, Spark, Loop, Fold, and Vessel.
 - First/second card selection, permanent matches, delayed mismatch resolution, accurate attempts, remaining pairs, and collection progress.
 - Immediate restart, including during a pending mismatch; replay from completion.
-- A restrained inline reward reveal, working Copy Demo Code action, and honest manual-copy fallback.
-- Original vector art, CSS card flipping, and reduced-motion support. No sound, countdown, leaderboard, or speed requirement.
+- A sculptural collector-card reward reveal, working Copy Demo Code action, and honest manual-copy fallback.
+- Original generated WebP art, CSS card flipping, and reduced-motion support. No sound, countdown, leaderboard, or speed requirement.
 - Keyboard play, live announcements, native card buttons, visible focus, and a readable no-JavaScript campaign fallback.
 - A “behind the campaign” section explaining the concept to potential brand clients.
 
@@ -36,20 +36,20 @@ Edit **`GAME_CONFIG` at the very top of `assets/app.js`**. No rendering or state
 | `campaign`             | Campaign title, three headline lines, and introduction.                                                                                        |
 | `game.pairs`           | `4`, `6`, or `8`; uses the first configured symbols in a four-column grid. Default: eight pairs.                                               |
 | `game.mismatchDelayMs` | Integer from `300` to `3000`; default `950`. Controls the mismatch display time, not a player deadline.                                        |
-| `symbols`              | Ordered `{ id, label }` entries from the eight original artwork IDs. Change labels or order to curate the collection.                          |
+| `symbols`              | Ordered `{ id, label, artwork }` entries from the eight original artwork IDs. Change labels or order to curate the collection.                 |
 | `reward`               | Headline, description, and demonstration code. Keep it explicitly fictional and nonredeemable.                                                 |
 
 For example, change `brand.logoText`, `brand.monogram`, `theme.primary`, and `reward.code` in that object to apply a new identity. Update brand-specific wording in `reward.description` in the same object as needed. Choose color combinations with sufficient text, focus, and card contrast, then rerun accessibility checks. Configuration validation checks color syntax; it cannot guarantee that an arbitrary client palette meets contrast requirements.
 
 `normalizeConfig` validates the object without mutating it. Unsupported pair counts, out-of-range delays, missing or empty text, and unsafe CSS color values receive safe defaults. Text lengths are bounded; duplicate/unknown symbol IDs are removed and missing entries filled from the original collection. Configuration text is assigned with `textContent`, never injected as HTML.
 
-The HTML contains generic readable fallback copy, and CSS supplies the default palette so the no-JavaScript campaign remains usable. Those fallbacks are not a second interactive configuration. The favicon is an original abstract campaign symbol. Adding entirely new artwork requires adding an SVG symbol to `index.html` and its ID to the catalog in `game-logic.js`; ordinary rebranding uses the existing artwork.
+The HTML contains generic readable fallback copy, and CSS supplies the default palette so the no-JavaScript campaign remains usable. Those fallbacks are not a second interactive configuration. The favicon is an original abstract campaign symbol. Artwork paths belong in `symbols[].artwork` (card and gallery) and `artwork.hero` / `artwork.reward`. Only `assets/art/<lowercase-slug>.webp` paths are accepted; remote, traversal, query and non-WebP paths receive safe local defaults. To replace an object, save its WebP locally and update the mapping. A missing file hides the broken image while keeping the object label and gameplay usable. Adding new game IDs requires extending the catalog; replacing artwork does not.
 
 ## Architecture and reliability
 
 - **`game-logic.js`:** build-free browser/CommonJS module with configuration normalization, deck generation, Fisher–Yates shuffle, and pure game transitions. Shuffle uses cryptographic random integers with rejection sampling where available, avoiding modulo bias; the fallback is `Math.random` with uniform index scaling. Tests inject deterministic choices and enumerate every permutation of a three-item deck.
 - **`app.js`:** the single configuration object followed by safe DOM rendering, keyboard navigation, live feedback, lifecycle handling, mismatch scheduling, and clipboard/reward interactions.
-- **`index.html`:** semantic campaign structure, original SVG symbol library, progressive fallback, and inline reward section.
+- **`index.html`:** semantic exhibition structure, local collectible imagery, progressive fallback, and inline reward section.
 - **`style.css`:** responsive campaign system, dimensional cards, matched indicators, and reduced-motion overrides.
 
 | State       | Allowed transition                                                                                                      |
@@ -98,3 +98,11 @@ All nine model tests and the complete Chromium browser suite passed. Initial and
 ## Limitations
 
 This is a static promotional concept, not a production rewards system. Cards and configuration are visible in source; there is no anti-cheating or server verification, and no real reward to protect. Only Chromium and emulated touch are covered by the automated browser suite. Manual screen-reader, Safari/Firefox, and physical-device reviews remain advisable before a real client launch. The final full-portfolio audit is a separate phase and is not part of this implementation.
+
+## Premium visual redesign
+
+The compact campaign heading leads into an oversized chrome-flower exhibit and a portrait 4 × 4 deck. All sixteen cards fit in the initial 1440 × 900 desktop viewport. Engraved plum backs flip into full-image collectible faces; matched cards retain their artwork with a check and explicit collected label. The completion scene features a large champagne-metal knot card, reward ticket and copy controls. Mobile uses a compact exhibition banner above the touch-friendly deck; the complete collection remains available below.
+
+Eight 384 × 384 WebP collectibles and two 960 × 960 hero/reward variants total **264,824 bytes**. The hero and game artwork load immediately; the gallery and reward use lazy loading. There are no full-resolution PNGs or remote image requests in the shipped page. See [art provenance](assets/art/PROVENANCE.md). Images depict fictional objects, not available products.
+
+Additional image/configuration QA: `node projects/marketing-game/tests/artwork.cjs` with the same browser-test environment. This checks decoded images, local payload budget, full desktop board visibility, configuration remapping and missing-image fallback. Model tests also reject unsafe artwork paths. Desktop and mobile initial, revealed/matched and reward screenshots were compared with the preceding version. This is a composition and asset redesign; shuffle and game transition functions remain unchanged.

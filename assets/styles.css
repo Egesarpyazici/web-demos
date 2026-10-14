@@ -2422,3 +2422,69 @@ h2 {
     gap: 4px;
   }
 }
+
+/* Local collectible photography carries the campaign into its portfolio preview. */
+.velune-art {
+  background: #17131d;
+}
+.velune-preview-copy {
+  position: relative;
+  align-self: stretch;
+  min-height: 160px;
+}
+.velune-preview-copy strong {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+}
+.velune-preview-copy > img {
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+  margin-top: -22px;
+}
+.velune-preview-board {
+  padding: 0;
+  border: 0;
+  gap: 5px;
+}
+.velune-preview-board i {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 0.77;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #483b50, #201b28 60%, #453849);
+  outline: 1px solid #c7aeb529;
+  outline-offset: -4px;
+}
+.velune-preview-board .velune-preview-found {
+  background: #17131d;
+  border-color: #dcf594;
+}
+.velune-preview-found img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.velune-preview-scene {
+  margin-block: 8px;
+}
+.velune-preview-copy {
+  min-height: 140px;
+}
+.velune-preview-copy > img {
+  height: 125px;
+  margin-top: -18px;
+}
+.velune-preview-board {
+  width: 125px;
+  max-width: 100%;
+  justify-self: end;
+}
+.velune-preview-scene {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.velune-preview-copy,
+.velune-preview-board {
+  min-width: 0;
+}
