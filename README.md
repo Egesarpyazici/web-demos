@@ -82,7 +82,7 @@ Automated checks do not replace a screen-reader review or testing Safari/Firefox
 - **Phase 2:** ORIVELA tour & rental website — original coastal artwork, accessible gallery, itemized EUR estimator, and client-side inquiry builder.
 - **Phase 3:** ReplyGap missed inquiries calculator — adjustable hypothetical scenarios, synchronized inputs, live SVG charts, and private report actions.
 - **Phase 4:** Ordelle business dashboard — deterministic fictional orders/inquiries, connected analytics, filtering, editing, local persistence, and CSV export.
-- **Phase 5:** VELUNE marketing mini-game — original SVG collection, reliable memory matching, configurable campaign identity, and a fictional reward reveal.
+- **Phase 5:** VELUNE marketing mini-game — original generated collectible collection, reliable memory matching, configurable campaign identity, and a fictional reward reveal.
 
 Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation and Phases 1–5 are implemented. The final full-portfolio audit remains a separate task.
 
@@ -120,7 +120,7 @@ See [Ordelle documentation](projects/business-dashboard/README.md) for architect
 
 ## Phase 5: VELUNE — Match / Reveal
 
-Open `projects/marketing-game/` through the static server. VELUNE is a fictional creative-commerce brand with a plum, lime, and lavender campaign. Sixteen dimensional cards contain eight original SVG pairs. Matching, attempts, progress, restart, and a fictional reward reveal work entirely in the browser, with keyboard controls and reduced-motion support.
+Open `projects/marketing-game/` through the static server. VELUNE is a fictional creative-commerce brand with a plum, lime, and lavender campaign. A sculptural exhibition hero and sixteen engraved portrait cards showcase eight original generated collectible pairs, served as optimized local WebP assets. A collector-card completion scene presents the fictional reward. Matching, attempts, progress, restart, and a fictional reward reveal work entirely in the browser, with keyboard controls and reduced-motion support.
 
 Rebrand the campaign through `GAME_CONFIG` at the top of `projects/marketing-game/assets/app.js`: identity, colors, card monogram, headline, symbols, pair count, mismatch delay, and reward copy/code. Pure game transitions, unbiased shuffle indexing, timer cleanup, and generation guards keep rapid inputs and restart reliable. Copying has a manual fallback. There are no real coupons, tracking, accounts, personal data, or persistent storage.
 

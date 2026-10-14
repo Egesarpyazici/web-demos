@@ -50,6 +50,13 @@
       ? value.trim().slice(0, max)
       : fallback;
   }
+  // Only local WebP filenames are accepted: no remote URLs, traversal or CSS values.
+  function artworkPath(value, fallback) {
+    return typeof value === "string" &&
+      /^assets\/art\/[a-z0-9][a-z0-9-]*\.webp$/.test(value)
+      ? value
+      : fallback;
+  }
   function normalizeConfig(input = {}) {
     if (!input || typeof input !== "object") input = {};
     const result = {};
@@ -92,11 +99,23 @@
         seen.add(s.id);
         return true;
       })
-      .map((s) => ({ id: s.id, label: text(s.label, s.id, 24) }));
+      .map((s) => ({
+        id: s.id,
+        label: text(s.label, s.id, 24),
+        artwork: artworkPath(s.artwork, `assets/art/${s.id}.webp`),
+      }));
     for (const id of catalog)
       if (!seen.has(id))
-        result.symbols.push({ id, label: id[0].toUpperCase() + id.slice(1) });
+        result.symbols.push({
+          id,
+          label: id[0].toUpperCase() + id.slice(1),
+          artwork: `assets/art/${id}.webp`,
+        });
     result.symbols = result.symbols.slice(0, result.game.pairs);
+    result.artwork = {
+      hero: artworkPath(input.artwork?.hero, "assets/art/bloom-large.webp"),
+      reward: artworkPath(input.artwork?.reward, "assets/art/loop-large.webp"),
+    };
     return result;
   }
   // Rejection sampling avoids modulo bias when cryptographic randomness is available.

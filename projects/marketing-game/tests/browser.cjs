@@ -368,9 +368,9 @@ const source = fs.readFileSync(
     );
     assert.equal(await page.locator(".card").count(), 8);
     assert.equal(await page.locator(".card-seal").first().innerText(), "A");
-    assert.equal(
-      await page.locator("h1").innerText(),
-      "Make space\nfor a\nmoment.",
+    assert.deepEqual(
+      await page.locator("h1 [data-campaign]").allTextContents(),
+      ["Make space", "for a", "moment."],
     );
     assert.equal(
       await page.evaluate(() =>
