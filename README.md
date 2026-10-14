@@ -17,7 +17,7 @@ Open the server’s root in a browser. To test the real GitHub Pages prefix from
 python3 -m http.server 8000 --bind 0.0.0.0 --directory /workspace
 ```
 
-Request `/web-demos/` on port 8000. HTML, CSS, JavaScript, and SVG assets are served directly. The site can also be opened from `index.html`; a local server is recommended for QA. Python is a development convenience, not a hosting dependency.
+Request `/web-demos/` on port 8000. HTML, CSS, JavaScript, SVG, and local WebP assets are served directly. The site can also be opened from `index.html`; a local server is recommended for QA. Python is a development convenience, not a hosting dependency.
 
 ## Publish on GitHub Pages
 
@@ -58,7 +58,7 @@ AGENTS.md                   Permanent standards for future Codex tasks
 
 ## Design and accessibility
 
-Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, travel, business-tool, dashboard, and game directions without stock imagery or external requests.
+Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, business-tool, dashboard, and game directions. The ORIVELA travel preview uses original generated yacht imagery. All assets are hosted locally, without stock imagery or external runtime requests.
 
 The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. The clinic and tour cards link to their standalone demos and source code. The other three cards remain noninteractive until their demos exist.
 
@@ -96,7 +96,7 @@ See [the clinic documentation](projects/clinic/README.md) for configuration, bus
 
 ## Phase 2: ORIVELA tour & rental demo
 
-Open `projects/tour-rental/` through the static server. The fictional coastal brand uses ocean navy, turquoise, ivory, and gold with three original SVG scenes. It includes an accessible keyboard/touch gallery, package-specific options, a live itemized EUR estimate, and a validated inquiry builder with clipboard fallback. No booking or message is sent. WhatsApp remains safely unconfigured.
+Open `projects/tour-rental/` through the static server. The fictional coastal brand now uses a cinematic midnight-navy and champagne-gold campaign, with original photorealistic AI-generated yacht, deck, and cove scenes. A separately composed portrait hero keeps the vessel prominent on mobile. The page explicitly identifies its generated imagery and fictional offerings. It includes an accessible keyboard/touch gallery, package-specific options, a live itemized EUR estimate, and a validated inquiry builder with clipboard fallback. No booking or message is sent. WhatsApp remains safely unconfigured.
 
 All rates and limits come from `projects/tour-rental/assets/config.js`. Inclusive dates represent daily private outings, not overnight stays. Calculation uses integer cents and strict calendar-day validation. See [the tour documentation](projects/tour-rental/README.md) for the complete model, independently checked example totals, configuration, test commands, and limitations.
 

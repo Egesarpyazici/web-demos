@@ -1,21 +1,23 @@
 # ORIVELA — private coastal experiences
 
-Phase 2 is a complete static tour and rental **Demo / Concept**. ORIVELA is fictional: no real operator, vessel, route, availability, customer claims, payment, reservation, or booking is represented. All coastal scenes and the yacht are original SVG illustrations created for this project.
+Phase 2 is a complete static tour and rental **Demo / Concept**. ORIVELA is fictional: no real operator, vessel, route, availability, customer claims, payment, reservation, or booking is represented. The current campaign uses original AI-generated photorealistic concept imagery, clearly identified on the page. The fictional vessels and scenes are not inventory or documentary photographs.
 
 ## Experience
 
-Ocean navy, turquoise, warm ivory, and restrained gold create a visual identity distinct from the clinic. A dramatic illustrated coast, oversized typography, floating route panel, accessible three-scene gallery, experience categories, and package cards lead into a transparent estimate and reviewable inquiry. Layouts support 320–1920px. Navigation, gallery controls, FAQ, form errors, and visible focus work by keyboard; motion respects the user's preference.
+Midnight navy, near-black, silver-white, and champagne gold create a cinematic luxury identity distinct from the clinic. A dominant front three-quarter superyacht, warm cabin lights and ocean reflections, oversized serif headline, precision arc, and restrained concept callouts lead the campaign. A separately composed portrait image preserves the yacht on mobile. Photorealistic cove and sunset-deck scenes carry the art direction through the gallery and open-layout package cards. The estimate and inquiry retain quiet, light surfaces for readability. Layouts support 320–1920px. Navigation, gallery controls, FAQ, form errors, and visible focus work by keyboard; motion respects the user's preference.
 
 Serve the repository with Python as described in the root README. Direct GitHub Pages path: `/web-demos/projects/tour-rental/`. All assets use relative paths. There is no installation, build, backend, API, analytics, external asset, or runtime dependency.
 
 ## Files
 
 - `index.html`: semantic content, gallery, estimator, inquiry, FAQ, and contact.
-- `assets/style.css`: scoped visual system and responsive layouts.
+- `assets/style.css`: shared layout, responsive controls, focus, and motion preferences.
+- `assets/luxury.css`: cinematic campaign, art-directed hero, and full-site visual restyle.
 - `assets/config.js`: the single public pricing/limits/contact configuration.
 - `assets/pricing.js`: pure date validation and integer-cent calculations, usable in the browser and Node.
 - `assets/app.js`: accessible interactions, rendering, validation, summary, clipboard, and optional WhatsApp.
-- `assets/coast.svg`, `sunset.svg`, `islands.svg`, `favicon.svg`: original vector artwork.
+- `assets/yacht-*.webp`: optimized local generated campaign imagery; see [image provenance](assets/IMAGES.md).
+- `assets/favicon.svg`: original brand mark. The earlier `coast.svg`, `sunset.svg`, and `islands.svg` studies are preserved but no longer rendered.
 - `tests/pricing.cjs`, `tests/browser.cjs`: development-only regression checks.
 
 ## Pricing model and configuration
@@ -76,6 +78,12 @@ NODE_PATH=/tmp/orivela-tools/node_modules CHROMIUM_PATH=/usr/bin/chromium node p
 
 Set `CHROMIUM_PATH` to your installed browser. Set `TEST_URL` if the server/prefix differs. Screenshots are written outside the repository to `/tmp/orivela-qa/`. The browser suite uses Playwright, Chromium, and axe-core; none are loaded by the site.
 
-Coverage: independent pricing totals, invalid/empty/reversed/out-of-range dates, leap dates and DST-safe days, guest and duration limits, unknown/duplicate extras, eight responsive widths, artwork loading, internal anchors, menu and focus, skip link, keyboard/button gallery navigation, Chromium-emulated touch swipes, FAQ, reduced motion, inquiry validation, safe summary text, real clipboard readback and denial fallback, configured/unconfigured/invalid WhatsApp, stale-summary removal, no-JavaScript fallback, and automated accessibility at 320/1440px. The root portfolio and unchanged multilingual clinic are regression-tested separately.
+Coverage: independent pricing totals, invalid/empty/reversed/out-of-range dates, leap dates and DST-safe days, guest and duration limits, unknown/duplicate extras, eight responsive widths, mobile/desktop hero source selection and visible headline/CTA, artwork loading, internal anchors, menu and focus, skip link, keyboard/button gallery navigation, Chromium-emulated touch swipes, FAQ, reduced motion, inquiry validation, safe summary text, real clipboard readback and denial fallback, configured/unconfigured/invalid WhatsApp, stale-summary removal, no-JavaScript fallback, and automated accessibility at 320/1440px. The root portfolio and unchanged multilingual clinic are regression-tested separately.
 
 Limitations: Chromium automation and emulated touch do not replace Safari/Firefox, real-device touch, or manual screen-reader testing. No real-world charter availability, weather, safety assessment, licensing, accessibility suitability, tax calculation, message delivery, or deployed GitHub Pages state is verified. A production operator needs real content, policies, contact details, and a separate booking backend if desired. Phase 3 is not implemented.
+
+## Luxury overhaul verification
+
+The new hero was reviewed in Chromium at 1440 × 900 and on 320/390px mobile layouts. Its original generated vessel replaces the previous flat vector hero. The mobile scene is a separately generated portrait composition, not a desktop crop. The page keeps its disclosure of generated imagery and fictional offerings. No fake speed, cabin count, vessel capacity, awards, or operating statistics were introduced.
+
+All existing pricing, contact validation, copy/fallback, WhatsApp, gallery, navigation, and accessibility regressions pass after the visual overhaul. Pure pricing/config files remain unchanged. Portfolio and clinic regression checks also pass; the clinic and unrelated project cards are unchanged. Assets are served locally with responsive selection, an eager high-priority hero, and lazy-loaded supporting images. No image-generation service or other external dependency is called at runtime.
