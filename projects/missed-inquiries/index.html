@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#10111b" />
+    <meta
+      name="description"
+      content="ReplyGap is an interactive hypothetical revenue calculator. Explore response-time assumptions with transparent formulas, live charts, and a private, copyable report."
+    />
+    <title>ReplyGap — The Cost of Waiting · Demo / Concept</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="../../assets/config.js" defer></script>
+    <script src="assets/model.js" defer></script>
+    <script src="assets/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="shell nav">
+        <a class="brand" href="#top"
+          ><img src="assets/favicon.svg" width="33" height="33" alt="" /><span
+            >ReplyGap<span class="brand-dot">.</span></span
+          ></a
+        ><span class="demo">DEMO / CONCEPT</span>
+        <nav aria-label="Main navigation">
+          <a href="#calculator">Calculator</a><a href="#method">The model</a
+          ><a href="../../index.html"
+            >Back to portfolio
+            <span aria-hidden="true"
+              ><svg
+                class="direction-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></span
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero shell" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="signal" aria-hidden="true"></span> A LITTLE CLARITY. A
+            BETTER CONVERSATION.
+          </p>
+          <h1>The conversation<br />you <span>almost had.</span></h1>
+          <p class="hero-description">
+            Every unanswered inquiry is a possibility. Explore what response
+            time could mean for your business—with assumptions you control.
+          </p>
+          <div class="hero-actions">
+            <a href="#calculator" class="button primary"
+              >Explore your response gap
+              <span aria-hidden="true"
+                ><svg
+                  class="direction-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span></a
+            ><a class="text-link" href="#method"
+              >See the thinking behind it
+              <span aria-hidden="true"
+                ><svg
+                  class="direction-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 4v16m-7-7 7 7 7-7"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg></span
+            ></a>
+          </div>
+          <p class="hero-note">
+            A scenario, not a prediction. No sign-up. No data collection.
+          </p>
+        </div>
+        <div class="signal-card" aria-labelledby="signal-title">
+          <div class="card-top">
+            <span class="micro">THE COST OF WAITING</span
+            ><span class="scenario-tag">YOUR SCENARIO</span>
+          </div>
+          <h2 id="signal-title">
+            Same inquiries.<br /><span>A different possibility.</span>
+          </h2>
+          <div class="hero-figure">
+            <span data-result="missed">—</span
+            ><small>illustrative monthly revenue gap</small>
+          </div>
+          <div class="signal-visual" aria-hidden="true">
+            <svg
+              class="signal-spark"
+              viewBox="0 0 300 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                id="signal-line"
+                d="M20 25H280"
+                fill="none"
+                stroke="#9d8abc"
+              />
+              <circle
+                cx="20"
+                cy="25"
+                r="4"
+                fill="#171725"
+                stroke="#c3adff"
+                stroke-width="2"
+              />
+              <circle
+                id="signal-end"
+                cx="280"
+                cy="25"
+                r="4"
+                fill="#171725"
+                stroke="#80dfce"
+                stroke-width="2"
+              />
+            </svg>
+            <div class="visual-caption first">
+              Within 5 min<small>Baseline</small>
+            </div>
+            <div class="visual-caption last">
+              <span id="hero-time">Your response time</span
+              ><small>Adjusted scenario</small>
+            </div>
+            <div class="gap-pill">THE REPLY GAP</div>
+          </div>
+          <div class="signal-foot">
+            <span class="tiny-dot" aria-hidden="true"></span> Linked to your
+            calculator inputs below
+          </div>
+        </div>
+      </section>
+      <div class="audience shell">
+        <span>BUILT FOR THE BUSINESS OF CONVERSATION</span>
+        <p>
+          Clinics <i>·</i> Agencies <i>·</i> Rentals <i>·</i> Real estate
+          <i>·</i> Local services <i>·</i> Startups
+        </p>
+      </div>
+      <section
+        class="workspace shell"
+        id="calculator"
+        aria-labelledby="calculator-title"
+      >
+        <div class="workspace-top">
+          <div>
+            <p class="eyebrow">01 / YOUR SCENARIO WORKSPACE</p>
+            <h2 id="calculator-title">
+              Make the invisible <span>visible.</span>
+            </h2>
+          </div>
+          <div class="workspace-meta">
+            <span class="private-mark">Local calculation</span
+            ><span>No uploads. No tracking.</span>
+          </div>
+        </div>
+        <noscript
+          ><p class="notice">
+            JavaScript is needed for live calculations, charts, and report
+            actions. The model and its assumptions remain readable below. No
+            results are shown until the calculator runs.
+          </p></noscript
+        >
+        <div class="workspace-grid">
+          <form id="scenario-form" class="controls-panel" novalidate>
+            <fieldset id="input-fields" disabled>
+              <legend class="sr-only">Scenario inputs</legend>
+              <div class="panel-heading">
+                <h3>Your business, in numbers</h3>
+                <span class="step-badge">01—05</span>
+              </div>
+              <p class="panel-intro">
+                Start with an estimate. Refine as you go.
+              </p>
+              <div class="currency-row">
+                <label for="currency">Currency</label
+                ><select
+                  id="currency"
+                  aria-describedby="currency-hint currency-error"
+                >
+                  <option value="USD">USD · US dollar</option>
+                  <option value="EUR">EUR · Euro</option>
+                  <option value="GBP">GBP · Pound</option>
+                </select>
+              </div>
+              <p class="hint" id="currency-hint">
+                Changes the assumed unit, not the amount. No currency
+                conversion.
+              </p>
+              <p class="error" id="currency-error" hidden></p>
+              <div class="control" data-control="inquiries">
+                <div class="control-title">
+                  <label for="inquiries"
+                    ><span>01</span> Monthly inquiries</label
+                  ><span class="unit">inquiries</span>
+                </div>
+                <input
+                  id="inquiries"
+                  type="number"
+                  inputmode="numeric"
+                  aria-describedby="inquiries-hint inquiries-error"
+                /><label class="sr-only" for="inquiries-range"
+                  >Monthly inquiries slider</label
+                ><input
+                  id="inquiries-range"
+                  type="range"
+                  aria-describedby="inquiries-hint inquiries-error"
+                />
+                <p class="hint" id="inquiries-hint">
+                  All incoming opportunities, across your channels.
+                </p>
+                <p class="error" id="inquiries-error" hidden></p>
+              </div>
+              <div class="control" data-control="minutes">
+                <div class="control-title">
+                  <label for="minutes"
+                    ><span>02</span> Average response time</label
+                  ><span class="unit">minutes</span>
+                </div>
+                <input
+                  id="minutes"
+                  type="number"
+                  inputmode="numeric"
+                  aria-describedby="minutes-hint minutes-error"
+                /><label class="sr-only" for="minutes-range"
+                  >Response time slider, minutes</label
+                ><input
+                  id="minutes-range"
+                  type="range"
+                  aria-describedby="minutes-hint minutes-error"
+                />
+                <div
+                  class="time-presets"
+                  role="group"
+                  aria-label="Response time presets"
+                >
+                  <button type="button" data-time="5">5 min</button
+                  ><button type="button" data-time="60">1 hour</button
+                  ><button type="button" data-time="240">4 hours</button
+                  ><button type="button" data-time="1440">1 day</button>
+                </div>
+                <p class="hint" id="minutes-hint">
+                  0–10,080 minutes (7 days). Up to 5 minutes is the baseline.
+                </p>
+                <p class="error" id="minutes-error" hidden></p>
+              </div>
+              <div class="control" data-control="value">
+                <div class="control-title">
+                  <label for="value"><span>03</span> Average sale value</label
+                  ><span class="unit" id="value-unit">USD</span>
+                </div>
+                <input
+                  id="value"
+                  type="number"
+                  inputmode="decimal"
+                  aria-describedby="value-hint value-error"
+                /><label class="sr-only" for="value-range"
+                  >Average sale value slider</label
+                ><input
+                  id="value-range"
+                  type="range"
+                  aria-describedby="value-hint value-error"
+                />
+                <p class="hint" id="value-hint">
+                  Revenue per conversion, before costs or taxes.
+                </p>
+                <p class="error" id="value-error" hidden></p>
+              </div>
+              <div class="control" data-control="conversion">
+                <div class="control-title">
+                  <label for="conversion"
+                    ><span>04</span> Fast-response conversion</label
+                  ><span class="unit">%</span>
+                </div>
+                <input
+                  id="conversion"
+                  type="number"
+                  inputmode="decimal"
+                  aria-describedby="conversion-hint conversion-error"
+                /><label class="sr-only" for="conversion-range"
+                  >Baseline conversion rate slider, percent</label
+                ><input
+                  id="conversion-range"
+                  type="range"
+                  aria-describedby="conversion-hint conversion-error"
+                />
+                <p class="hint" id="conversion-hint">
+                  Your assumed conversion rate when replying within 5 minutes.
+                </p>
+                <p class="error" id="conversion-error" hidden></p>
+              </div>
+              <div class="control assumption-control" data-control="retention">
+                <div class="control-title">
+                  <label for="retention"
+                    ><span>05</span> Conversion retained</label
+                  ><span class="unit">%</span>
+                </div>
+                <input
+                  id="retention"
+                  type="number"
+                  inputmode="numeric"
+                  aria-describedby="retention-hint retention-error"
+                /><label class="sr-only" for="retention-range"
+                  >Retention per doubling slider, percent</label
+                ><input
+                  id="retention-range"
+                  type="range"
+                  aria-describedby="retention-hint retention-error"
+                />
+                <p class="hint" id="retention-hint">
+                  Conversion retained each time the delay beyond 5 minutes
+                  doubles. Higher retention means a smaller assumed impact.
+                </p>
+                <div
+                  class="assumptions"
+                  role="group"
+                  aria-label="Illustrative retention assumptions"
+                >
+                  <button type="button" data-preset="conservative">
+                    Conservative</button
+                  ><button type="button" data-preset="moderate">Moderate</button
+                  ><button type="button" data-preset="aggressive">
+                    Aggressive
+                  </button>
+                </div>
+                <p class="preset-note" id="preset-note">
+                  Illustrative assumptions, not research findings.
+                </p>
+                <p class="error" id="retention-error" hidden></p>
+              </div>
+              <button type="button" class="reset" id="reset">
+                Reset to documented defaults
+                <span aria-hidden="true"
+                  ><svg
+                    class="direction-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 12a7 7 0 1 0 2-5M4 3v6h6"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    /></svg
+                ></span>
+              </button>
+            </fieldset>
+          </form>
+          <div class="results-panel" id="results" tabindex="-1">
+            <div class="results-heading">
+              <h3>Your response gap</h3>
+              <span id="result-state" class="scenario-tag"
+                >WAITING FOR CALCULATOR</span
+              >
+            </div>
+            <p id="invalid-notice" class="notice" hidden>
+              Check the highlighted inputs. Results and report actions are
+              unavailable until every input is valid.
+            </p>
+            <div class="primary-result">
+              <div>
+                <span class="micro">ILLUSTRATIVE MISSED REVENUE / MONTH</span
+                ><strong data-result="missed">—</strong>
+                <p>
+                  Potential difference under your assumptions.<br />Not a
+                  verified loss or a promise of recovery.
+                </p>
+              </div>
+              <svg
+                class="result-emblem"
+                viewBox="0 0 80 80"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 60 60 20M20 20h40v40"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M4 44 44 4M36 76 76 36"
+                  stroke="currentColor"
+                  opacity=".25"
+                />
+              </svg>
+              <div class="annual-line">
+                <span
+                  >Annualized scenario <small>12 identical months</small></span
+                ><strong data-result="annual">—</strong>
+              </div>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi">
+                <span>Missed conversions</span
+                ><strong data-result="conversions">—</strong
+                ><small>Expected monthly value, not real customers</small>
+              </div>
+              <div class="kpi">
+                <span>Conversion-rate gap</span
+                ><strong data-result="difference">—</strong
+                ><small>Percentage points below your baseline</small>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-heading">
+                <h3>Two response times.<br />One set of inquiries.</h3>
+                <span class="chart-unit" data-currency>USD / month</span>
+              </div>
+              <div class="revenue-label">
+                <span><i class="key baseline"></i> Fast-response potential</span
+                ><strong data-result="potential">—</strong>
+              </div>
+              <svg
+                id="revenue-chart"
+                viewBox="0 0 500 70"
+                role="img"
+                aria-labelledby="revenue-title revenue-desc"
+              >
+                <title id="revenue-title">Monthly revenue comparison</title>
+                <desc id="revenue-desc">
+                  Enter valid inputs to compare hypothetical revenues.
+                </desc>
+                <rect
+                  x="0"
+                  y="0"
+                  width="500"
+                  height="22"
+                  rx="4"
+                  fill="#242638"
+                />
+                <rect
+                  x="0"
+                  y="0"
+                  id="potential-bar"
+                  width="0"
+                  height="22"
+                  rx="4"
+                  fill="#b8a6ff"
+                />
+                <rect
+                  x="0"
+                  y="46"
+                  width="500"
+                  height="22"
+                  rx="4"
+                  fill="#242638"
+                />
+                <rect
+                  x="0"
+                  y="46"
+                  id="current-bar"
+                  width="0"
+                  height="22"
+                  rx="4"
+                  fill="#64d8c5"
+                />
+              </svg>
+              <div class="revenue-label current">
+                <span
+                  ><i class="key current-key"></i> Current-response
+                  estimate</span
+                ><strong data-result="current">—</strong>
+              </div>
+              <p class="chart-foot">
+                Same scale. The baseline is the full bar; zero revenue has no
+                filled bar.
+              </p>
+            </div>
+            <div class="chart-card curve-card">
+              <div class="chart-heading">
+                <h3>What changes<br />when you wait?</h3>
+                <span class="chart-unit">CONVERSION / %</span>
+              </div>
+              <p class="chart-intro">
+                Choose a point to change your response time. With a keyboard,
+                use Tab and Enter, or move between points with the arrow keys.
+              </p>
+              <div id="curve-wrap">
+                <svg
+                  id="curve-chart"
+                  role="group"
+                  aria-labelledby="curve-title curve-desc"
+                >
+                  <title id="curve-title">
+                    Hypothetical conversion by response time
+                  </title>
+                  <desc id="curve-desc">
+                    The horizontal axis uses a logarithmic time scale from five
+                    minutes to seven days. Points set the response time.
+                  </desc>
+                  <g id="curve-grid"></g>
+                  <path id="curve-area" fill="#8a72ff16" />
+                  <path
+                    id="curve-line"
+                    fill="none"
+                    stroke="#b7a3ff"
+                    stroke-width="2.5"
+                  />
+                  <g id="curve-points"></g>
+                  <line
+                    id="selected-line"
+                    stroke="#64d8c5"
+                    stroke-dasharray="3 4"
+                  />
+                  <circle
+                    id="selected-point"
+                    r="5"
+                    fill="#64d8c5"
+                    stroke="#10111b"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div class="curve-readout">
+                <span id="curve-selection">Your selected response time</span
+                ><strong data-result="delayed">—</strong>
+              </div>
+              <p class="chart-foot">
+                Logarithmic time axis · rates are model assumptions, not
+                observed data.
+              </p>
+              <details class="table-details">
+                <summary>View the data behind both charts</summary>
+                <div
+                  class="table-scroll"
+                  tabindex="0"
+                  role="region"
+                  aria-label="Scenario chart data"
+                >
+                  <table>
+                    <caption>
+                      Hypothetical response-time scenarios
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Response</th>
+                        <th scope="col">Conversion</th>
+                        <th scope="col">Revenue / month</th>
+                        <th scope="col">Gap / month</th>
+                      </tr>
+                    </thead>
+                    <tbody id="chart-table"></tbody>
+                  </table>
+                </div>
+              </details>
+            </div>
+            <p class="results-disclaimer">
+              This model isolates response time. It does not model costs,
+              profit, repeat purchases, seasonality, taxes, or actual customer
+              behavior.
+            </p>
+            <p
+              id="live-status"
+              class="sr-only"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <section class="method shell" id="method">
+        <div>
+          <p class="eyebrow">02 / OPEN BY DESIGN</p>
+          <h2>No black box.<br /><span>Just your assumptions.</span></h2>
+          <p>
+            There is no universal rule for what a slow reply costs. ReplyGap
+            makes one hypothetical relationship visible, so you can question it.
+          </p>
+          <a href="#calculator" class="text-link"
+            >Adjust the assumptions
+            <span aria-hidden="true"
+              ><svg
+                class="direction-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 20V4m-7 7 7-7 7 7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                /></svg></span
+          ></a>
+        </div>
+        <div class="formula-card">
+          <span class="micro">THE MODEL, IN PLAIN SIGHT</span>
+          <div class="formula">
+            Delayed conversion = <b>P × R<sup>D</sup></b>
+          </div>
+          <p><code>D = max(0, log₂(max(T, 5) / 5))</code></p>
+          <dl>
+            <div>
+              <dt>P</dt>
+              <dd>Your assumed conversion rate within 5 minutes.</dd>
+            </div>
+            <div>
+              <dt>R</dt>
+              <dd>The proportion retained with each doubling in delay.</dd>
+            </div>
+            <div>
+              <dt>T</dt>
+              <dd>Your average response time in minutes.</dd>
+            </div>
+            <div>
+              <dt>D</dt>
+              <dd>
+                Doublings beyond 5 minutes, including fractional doublings.
+              </dd>
+            </div>
+          </dl>
+          <p class="formula-example">
+            For example, 40 minutes is three doublings from 5. At 80% retention,
+            the baseline conversion is multiplied by 0.8³ = 0.512.
+          </p>
+          <details>
+            <summary>Revenue, rounding, and the preset assumptions</summary>
+            <p>
+              Revenue is monthly inquiries × conversion rate × average sale
+              value. We round each revenue to cents, then subtract current from
+              fast-response revenue. Annualization multiplies that monthly gap
+              by 12, assuming unchanged inputs. Fractional conversions are
+              expected values.
+            </p>
+            <p>
+              Conservative retains 90%, Moderate 80%, and Aggressive 60% per
+              doubling. These presets change retention only. They are
+              illustrative choices, not findings from research. At 100%
+              retention, delay has no modeled effect.
+            </p>
+            <p>
+              Defaults: 240 inquiries, 40 minutes, 250 USD per sale, 25%
+              baseline conversion, and 80% retention. Currency changes the unit
+              and formatting only.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="value-section shell">
+        <div class="section-head">
+          <p class="eyebrow">03 / FROM A NUMBER TO A CONVERSATION</p>
+          <h2>
+            Better questions.<br /><span>More considered decisions.</span>
+          </h2>
+        </div>
+        <div class="value-grid">
+          <article>
+            <span class="value-number">01 / MAKE IT EXPLICIT</span>
+            <h3>Put assumptions<br />on the table.</h3>
+            <p>
+              Separate what you know from what you are estimating. A visible
+              assumption is one you can improve.
+            </p>
+          </article>
+          <article>
+            <span class="value-number">02 / EXPLORE THE ALTERNATIVE</span>
+            <h3>Change the delay.<br />See the difference.</h3>
+            <p>
+              Compare response times using the same inquiry volume and sale
+              value. Understand what drives the scenario.
+            </p>
+          </article>
+          <article>
+            <span class="value-number">03 / START A USEFUL DISCUSSION</span>
+            <h3>Give your workflow<br />a second look.</h3>
+            <p>
+              Use the report to discuss routing, ownership, and follow-up.
+              Validate the assumptions with your own evidence.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="report-section shell" id="report">
+        <div>
+          <p class="eyebrow">04 / TAKE THE THINKING WITH YOU</p>
+          <h2>A useful conversation<br /><span>starts with clarity.</span></h2>
+          <p>
+            Your inputs, results, and assumptions in one plain-English report.
+            Nothing is submitted or tracked. Your inputs are not saved
+            automatically.
+          </p>
+          <div class="report-actions">
+            <button class="button primary" id="copy" disabled>
+              Copy scenario summary
+              <span aria-hidden="true"
+                ><svg
+                  class="direction-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg
+              ></span></button
+            ><button class="button secondary" id="download" disabled>
+              Download .txt</button
+            ><button class="text-button" id="print" disabled>
+              Print report
+            </button>
+          </div>
+          <p id="copy-status" role="status" aria-live="polite"></p>
+          <div class="consultation">
+            <span class="tiny-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Explore a smarter inquiry workflow.</strong>
+              <p id="contact-unavailable">
+                Consultation contact is not configured. No inquiry can be sent
+                here.
+              </p>
+              <a id="contact-link" hidden
+                >Request a consultation by email
+                <span aria-hidden="true"
+                  ><svg
+                    class="direction-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    /></svg></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="report-preview">
+          <div class="report-top">
+            <span class="micro">YOUR SCENARIO BRIEF</span
+            ><span class="file-tag">.TXT</span>
+          </div>
+          <label class="sr-only" for="summary">Read-only scenario summary</label
+          ><textarea
+            id="summary"
+            readonly
+            rows="15"
+            placeholder="Your report appears when the calculator runs."
+          ></textarea
+          ><span class="report-footer"
+            >Generated locally. Share only if you choose.</span
+          >
+        </div>
+      </section>
+    </main>
+    <aside class="mobile-result" aria-label="Live mobile result" hidden>
+      <div>
+        <small>Illustrative monthly gap</small
+        ><strong data-result="missed">—</strong>
+      </div>
+      <a href="#results"
+        >View results
+        <span aria-hidden="true"
+          ><svg
+            class="direction-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 4v16m-7-7 7 7 7-7"
+              stroke="currentColor"
+              stroke-width="1.5"
+            /></svg></span
+      ></a>
+    </aside>
+    <footer class="shell footer">
+      <a class="brand" href="#top"
+        ><img src="assets/favicon.svg" width="25" height="25" alt="" /><span
+          >ReplyGap.</span
+        ></a
+      >
+      <p>
+        The Cost of Waiting · Demo / Concept<br /><span
+          >Hypothetical scenarios. Human decisions.</span
+        >
+      </p>
+      <a href="../../index.html"
+        >Back to portfolio
+        <span aria-hidden="true"
+          ><svg
+            class="direction-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 19 19 5M5 5h14v14"
+              stroke="currentColor"
+              stroke-width="1.5"
+            /></svg></span
+      ></a>
+    </footer>
+  </body>
+</html>

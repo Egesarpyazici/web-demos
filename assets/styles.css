@@ -2042,3 +2042,149 @@ h2 {
 .orivela-art > strong em {
   color: #edca85;
 }
+
+/* ReplyGap: an honest preview of the calculator's documented default scenario. */
+.replygap-art {
+  background: #131420;
+  color: #f3effb;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.replygap-preview-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font:
+    600 16px Arial,
+    sans-serif;
+  letter-spacing: -0.4px;
+}
+.replygap-preview-brand img {
+  width: 20px;
+  height: 20px;
+}
+.replygap-preview-brand > span {
+  margin-left: auto;
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #b5a9cd;
+}
+.replygap-preview-body {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 15px;
+  margin-top: 29px;
+}
+.replygap-preview-inputs {
+  padding: 15px 12px;
+  border: 1px solid #ffffff1a;
+  background: #1c1d2b;
+  border-radius: 5px;
+}
+.replygap-preview-inputs > span {
+  font:
+    6px Arial,
+    sans-serif;
+  letter-spacing: 1px;
+  color: #a69ab9;
+}
+.replygap-preview-inputs > div {
+  font:
+    7px Arial,
+    sans-serif;
+  color: #beb2cd;
+  margin-top: 16px;
+}
+.replygap-preview-inputs b {
+  display: block;
+  background: #11121e;
+  border: 1px solid #ffffff18;
+  padding: 6px 8px;
+  border-radius: 3px;
+  color: #e3d9ee;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.replygap-preview-result {
+  padding: 19px 15px;
+  background: #292138;
+  border: 1px solid #b89ae52b;
+  border-radius: 6px;
+}
+.replygap-preview-result > span {
+  display: block;
+  font:
+    6px Arial,
+    sans-serif;
+  color: #c3addd;
+  letter-spacing: 1px;
+}
+.replygap-preview-result strong {
+  display: block;
+  font:
+    400 clamp(24px, 3vw, 40px)/1.2 Arial,
+    sans-serif;
+  letter-spacing: -1.5px;
+  margin-top: 15px;
+}
+.replygap-preview-result strong span {
+  font-size: 0.6em;
+  color: #b8a6ca;
+}
+.replygap-preview-result small {
+  font:
+    7px Arial,
+    sans-serif;
+  color: #c0b2ce;
+  display: block;
+  margin-top: 6px;
+}
+.replygap-mini-bars {
+  display: grid;
+  gap: 9px;
+  margin-top: 23px;
+}
+.replygap-mini-bars i {
+  height: 9px;
+  border-radius: 2px;
+  background: #b9a5ff;
+}
+.replygap-mini-bars i + i {
+  width: 51.2%;
+  background: #6ad8c4;
+}
+.replygap-preview-result p {
+  font:
+    6px/1.6 Arial,
+    sans-serif;
+  color: #bda9cf;
+  margin-top: 12px;
+}
+.replygap-art .concept-label {
+  color: #b8abcc;
+}
+@media (max-width: 520px) {
+  .replygap-art {
+    padding: 20px;
+  }
+  .replygap-preview-body {
+    gap: 10px;
+    margin-top: 23px;
+  }
+  .replygap-preview-inputs {
+    padding: 12px 9px;
+  }
+  .replygap-preview-result {
+    padding: 15px 10px;
+  }
+  .replygap-preview-result strong {
+    font-size: 27px;
+  }
+  .replygap-preview-brand > span {
+    font-size: 5px;
+    letter-spacing: 0.5px;
+  }
+}
