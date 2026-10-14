@@ -1,6 +1,6 @@
 # Ege Sarp Yazıcı — Portfolio foundation
 
-A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo. Phase 2 adds **ORIVELA**, a luxury coastal tour and rental demo. Three **Coming Soon — Demo / Concept** previews remain. All projects are original concepts, not commissioned client case studies.
+A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo. Phase 2 adds **ORIVELA**, a luxury coastal tour and rental demo. Phase 3 adds **ReplyGap**, a transparent response-delay revenue calculator. Two **Coming Soon — Demo / Concept** previews remain. All projects are original concepts, not commissioned client case studies.
 
 ## Run locally
 
@@ -49,7 +49,7 @@ assets/config.js            Public contact configuration
 assets/favicon.svg          Original brand mark
 projects/clinic/             Avela multilingual clinic demo (Phase 1)
 projects/tour-rental/        ORIVELA coastal tour and rental demo (Phase 2)
-projects/missed-inquiries/   Reserved inquiries calculator
+projects/missed-inquiries/   ReplyGap hypothetical revenue calculator (Phase 3)
 projects/business-dashboard/ Reserved business dashboard
 projects/marketing-game/    Reserved branded mini-game
 AGENTS.md                   Permanent standards for future Codex tasks
@@ -60,7 +60,7 @@ AGENTS.md                   Permanent standards for future Codex tasks
 
 Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, business-tool, dashboard, and game directions. The ORIVELA travel preview uses original generated yacht imagery. All assets are hosted locally, without stock imagery or external runtime requests.
 
-The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. The clinic and tour cards link to their standalone demos and source code. The other three cards remain noninteractive until their demos exist.
+The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. The clinic, tour, and calculator cards link to their standalone demos and source code. The other two cards remain noninteractive until their demos exist.
 
 ## Quality assurance
 
@@ -80,11 +80,11 @@ Automated checks do not replace a screen-reader review or testing Safari/Firefox
 - **Phase 0:** Portfolio foundation, honest previews, contact configuration, accessibility, and documentation.
 - **Phase 1:** Avela clinic website — complete EN/DE/RU demo, service discovery, accessible FAQ, and a client-side appointment inquiry builder.
 - **Phase 2:** ORIVELA tour & rental website — original coastal artwork, accessible gallery, itemized EUR estimator, and client-side inquiry builder.
-- **Future:** Missed inquiries calculator — accessible inputs, transparent assumptions, useful estimates.
+- **Phase 3:** ReplyGap missed inquiries calculator — adjustable hypothetical scenarios, synchronized inputs, live SVG charts, and private report actions.
 - **Future:** Business dashboard — representative labeled sample data and meaningful controls.
 - **Future:** Branded marketing mini-game — original interaction, keyboard support, accessible alternative.
 
-Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation, Phase 1 clinic, and Phase 2 tour demo are implemented. Phase 3 has not begun.
+Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation and Phases 1–3 are implemented. Phase 4 has not begun.
 
 ## Phase 1: Avela clinic demo
 
@@ -101,3 +101,11 @@ Open `projects/tour-rental/` through the static server. The fictional coastal br
 All rates and limits come from `projects/tour-rental/assets/config.js`. Inclusive dates represent daily private outings, not overnight stays. Calculation uses integer cents and strict calendar-day validation. See [the tour documentation](projects/tour-rental/README.md) for the complete model, independently checked example totals, configuration, test commands, and limitations.
 
 Phase 2 QA covers 30 pricing/invalid-input cases, responsive widths from 320 to 1920px, navigation/focus, gallery buttons/keyboard/emulated touch, inquiry validation, summary generation, real clipboard and denied-access fallback, WhatsApp states, no-JavaScript content, reduced motion, and axe accessibility. Portfolio and EN/DE/RU clinic regression suites are also run. Browser testing is local Chromium validation, not proof of a live GitHub Pages deployment.
+
+## Phase 3: ReplyGap — The Cost of Waiting
+
+Open `projects/missed-inquiries/` through the static server. ReplyGap uses a graphite/indigo and electric-violet SaaS design with synchronized inputs, illustrative retention presets, live KPI cards, accessible SVG revenue/response charts, a data table, and copy/download/print reports. The existing portfolio email configuration powers an optional consultation link; the default remains honestly unavailable. No data is collected, submitted, or persisted automatically.
+
+The pure model assumes conversion is retained by a user-selected factor with each doubling of response time beyond five minutes. All assumptions are visible, adjustable, and explicitly hypothetical. USD/EUR/GBP changes the assumed unit, without exchange-rate conversion. Annualization assumes 12 identical months. Results are not verified historical losses, causal predictions, or guaranteed recoverable revenue.
+
+See [the ReplyGap documentation](projects/missed-inquiries/README.md) for exact formulas, limits, defaults, independent expected totals, accessibility, privacy, and test instructions. Model tests run with Node alone; browser checks use development-only Playwright/Chromium and axe. Portfolio, Avela, and ORIVELA regressions are checked independently. The other demos and shared contact configuration are unchanged.
