@@ -2,7 +2,7 @@
 
 A static freelance developer portfolio for small businesses, entrepreneurs and startups. Five complete, standalone demos demonstrate business websites, multilingual inquiries, interactive estimators, operations interfaces and branded experiences. Every project is original **Demo / Concept** work, not a commissioned client case study. No fabricated clients, credentials or commercial results are presented.
 
-**[Portfolio](https://egesarpyazici.github.io/web-demos/)** · [Phase 6 audit and launch checklist](PORTFOLIO_AUDIT.md)
+**[Portfolio](https://egesarpyazici.github.io/web-demos/)** · [Phase 6 audit and launch checklist](PORTFOLIO_AUDIT.md) · [Final UI polish evidence](UI_POLISH_REPORT.md)
 
 ## Projects and potential business value
 
@@ -77,6 +77,7 @@ node projects/tour-rental/tests/pricing.cjs
 # Same NODE_PATH and CHROMIUM_PATH environment as above:
 node tests/portfolio.cjs
 node tests/audit.cjs
+node tests/ui-polish.cjs
 node tests/slow-network.cjs
 ```
 

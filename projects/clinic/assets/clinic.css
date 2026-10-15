@@ -11,13 +11,15 @@
   --success: #233f64;
   --shadow: 0 16px 40px #16284008;
   --radius: 20px;
+  --section-space: clamp(56px, 5vw, 72px);
+  --header-height: 100px;
 }
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 125px;
+  scroll-padding-top: calc(var(--header-height) + 16px);
 }
 body {
   margin: 0;
@@ -555,14 +557,22 @@ h3 {
   color: var(--accent);
 }
 .section {
-  padding-block: 95px;
+  padding-block: var(--section-space);
+}
+/* Anchor the content edge, not the empty padding above it. */
+#services,
+#principles,
+#experience,
+#questions,
+#appointment {
+  scroll-margin-top: calc(-1 * var(--section-space));
 }
 .section-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 45px;
-  margin-bottom: 43px;
+  margin-bottom: 32px;
 }
 .section-intro {
   font-size: 13px;
@@ -999,7 +1009,7 @@ summary {
   justify-content: space-between;
   gap: 25px;
   cursor: pointer;
-  padding: 23px 0;
+  padding: 19px 0;
   list-style: none;
   font-size: 14px;
   font-weight: 500;
@@ -1500,9 +1510,7 @@ textarea {
     gap: 20px;
     padding-inline: 5px;
   }
-  .section {
-    padding-block: 65px;
-  }
+
   .section-head {
     gap: 30px;
     align-items: start;
@@ -1631,7 +1639,8 @@ textarea {
 }
 @media (max-width: 600px) {
   html {
-    scroll-padding-top: 160px;
+    --header-height: 83px;
+    --section-space: 48px;
   }
   .wrap {
     width: calc(100% - 40px);
@@ -1821,9 +1830,7 @@ textarea {
     flex-basis: 100%;
     text-align: center;
   }
-  .section {
-    padding-block: 55px;
-  }
+
   .eyebrow {
     font-size: 8px;
     letter-spacing: 1.1px;
@@ -2075,5 +2082,32 @@ textarea {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* Keep the explanatory column with its longer form/FAQ, without trapping it
+   in short landscape or zoomed viewports. */
+@media (min-width: 901px) and (min-height: 800px) {
+  .faq-grid > div:first-child,
+  .appointment-intro {
+    align-self: start;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+  }
+}
+
+/* Long translated brand descriptors must not push the controls into a second row. */
+@media (max-width: 380px) {
+  .header {
+    column-gap: 8px;
+  }
+  .header > .brand {
+    flex: 1;
+    min-width: 0;
+  }
+  .brand-sub {
+    max-width: 100px;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
   }
 }

@@ -251,9 +251,18 @@
   const menu = document.querySelector("#menu-toggle");
   const nav = document.querySelector("#main-nav");
   const narrow = matchMedia("(max-width: 600px)");
+  const header = document.querySelector(".header");
+  function syncHeaderOffset() {
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${Math.ceil(header.getBoundingClientRect().height)}px`,
+    );
+  }
+  new ResizeObserver(syncHeaderOffset).observe(header);
   function setMenu(open) {
     menu.setAttribute("aria-expanded", String(open));
     nav.dataset.collapsed = String(narrow.matches && !open);
+    syncHeaderOffset();
   }
   function syncMenu() {
     menu.hidden = !narrow.matches;
@@ -273,16 +282,23 @@
       menu.focus();
     }
   });
-  nav.addEventListener("click", (event) => {
-    const link = event.target.closest("a");
-    if (!link || !narrow.matches) return;
-    setMenu(false);
-    const target = document.querySelector(link.hash);
-    target.setAttribute("tabindex", "-1");
+  // Keep native hash/history scrolling, but move focus to the chosen section
+  // for desktop CTAs as well as the mobile navigation.
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const target = document.getElementById(link.hash.slice(1));
+    if (!target) return;
+    if (narrow.matches) setMenu(false);
+    const temporary = !target.hasAttribute("tabindex");
+    if (temporary) target.setAttribute("tabindex", "-1");
     target.focus({ preventScroll: true });
-    target.addEventListener("blur", () => target.removeAttribute("tabindex"), {
-      once: true,
-    });
+    if (temporary)
+      target.addEventListener(
+        "blur",
+        () => target.removeAttribute("tabindex"),
+        { once: true },
+      );
   });
   document.querySelectorAll("[data-service]").forEach((link) =>
     link.addEventListener("click", () => {
