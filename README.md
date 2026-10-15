@@ -1,127 +1,121 @@
-# Ege Sarp Yazıcı — Portfolio foundation
+# Ege Sarp Yazıcı — Independent web developer
 
-A lightweight, original portfolio for independent web development. Phase 0 presents the developer’s services and approach. Phase 1 adds **Avela**, a complete multilingual clinic website demo. Phase 2 adds **ORIVELA**, a luxury coastal tour and rental demo. Phase 3 adds **ReplyGap**, a transparent response-delay revenue calculator. Phase 4 adds **Ordelle**, a complete fictional business operations dashboard. Phase 5 adds **VELUNE**, a branded memory-matching campaign. All five standalone demos are implemented. All projects are original concepts, not commissioned client case studies.
+A static freelance developer portfolio for small businesses, entrepreneurs and startups. Five complete, standalone demos demonstrate business websites, multilingual inquiries, interactive estimators, operations interfaces and branded experiences. Every project is original **Demo / Concept** work, not a commissioned client case study. No fabricated clients, credentials or commercial results are presented.
+
+**[Portfolio](https://egesarpyazici.github.io/web-demos/)** · [Phase 6 audit and launch checklist](PORTFOLIO_AUDIT.md)
+
+## Projects and potential business value
+
+The links below are intended GitHub Pages URLs. Local tests validate the exact `/web-demos/` prefix; live deployment verification is reported separately in the audit.
+
+| Demo                                                                                                     | Problem                                                                 | Solution and features                                                                                                   | Potential business value                                                                                         |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| [Avela — clinic](https://egesarpyazici.github.io/web-demos/projects/clinic/)                             | Visitors need understandable care information and a clear inquiry path. | EN/DE/RU service pages, persistent language selection, FAQ, validated inquiry summary, clipboard and optional WhatsApp. | Could help a practice communicate across languages and receive more structured questions.                        |
+| [ORIVELA — charter](https://egesarpyazici.github.io/web-demos/projects/tour-rental/)                     | Package choices, dates and extras make pricing difficult to understand. | Cinematic generated yacht imagery, accessible gallery, itemized EUR estimate and reviewable inquiry.                    | Could make options and price assumptions easier to evaluate before contacting an operator.                       |
+| [ReplyGap — scenario calculator](https://egesarpyazici.github.io/web-demos/projects/missed-inquiries/)   | Teams need a way to discuss the possible effect of response delays.     | Adjustable hypothetical model, synchronized inputs, interactive charts and copy/download/print reports.                 | Could support a conversation about response processes; results are assumptions, not measured losses or promises. |
+| [Ordelle — operations dashboard](https://egesarpyazici.github.io/web-demos/projects/business-dashboard/) | Orders and inquiries can be hard to review together.                    | Five views, consistent metrics, search/filter/sort, editable fictional records, undo, CSV and local persistence.        | Demonstrates how a focused workspace could simplify day-to-day review.                                           |
+| [VELUNE — branded matching campaign](https://egesarpyazici.github.io/web-demos/projects/marketing-game/) | A collection needs a memorable way to invite exploration.               | Original collectible artwork, keyboard-accessible matching, configurable branding and fictional reward reveal.          | Demonstrates an interactive product-discovery format without claiming engagement or sales results.               |
+
+Each project has [source code](https://github.com/Egesarpyazici/web-demos/tree/main/projects), its own README, configuration guidance and regression tests. The homepage links directly to each individual demo and source directory.
 
 ## Run locally
 
-No installation, build step, API, or environment variable is required. Use Python 3 to serve the repository:
+HTML5, CSS3 and vanilla JavaScript only. System fonts, original SVG/CSS graphics and optimized generated WebP images are served locally. No build, framework, backend, database, API key or external runtime dependency is required.
 
 ```sh
 cd /path/to/web-demos
 python3 -m http.server 8000
 ```
 
-Open the server’s root in a browser. To test the real GitHub Pages prefix from the cloud checkout:
+For GitHub Pages path testing from the cloud checkout:
 
 ```sh
 python3 -m http.server 8000 --bind 0.0.0.0 --directory /workspace
 ```
 
-Request `/web-demos/` on port 8000. HTML, CSS, JavaScript, SVG, and local WebP assets are served directly. The site can also be opened from `index.html`; a local server is recommended for QA. Python is a development convenience, not a hosting dependency.
+Request `/web-demos/` on port 8000. Direct entry to every `projects/<name>/` route works. A server is recommended over opening files directly; clipboard support requires HTTPS or localhost and browser permission. Python and QA dependencies are development tools only.
 
-## Publish on GitHub Pages
+## Contact configuration — required before client outreach
 
-After reviewing and merging the changes, open repository **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/(root)`, then save. The intended site path is `https://egesarpyazici.github.io/web-demos/`. Publication is a separate step and is not implied by a local commit or successful tests. `.nojekyll` keeps hosting static. All asset references are relative, so project-site hosting works without rewriting paths.
-
-## Configure contact details
-
-Edit `assets/config.js`:
+Edit the single public configuration in `assets/config.js`:
 
 ```js
 window.PORTFOLIO_CONFIG = Object.freeze({
-  email: "",
-  github: "",
-  linkedin: "",
+  email: "", // Owner must provide a real public inquiry address.
+  github: "https://github.com/Egesarpyazici",
+  linkedin: "", // Owner must provide the correct public profile URL.
 });
 ```
 
-Replace empty strings only with real public details. Email enables a mailto CTA, using the visitor’s email application; it does not submit to a backend. Social URLs must be complete HTTPS URLs. Missing or invalid entries produce no link. By default, the contact section explicitly says details are coming soon. No invented email address or profile is published. Without JavaScript, the safe default contact state remains visible.
+The GitHub profile was verified against the repository owner. **Email and LinkedIn are still missing and are launch blockers for the requested client-outreach pass.** Do not infer them from the owner's name or username. Missing/invalid email remains an explicit noninteractive status; a valid email enables a `mailto:` link that opens the visitor's mail application. Nothing is submitted by this site. ReplyGap uses the same email configuration without attaching scenario data.
 
-The public display name is in `index.html` (including the title, metadata, branding, and introduction). Never store credentials in configuration.
+Social links require HTTPS and reject embedded URL credentials. Only publish the owner's real profile URLs. Without JavaScript, the honest email-unconfigured fallback remains visible. Never put secrets in any public config file. The existing public display name is preserved.
 
-## Structure
+Avela and ORIVELA have separate, intentionally empty WhatsApp destinations in their own `assets/config.js` files. They are fictional demos, so these are not portfolio contact channels or outreach blockers. Enable only with a real authorized destination and deliberate owner intent; opening WhatsApp shares the prefilled URL with that external service, and sending remains the visitor's choice.
 
-```text
-index.html                  Portfolio sections and original mockup artwork
-assets/styles.css           Responsive design, interaction and motion preferences
-assets/main.js              Menu, focus management, year and contact enhancement
-assets/config.js            Public contact configuration
-assets/favicon.svg          Original brand mark
-projects/clinic/             Avela multilingual clinic demo (Phase 1)
-projects/tour-rental/        ORIVELA coastal tour and rental demo (Phase 2)
-projects/missed-inquiries/   ReplyGap hypothetical revenue calculator (Phase 3)
-projects/business-dashboard/ Ordelle operations workspace (Phase 4)
-projects/marketing-game/    VELUNE branded memory campaign (Phase 5)
-AGENTS.md                   Permanent standards for future Codex tasks
-.nojekyll                   Static GitHub Pages hosting
+## Test the complete portfolio
+
+Use Node.js 22+ and an installed Chromium. Install development dependencies **outside this repository**:
+
+```sh
+npm install --prefix /tmp/portfolio-tools --cache /tmp/portfolio-npm-cache --no-package-lock playwright@1.62.1 axe-core@4.14.0
 ```
 
-## Design and accessibility
+Start the prefixed static server above, then run from the repository:
 
-Warm ivory, deep green ink, chartreuse accents, system sans-serif type, and italic serif headings establish an editorial identity. Original CSS/SVG previews explore distinct healthcare, business-tool, dashboard, and game directions. The ORIVELA travel preview uses original generated yacht imagery. All assets are hosted locally, without stock imagery or external runtime requests.
+```sh
+NODE_PATH=/tmp/portfolio-tools/node_modules CHROMIUM_PATH=/usr/bin/chromium node tests/run.cjs
+```
 
-The page includes semantic landmarks, logical headings, a keyboard skip link, visible focus indicators, a mobile disclosure menu with Escape/focus handling, responsive layouts from 320px, and reduced-motion support. Decorative previews are hidden from assistive technology. Content and navigation remain available without JavaScript. All five project cards link to their standalone demos and source code. Each is clearly labeled as an original Demo / Concept.
+If a system Chromium is unavailable, install Playwright's browser outside the checkout and set `CHROMIUM_PATH` to its executable. The fail-fast runner executes model/pricing tests, homepage checks, all five existing browser suites, VELUNE image/configuration checks, and the cross-site audit. Screenshots/results go to `/tmp`. No testing dependency is loaded by visitors.
 
-## Quality assurance
+Useful individual commands:
 
-Phase 0 was tested using headless Chromium and Playwright against `/web-demos/` on a local Python server. Browser tooling is development-only and is not shipped as a runtime dependency. The checks cover:
+```sh
+node --test projects/missed-inquiries/tests/model.cjs projects/business-dashboard/tests/model.cjs projects/marketing-game/tests/model.cjs
+node projects/tour-rental/tests/pricing.cjs
+# Same NODE_PATH and CHROMIUM_PATH environment as above:
+node tests/portfolio.cjs
+node tests/audit.cjs
+node tests/slow-network.cjs
+```
 
-- Widths 320, 375, 390, 520, 521, 768, 1024, 1440, and 1920px; horizontal overflow and five correctly labeled cards.
-- Internal navigation targets, mobile menu toggle, Escape, focus transfer, and desktop breakpoint reset.
-- Skip-link focus, reduced-motion behavior, and no-JavaScript content/navigation.
-- Default contact state, configured email/social links, and rejection of unsafe social URL schemes.
-- Browser exceptions and HTTP failures; real requests for all local assets.
-- Desktop/mobile screenshot review and automated accessibility checks.
+`tests/audit.cjs` covers all six sites at 320, 375, 390, 430, 768, 1024, 1440 and 1920px, short landscape/reflow viewports, axe WCAG 2.2 AA fundamentals and best practices, metadata, local links/assets, image dimensions, completed project links, contact safety and browser/network errors. Each project's README documents its deeper interaction suite. `PORTFOLIO_TEST_URL` changes the homepage/audit base; existing demo suite overrides are documented in their READMEs. The complete runner defaults to the local prefixed server.
 
-Automated checks do not replace a screen-reader review or testing Safari/Firefox and real touch devices. Phase 0 checks do not establish clinic behavior, email delivery, or live deployment. The clinic has its own browser regression suite described below.
+Performance is measured separately with development-only Lighthouse to avoid concurrent browser-test load. See `PORTFOLIO_AUDIT.md` for actual versions, measured scores, limitations and reproducible commands. Automated accessibility scans are not full WCAG certification.
 
-## Roadmap
+## Hosting and metadata
 
-- **Phase 0:** Portfolio foundation, honest previews, contact configuration, accessibility, and documentation.
-- **Phase 1:** Avela clinic website — complete EN/DE/RU demo, service discovery, accessible FAQ, and a client-side appointment inquiry builder.
-- **Phase 2:** ORIVELA tour & rental website — original coastal artwork, accessible gallery, itemized EUR estimator, and client-side inquiry builder.
-- **Phase 3:** ReplyGap missed inquiries calculator — adjustable hypothetical scenarios, synchronized inputs, live SVG charts, and private report actions.
-- **Phase 4:** Ordelle business dashboard — deterministic fictional orders/inquiries, connected analytics, filtering, editing, local persistence, and CSV export.
-- **Phase 5:** VELUNE marketing mini-game — original generated collectible collection, reliable memory matching, configurable campaign identity, and a fictional reward reveal.
+After owner review and merge, select repository **Settings → Pages → Deploy from a branch → main → /(root)**. The public base is `https://egesarpyazici.github.io/web-demos/`, not the domain root. `.nojekyll` preserves static hosting. A pushed branch does not imply deployment, and Phase 6 does not authorize merging or deploying.
 
-Each demo requires its own scoped implementation and testing. Add navigation to a demo only after its standalone page is complete. The foundation and Phases 1–5 are implemented. The final full-portfolio audit remains a separate task.
+All runtime paths are relative. Canonical/Open Graph URLs and `sitemap.xml` list the six public routes; update them if the repository/domain changes. No nonexistent social preview image is advertised. A project-level `robots.txt` would not control crawling: crawlers read `https://egesarpyazici.github.io/robots.txt`, which belongs to the account-level site. Therefore this repository includes a sitemap but does not pretend to configure root crawler policy.
 
-## Phase 1: Avela clinic demo
+GitHub Pages controls HTTP compression/cache headers; this source repository cannot configure arbitrary server headers. Keep local assets optimized, verify changes after deployment, and use a fresh asset filename when a future replacement needs cache invalidation. Do not add a service worker merely to mask missing files or force an audit score.
 
-Open `projects/clinic/` through the static server. Avela uses a refined graphite, mineral-white, and mint healthcare identity, original dimensional SVG/CSS illustrations, and fully translated English, German, and Russian content. It demonstrates how a healthcare business could communicate services and guide international visitors toward a structured inquiry.
+## Maintenance and static-demo limitations
 
-The inquiry builder validates sample details, formats dates locally, generates a reviewable summary, and supports copying. Nothing is booked, submitted, or received. WhatsApp is intentionally unconfigured; add a real authorized number only in `projects/clinic/assets/config.js`. No form data is persisted. Only the language preference is saved locally when storage is available.
+- Preserve the five approved visual identities, original asset provenance, keyboard navigation, focus indicators, reduced motion and explicit demo labels. Change layout only for demonstrated defects.
+- Read [AGENTS.md](AGENTS.md) and the affected project's README before changing behavior. Run the complete release suite after shared changes.
+- Avela and ORIVELA generate inquiries; they do not book, send, confirm availability or accept payments. Never enter sensitive medical or real client information in demos.
+- ReplyGap uses an explicitly hypothetical formula; changing USD/EUR/GBP changes the unit, not an exchange rate. There is no verified or guaranteed financial outcome.
+- Ordelle uses seeded fictional records and validated browser-local edits. It has no authentication, server, synchronization or real accounting integration. Reset affects only its own storage key.
+- VELUNE has no purchase, tracking or redeemable reward. Its state and artwork are visible in source. Rebrand through `GAME_CONFIG` at the top of its app.js.
+- No portfolio message delivery, real-device testing or complete assistive-technology conformance is implied by local automated tests. Follow the audit's owner checklist before outreach.
 
-See [the clinic documentation](projects/clinic/README.md) for configuration, business value, field rules, privacy behavior, browser testing instructions, and limitations. The committed `projects/clinic/tests/browser.cjs` suite checks languages, responsive layouts, navigation, form behavior, clipboard, WhatsApp configuration, and accessibility. Test dependencies are installed outside the repository and are not runtime dependencies.
+## Repository map and phase status
 
-## Phase 2: ORIVELA tour & rental demo
+```text
+index.html, assets/         Main portfolio and public contact configuration
+projects/clinic/            Avela + configuration, translations and tests
+projects/tour-rental/       ORIVELA + pricing, generated art provenance and tests
+projects/missed-inquiries/  ReplyGap + transparent model and tests
+projects/business-dashboard/ Ordelle + fictional data, store, analytics and tests
+projects/marketing-game/   VELUNE + art provenance, game model and tests
+tests/                     Complete runner, homepage and cross-site audit
+sitemap.xml                Six public canonical routes
+PORTFOLIO_AUDIT.md          Phase 6 findings, evidence, limitations and owner actions
+AGENTS.md                  Permanent maintenance standards
+.nojekyll                  Static GitHub Pages compatibility
+```
 
-Open `projects/tour-rental/` through the static server. The fictional coastal brand now uses a cinematic midnight-navy and champagne-gold campaign, with original photorealistic AI-generated yacht, deck, and cove scenes. A separately composed portrait hero keeps the vessel prominent on mobile. The page explicitly identifies its generated imagery and fictional offerings. It includes an accessible keyboard/touch gallery, package-specific options, a live itemized EUR estimate, and a validated inquiry builder with clipboard fallback. No booking or message is sent. WhatsApp remains safely unconfigured.
-
-All rates and limits come from `projects/tour-rental/assets/config.js`. Inclusive dates represent daily private outings, not overnight stays. Calculation uses integer cents and strict calendar-day validation. See [the tour documentation](projects/tour-rental/README.md) for the complete model, independently checked example totals, configuration, test commands, and limitations.
-
-Phase 2 QA covers 30 pricing/invalid-input cases, responsive widths from 320 to 1920px, navigation/focus, gallery buttons/keyboard/emulated touch, inquiry validation, summary generation, real clipboard and denied-access fallback, WhatsApp states, no-JavaScript content, reduced motion, and axe accessibility. Portfolio and EN/DE/RU clinic regression suites are also run. Browser testing is local Chromium validation, not proof of a live GitHub Pages deployment.
-
-## Phase 3: ReplyGap — The Cost of Waiting
-
-Open `projects/missed-inquiries/` through the static server. ReplyGap uses a graphite/indigo and electric-violet SaaS design with synchronized inputs, illustrative retention presets, live KPI cards, accessible SVG revenue/response charts, a data table, and copy/download/print reports. The existing portfolio email configuration powers an optional consultation link; the default remains honestly unavailable. No data is collected, submitted, or persisted automatically.
-
-The pure model assumes conversion is retained by a user-selected factor with each doubling of response time beyond five minutes. All assumptions are visible, adjustable, and explicitly hypothetical. USD/EUR/GBP changes the assumed unit, without exchange-rate conversion. Annualization assumes 12 identical months. Results are not verified historical losses, causal predictions, or guaranteed recoverable revenue.
-
-See [the ReplyGap documentation](projects/missed-inquiries/README.md) for exact formulas, limits, defaults, independent expected totals, accessibility, privacy, and test instructions. Model tests run with Node alone; browser checks use development-only Playwright/Chromium and axe. Portfolio, Avela, and ORIVELA regressions are checked independently. The other demos and shared contact configuration are unchanged.
-
-## Phase 4: Ordelle business operations dashboard
-
-Open `projects/business-dashboard/` through the static server. Ordelle pairs a navy sidebar and cool-white/cobalt workspace with five functional views: overview, orders, inquiries, analytics, and demo settings. Its seeded 180 orders and 96 inquiries drive every metric and chart. Search, combined filters, sorting, pagination, native detail dialogs, status/priority editing with undo, and accurate filtered CSV export work entirely in the browser.
-
-The fixed sample window ends 31 March 2026. Revenue counts paid, non-cancelled orders; open inquiries are new or in progress. Validated overrides and the reporting-period preference persist in `ordelle.demo.v1`. Malformed or blocked storage recovers safely, and confirmed reset affects only this demo. No customer is contacted and nothing is saved to a server.
-
-See [Ordelle documentation](projects/business-dashboard/README.md) for architecture, calculation rules, privacy, test commands, and limitations. Its Node model tests and Chromium/axe browser suite verify data consistency, management interactions, export safety, local state, keyboard accessibility, responsive layouts, and GitHub Pages paths. Other demo implementations are unchanged.
-
-## Phase 5: VELUNE — Match / Reveal
-
-Open `projects/marketing-game/` through the static server. VELUNE is a fictional creative-commerce brand with a plum, lime, and lavender campaign. A sculptural exhibition hero and sixteen engraved portrait cards showcase eight original generated collectible pairs, served as optimized local WebP assets. A collector-card completion scene presents the fictional reward. Matching, attempts, progress, restart, and a fictional reward reveal work entirely in the browser, with keyboard controls and reduced-motion support.
-
-Rebrand the campaign through `GAME_CONFIG` at the top of `projects/marketing-game/assets/app.js`: identity, colors, card monogram, headline, symbols, pair count, mismatch delay, and reward copy/code. Pure game transitions, unbiased shuffle indexing, timer cleanup, and generation guards keep rapid inputs and restart reliable. Copying has a manual fallback. There are no real coupons, tracking, accounts, personal data, or persistent storage.
-
-See [VELUNE documentation](projects/marketing-game/README.md) for configuration, architecture, controls, tests, and limitations. The Node and Chromium/axe suites cover gameplay, configuration, restart races, copying, keyboard-only completion, responsive layouts, accessibility, and no-JavaScript behavior. The other four demo implementations are preserved. Completing this demo does not imply that the separate final portfolio audit or GitHub Pages deployment has occurred.
+Phases 0–5 are implemented. Phase 6 is the focused quality and readiness pass documented in the audit. CV creation, applications and business-development work are outside this repository phase.

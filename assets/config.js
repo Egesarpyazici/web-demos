@@ -2,6 +2,6 @@
    Social URLs must use https://. Never put secrets in this public file. */
 window.PORTFOLIO_CONFIG = Object.freeze({
   email: "",
-  github: "",
+  github: "https://github.com/Egesarpyazici",
   linkedin: "",
 });

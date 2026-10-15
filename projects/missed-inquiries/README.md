@@ -1,6 +1,6 @@
 # ReplyGap — The Cost of Waiting
 
-A premium, static **Demo / Concept** for exploring how assumed response-delay effects could change inquiry conversion and monthly revenue. This is a hypothetical scenario tool, not evidence of historical loss, a causal forecast, research advice, or a promise of recoverable revenue. Phase 3 only; no dashboard or mini-game is implemented.
+A premium, static **Demo / Concept** for exploring how assumed response-delay effects could change inquiry conversion and monthly revenue. This is a hypothetical scenario tool, not evidence of historical loss, a causal forecast, research advice, or a promise of recoverable revenue. This standalone calculator is one of five implemented portfolio demos.
 
 ## Product and design
 

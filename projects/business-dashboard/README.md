@@ -65,4 +65,4 @@ The nine model tests and full Chromium browser suite passed. All five views pass
 
 ## Limitations
 
-This is a single-browser concept, not a deployed operations service. There is no login, authorization, synchronization, real payment processing, accounting compliance, messaging, or multi-user conflict handling. Storage may be cleared by the browser. It does not include Phase 5. Automated Chromium/axe checks and screenshot review do not replace manual assistive-technology testing or real-device Safari/Firefox validation.
+This is a single-browser concept, not a deployed operations service. There is no login, authorization, synchronization, real payment processing, accounting compliance, messaging, or multi-user conflict handling. Storage may be cleared by the browser. It remains separate from the implemented VELUNE campaign. Automated Chromium/axe checks and screenshot review do not replace manual assistive-technology testing or real-device Safari/Firefox validation.
