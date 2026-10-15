@@ -859,6 +859,8 @@
     $("#view-heading").textContent = heading;
     $("#page-description").textContent = description;
     document.title = `${nice(view)} — Ordelle · Demo / Concept`;
+    document.querySelector('meta[property="og:title"]').content =
+      document.title;
     render();
     if (focus) {
       $("#view-heading").focus({ preventScroll: true });

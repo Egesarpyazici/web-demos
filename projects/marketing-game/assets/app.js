@@ -106,6 +106,9 @@ const GAME_CONFIG = {
     config.theme.background;
   document.querySelector('meta[name="description"]').content =
     `${config.brand.name}: a fictional ${config.campaign.title} memory campaign. No purchases, tracking, or redeemable reward.`;
+  document.querySelector('meta[property="og:title"]').content = document.title;
+  document.querySelector('meta[property="og:description"]').content =
+    document.querySelector('meta[name="description"]').content;
   $$("[data-pairs]").forEach((e) => (e.textContent = config.game.pairs));
   $("#collection-count").textContent = String(config.game.pairs).padStart(
     2,

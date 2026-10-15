@@ -205,6 +205,10 @@
     document.title = t("pageTitle");
     document.querySelector('meta[name="description"]').content =
       t("description");
+    document.querySelector('meta[property="og:title"]').content =
+      document.title;
+    document.querySelector('meta[property="og:description"]').content =
+      t("description");
     // Only the bundled, developer-authored translation keys may contain markup.
     // User input is always rendered via textContent or textarea.value.
     document.querySelectorAll("[data-i18n]").forEach((element) => {

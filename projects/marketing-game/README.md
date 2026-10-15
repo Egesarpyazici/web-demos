@@ -85,7 +85,7 @@ NODE_PATH=/path/to/qa/node_modules CHROMIUM_PATH=/usr/bin/chromium \
 
 Override `MARKETING_GAME_TEST_URL` for a different server. Screenshots are written to `/tmp/velune-qa/`, not shipped as production assets.
 
-The nine model tests cover deck/pair integrity, deterministic shuffle mechanics, all small-deck permutations, first/second selection, duplicate and rapid input, matching, mismatch locks, completion, restart isolation, configurable counts, and safe configuration defaults.
+The ten model tests cover deck/pair integrity, deterministic shuffle mechanics, all small-deck permutations, first/second selection, duplicate and rapid input, matching, mismatch locks, completion, restart isolation, configurable counts, and safe configuration defaults.
 
 Browser checks cover 320, 375, 390, 768, 1024, 1440, and 1920px; initial and completed layouts; no page overflow; card touch sizes; accurate attempts/progress; restart during a pending timeout; real clipboard copying and denied-copy fallback; late clipboard results after restart; keyboard-only completion and focus; reduced motion; back/forward-cache recovery; one-object rebranding; invalid configuration and safe rendering; emulated touch; blocked storage; no-JavaScript content; relative paths; console errors; failed HTTP responses; and external requests. Axe scans initial and reward states at 320/390/1440, plus copy fallback and the rebranded configuration.
 
@@ -93,11 +93,11 @@ Desktop (1440 × 900), mobile campaign, and reward screenshots are reviewed for 
 
 ## Verified results
 
-All nine model tests and the complete Chromium browser suite passed. Initial and reward states passed axe checks at 320, 390, and 1440px, with zero reported violations; copy fallback and the rebranded configuration also passed. All seven requested widths passed overflow and card-size checks. Portfolio regression checks and the existing Avela, ORIVELA, ReplyGap, and Ordelle browser/model/pricing suites passed. The four previous project cards and demo implementations were verified unchanged against the branch base.
+All ten model tests and the complete Chromium browser suite passed. Initial and reward states passed axe checks at 320, 390, and 1440px, with zero reported violations; copy fallback and the rebranded configuration also passed. All seven requested widths passed overflow and card-size checks. Portfolio regression checks and the existing Avela, ORIVELA, ReplyGap, and Ordelle browser/model/pricing suites passed. The four previous project cards and demo implementations were verified unchanged against the branch base.
 
 ## Limitations
 
-This is a static promotional concept, not a production rewards system. Cards and configuration are visible in source; there is no anti-cheating or server verification, and no real reward to protect. Only Chromium and emulated touch are covered by the automated browser suite. Manual screen-reader, Safari/Firefox, and physical-device reviews remain advisable before a real client launch. The final full-portfolio audit is a separate phase and is not part of this implementation.
+This is a static promotional concept, not a production rewards system. Cards and configuration are visible in source; there is no anti-cheating or server verification, and no real reward to protect. Only Chromium and emulated touch are covered by the automated browser suite. Manual screen-reader, Safari/Firefox, and physical-device reviews remain advisable before a real client launch. The repository-wide Phase 6 audit and its limitations are documented in ../../PORTFOLIO_AUDIT.md.
 
 ## Premium visual redesign
 

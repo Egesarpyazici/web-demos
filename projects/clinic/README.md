@@ -86,7 +86,7 @@ Manual review should additionally cover real touch devices, screen readers, cros
 
 ## Limitations
 
-No medical advice, real staff, real address, live availability, appointment booking, message submission, delivery verification, or backend storage. No WhatsApp destination is configured by default. Safari/Firefox, assistive technology, real-device behavior, and live GitHub Pages deployment require separate verification. All other portfolio demos remain future work; Phase 2 has not begun.
+No medical advice, real staff, real address, live availability, appointment booking, message submission, delivery verification, or backend storage. No WhatsApp destination is configured by default. Safari/Firefox, assistive technology, real-device behavior, and live GitHub Pages deployment require separate verification. All five portfolio demos are implemented; repository-wide audit evidence is in ../../PORTFOLIO_AUDIT.md.
 
 ## Final Phase 1 dental refinement
 
