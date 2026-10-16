@@ -97,3 +97,7 @@ Medical blue, cool whites, navy, and metallic accents unify the navigation, lang
 The hero’s **03 languages** and **04 care concepts** are actual interface features, explicitly labeled as demo features rather than clinical statistics. The people-centered badge is a design principle, not an endorsement, accreditation, or fabricated review. No patient counts, success rates, medical credentials, or invented achievements are shown.
 
 All new copy and artwork descriptions are translated into English, German, and Russian, including the English no-JavaScript fallback. The validation, persistence, FAQ, inquiry generation, clipboard, and WhatsApp code in `assets/clinic.js` remains unchanged. Reduced-motion preferences and visible focus are preserved. No runtime dependency, external image, font service, or backend was added. This remains Phase 1 only.
+
+## Final spacing polish
+
+The hero retains the original implant artwork with a bounded desktop image height, balanced multilingual typography and responsive section spacing. Header-aware anchor offsets preserve native history while moving keyboard focus to the destination. See [UI polish report](../../UI_POLISH_REPORT.md) for before/after evidence, the six-site matrix and remaining verification limits. Run `node tests/ui-polish.cjs` from the repository root with the same QA environment as the browser suite.
