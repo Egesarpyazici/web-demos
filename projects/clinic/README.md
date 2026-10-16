@@ -101,3 +101,11 @@ All new copy and artwork descriptions are translated into English, German, and R
 ## Final spacing polish
 
 The hero retains the original implant artwork with a bounded desktop image height, balanced multilingual typography and responsive section spacing. Header-aware anchor offsets preserve native history while moving keyboard focus to the destination. See [UI polish report](../../UI_POLISH_REPORT.md) for before/after evidence, the six-site matrix and remaining verification limits. Run `node tests/ui-polish.cjs` from the repository root with the same QA environment as the browser suite.
+
+### PR #12 artwork framing follow-up
+
+At desktop widths of 1200px and above, the sculpture image is 580px high (previously 600px), with 12px lower padding (previously 28px). The visual wrapper moves upward by 8px so the orbit, floating labels and caption move together. The SVG, `object-fit: contain`, visible scene overflow, typography and tablet/mobile rules are preserved. At both 1440×900 and 1916×976 in English, the artwork wrapper now spans y=158–750 instead of 166–794; the facts strip starts at y=772 instead of 808.
+
+Before/after EN/DE/RU screenshots were inspected at both desktop sizes. Evidence for this follow-up is in `/tmp/avela-art/{before,after}-{en,de,ru}-{1440,1916}.png` and `geometry.json` (temporary local files, not deployed assets). The screenshot mentioned in the request was not available in the task attachments; actual crown clipping could not be reproduced on this branch. The full crown remains visible in the tested renderings.
+
+Validation: `projects/clinic/tests/browser.cjs` passed translations, persistence, form validation/summary, clipboard, WhatsApp states, keyboard/FAQ/navigation, no-JavaScript fallback and axe checks in all three languages. `tests/ui-polish.cjs` passed the 88 layout cases and 72 multilingual anchor cases, including tablet/mobile, native history and smooth scrolling. No page overflow, panel/text collisions or browser exceptions were reported. Only this README and `assets/dental-hero.css` changed in the follow-up; all other sites and artwork files are unchanged.
